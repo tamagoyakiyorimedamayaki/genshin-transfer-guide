@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テイワット乗換案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #14110d;
+    --ink-2: #1c1812;
+    --parchment: #ece1c8;
+    --parchment-dim: #a89e86;
+    --hair: rgba(236,225,200,0.10);
+    --hair-strong: rgba(236,225,200,0.18);
+    --gold: #cba135;
+    --jade: #3f8479;
+    --violet: #8566c4;
+    --ember: #c24b4b;
+    --radius: 10px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(203,161,53,0.07), transparent 60%),
+      radial-gradient(1000px 500px at 90% 10%, rgba(133,102,196,0.06), transparent 55%),
+      var(--ink);
+    color:var(--parchment);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    min-height:100vh;
+  }
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  /* ---------- Header / board ---------- */
+  header{
+    padding:36px 5vw 20px;
+    border-bottom:1px solid var(--hair-strong);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 8px var(--gold);
+  }
+  h1{
+    font-family:'Shippori Mincho', serif;
+    font-weight:800;
+    font-size:clamp(28px, 4vw, 46px);
+    margin:0 0 10px;
+    letter-spacing:.03em;
+    line-height:1.25;
+  }
+  h1 span{color:var(--gold);}
+  .lede{
+    max-width:640px;
+    color:var(--parchment-dim);
+    font-size:14.5px;
+    line-height:1.9;
+    margin:0;
+  }
+
+  /* ---------- Ticker (運行情報) ---------- */
+  .ticker-wrap{
+    margin-top:22px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-2);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    align-items:stretch;
+  }
+  .ticker-label{
+    flex:0 0 auto;
+    background:linear-gradient(180deg, #2a2318, #1c1812);
+    color:var(--gold);
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.1em;
+    padding:9px 14px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    border-right:1px solid var(--hair-strong);
+    white-space:nowrap;
+  }
+  .ticker-label .dot{width:6px;height:6px;border-radius:50%;background:#e0553f;box-shadow:0 0 6px #e0553f;}
+  .ticker-viewport{
+    flex:1 1 auto;
+    overflow:hidden;
+    position:relative;
+    min-width:0;
+  }
+  .ticker-track{
+    display:inline-flex;
+    white-space:nowrap;
+    padding:9px 0;
+    animation: scroll-left 32s linear infinite;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--parchment-dim);
+  }
+  .ticker-track span{padding:0 28px;}
+  .ticker-track b{color:var(--parchment);font-weight:700;}
+  @keyframes scroll-left{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ---------- Legend / filters ---------- */
+  .legend-bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    padding:16px 5vw;
+    border-bottom:1px solid var(--hair);
+  }
+  .legend-title{
+    font-size:11px;
+    letter-spacing:.1em;
+    color:var(--parchment-dim);
+    margin-right:6px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .legend-chip{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:6px 12px 6px 8px;
+    border-radius:20px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-2);
+    cursor:pointer;
+    font-size:12.5px;
+    color:var(--parchment);
+    user-select:none;
+    transition:opacity .15s ease, border-color .15s ease;
+  }
+  .legend-chip input{display:none;}
+  .legend-chip .sw{width:10px;height:10px;border-radius:50%;flex:0 0 auto;}
+  .legend-chip.off{opacity:.35;}
+  .legend-note{
+    margin-left:auto;
+    font-size:12px;
+    color:var(--parchment-dim);
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .legend-note .k{display:flex;align-items:center;gap:6px;}
+  .legend-note .ln{width:20px;height:0;border-top:2px dashed var(--parchment-dim);}
+  .legend-note .ln2{width:20px;height:0;border-top:2px solid var(--parchment-dim);}
+
+  /* ---------- Map ---------- */
+  .map-scroll{
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:28px 0 40px;
+  }
+  .map-inner{
+    position:relative;
+    padding:0 5vw;
+    width:max-content;
+    min-width:100%;
+  }
+  .line-row{
+    display:flex;
+    align-items:stretch;
+    position:relative;
+    margin-bottom:6px;
+  }
+  .line-row.hidden{display:none;}
+  .line-label{
+    position:sticky;
+    left:0;
+    z-index:5;
+    flex:0 0 168px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 16px 14px 5vw;
+    margin-left:-5vw;
+    background:linear-gradient(90deg, var(--ink) 78%, rgba(20,17,13,0));
+  }
+  .line-badge{
+    width:34px;height:34px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    font-size:12px;
+    color:#14110d;
+    flex:0 0 auto;
+  }
+  .line-name{
+    font-size:13px;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .line-name small{
+    display:block;
+    font-weight:400;
+    color:var(--parchment-dim);
+    font-size:10.5px;
+    margin-top:2px;
+  }
+  .line-track{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:20px 24px 20px 6px;
+    position:relative;
+  }
+  .line-track::before{
+    content:"";
+    position:absolute;
+    left:6px; right:24px; top:50%;
+    height:3px;
+    background:var(--rail-color, var(--hair-strong));
+    opacity:.35;
+    transform:translateY(-50%);
+    z-index:0;
+  }
+
+  .station{
+    position:relative;
+    z-index:2;
+    flex:0 0 208px;
+    background:#1e1a13;
+    border:1px solid var(--hair-strong);
+    border-left:4px solid var(--c, var(--gold));
+    border-radius:var(--radius);
+    padding:12px 13px 13px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .station:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(0,0,0,.35);
+    border-color:var(--hair-strong);
+  }
+  .station.dimmed{opacity:.28;}
+  .station.active-hover{box-shadow:0 0 0 1px var(--c), 0 10px 26px rgba(0,0,0,.4);}
+  .station .code{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    color:var(--c, var(--gold));
+    letter-spacing:.06em;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .station .chapter{
+    font-size:10.5px;
+    color:var(--parchment-dim);
+    margin-top:6px;
+  }
+  .station .title{
+    font-size:14px;
+    font-weight:700;
+    margin-top:4px;
+    line-height:1.4;
+  }
+  .station .flags{
+    margin-top:9px;
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+  .flag{
+    font-size:10px;
+    padding:2px 7px;
+    border-radius:20px;
+    font-weight:700;
+    letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .flag.transfer{background:rgba(203,161,53,.15); color:var(--gold); border:1px solid rgba(203,161,53,.4);}
+  .flag.summary{background:rgba(133,102,196,.15); color:var(--violet); border:1px solid rgba(133,102,196,.4);}
+
+  .station.ended{
+    background:
+      repeating-linear-gradient(135deg, rgba(194,75,75,.10) 0 10px, rgba(194,75,75,.02) 10px 20px),
+      #1e1a13;
+  }
+  .station.ended .code::after{
+    content:"運行終了";
+    font-size:9.5px;
+    background:var(--ember);
+    color:#14110d;
+    padding:1px 6px;
+    border-radius:3px;
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-weight:900;
+  }
+
+  svg#connectors{
+    position:absolute;
+    top:0; left:0;
+    z-index:1;
+    pointer-events:none;
+    overflow:visible;
+  }
+  svg#connectors path{
+    transition: opacity .15s ease, stroke-width .15s ease;
+  }
+  svg#connectors path.dimmed{opacity:.08;}
+  svg#connectors path.active{stroke-width:2.6;}
+  svg#connectors .badge-mid{
+    transition: opacity .15s ease;
+  }
+  svg#connectors .badge-mid.dimmed{opacity:.08;}
+
+  /* ---------- Detail panel ---------- */
+  .scrim{
+    position:fixed; inset:0;
+    background:rgba(10,8,6,.5);
+    opacity:0; pointer-events:none;
+    transition:opacity .2s ease;
+    z-index:20;
+  }
+  .scrim.open{opacity:1; pointer-events:auto;}
+  .panel{
+    position:fixed;
+    top:0; right:0; bottom:0;
+    width:min(400px, 92vw);
+    background:var(--ink-2);
+    border-left:1px solid var(--hair-strong);
+    z-index:21;
+    transform:translateX(100%);
+    transition:transform .25s cubic-bezier(.2,.8,.2,1);
+    padding:26px 24px 30px;
+    overflow-y:auto;
+  }
+  .panel.open{transform:translateX(0);}
+  .panel-close{
+    position:absolute;
+    top:20px; right:20px;
+    background:none;
+    border:1px solid var(--hair-strong);
+    color:var(--parchment-dim);
+    width:30px;height:30px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:15px;
+    line-height:1;
+  }
+  .panel-close:hover{color:var(--parchment); border-color:var(--parchment-dim);}
+  .panel .p-code{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--c, var(--gold));
+    letter-spacing:.08em;
+  }
+  .panel .p-line{
+    font-size:11.5px;
+    color:var(--parchment-dim);
+    margin-top:2px;
+  }
+  .panel h2{
+    font-family:'Shippori Mincho', serif;
+    font-size:22px;
+    margin:10px 0 4px;
+    line-height:1.4;
+  }
+  .panel .p-chapter{
+    font-size:12.5px;
+    color:var(--parchment-dim);
+    margin-bottom:16px;
+  }
+  .panel .p-desc{
+    font-size:13.5px;
+    line-height:1.9;
+    color:var(--parchment);
+    border-top:1px solid var(--hair);
+    border-bottom:1px solid var(--hair);
+    padding:16px 0;
+    margin-bottom:18px;
+  }
+  .p-section-title{
+    font-size:11px;
+    letter-spacing:.1em;
+    color:var(--parchment-dim);
+    font-family:'JetBrains Mono', monospace;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .p-section-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--hair-strong);
+  }
+  .p-item{
+    display:flex;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid var(--hair);
+    align-items:flex-start;
+  }
+  .p-item:last-child{border-bottom:none;}
+  .p-item .dot{
+    width:9px;height:9px;border-radius:50%;
+    margin-top:4px;
+    flex:0 0 auto;
+  }
+  .p-item .body b{
+    font-size:13px;
+    display:block;
+    margin-bottom:3px;
+  }
+  .p-item .body span.pcode{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    color:var(--parchment-dim);
+    margin-right:6px;
+  }
+  .p-item .reason{
+    font-size:12px;
+    color:var(--parchment-dim);
+    line-height:1.7;
+  }
+  .p-empty{
+    font-size:12.5px;
+    color:var(--parchment-dim);
+    font-style:normal;
+    padding:6px 0 16px;
+  }
+  .rescue{
+    margin-top:4px;
+    background:rgba(194,75,75,.08);
+    border:1px solid rgba(194,75,75,.35);
+    border-radius:8px;
+    padding:12px 13px;
+    font-size:12.5px;
+    line-height:1.8;
+    color:var(--parchment);
+  }
+  .rescue b{color:var(--ember);}
+
+  @media (max-width:640px){
+    .line-label{flex-basis:120px; padding-left:5vw;}
+    .line-name{font-size:11.5px;}
+    .station{flex-basis:172px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">GENSHIN IMPACT · UNOFFICIAL FAN GUIDE</div>
+  <h1>テイワット<span>乗換</span>案内</h1>
+  <p class="lede">
+    クエストを路線に見立てた、原神ストーリーの「先に乗っておくべき前提クエスト」マップです。
+    魔神任務・世界任務・伝説任務・期間限定任務をまたいだ伏線を、乗り換え駅のように可視化します。
+  </p>
+
+  <div class="ticker-wrap">
+    <div class="ticker-label"><span class="dot"></span>運行情報</div>
+    <div class="ticker-viewport">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar" id="legendBar">
+  <span class="legend-title">路線を表示 /</span>
+  <!-- chips injected by JS -->
+  <div class="legend-note">
+    <span class="k"><span class="ln"></span>推奨前提（乗り換え）</span>
+    <span class="k"><span class="ln2"></span>まとめ・収録</span>
+  </div>
+</div>
+
+<div class="map-scroll">
+  <div class="map-inner" id="mapInner">
+    <svg id="connectors"></svg>
+    <!-- line rows injected by JS -->
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel">
+  <button class="panel-close" id="panelClose">✕</button>
+  <div id="panelBody"></div>
+</aside>
+
+<footer style="padding:28px 5vw 40px; border-top:1px solid var(--hair); margin-top:20px;">
+  <p style="font-size:11.5px; color:var(--parchment-dim); line-height:1.8; max-width:640px;">
+    本サイトは個人が運営する非公式のファンコンテンツです。「原神」に関する著作権・商標等の権利は
+    COGNOSPHERE PTE. LTD. / miHoYo Co., Ltd. に帰属します。掲載しているクエスト名・画像等の情報について、
+    正確性を保証するものではありません。誤りに気づいた場合はご指摘いただけると助かります。
+  </p>
+</footer>
+
+<script>
+/* ---------------- DATA ---------------- */
+const LINES = [
+  {
+    code:'AQ', name:'魔神任務線', sub:'Archon Quest', color:'#cba135',
+    quests:[
+      {id:'AQ-01', title:'燃ゆる運命の虹光', chapter:'第五章 第四幕', desc:'ナタ編クライマックス直前の一幕。仲間たちとの決意が描かれる。'},
+      {id:'AQ-02', title:'万火、一に帰す', chapter:'第五章 幕間', desc:'複数の勢力が「一つの意志」として合流していく幕間クエスト。', summaryOf:'SQ-01'},
+      {id:'AQ-03', title:'灼烈の反魂の詩', chapter:'第五章 第五幕', desc:'ナタの部族に伝わる因縁が明らかになる、シリーズ屈指の重要な一幕。',
+        prereqs:[{id:'WQ-04', reason:'登場する部族の歴史と人物背景の前提知識が語られており、本編での感情の機微が理解しやすくなります。'}]},
+      {id:'AQ-04', title:'あなたがいる時空', chapter:'第五章 第六幕', desc:'第五章の帰結。ここまでの伏線が一つに収束する。'},
+      {id:'AQ-05', title:'背理', chapter:'間章 第四幕', desc:'間章で描かれる、過去に決着をつけられなかった因縁との再会。',
+        prereqs:[{id:'EQ-02', reason:'このクエストで対峙する敵キャラクターの過去と動機が描かれた期間限定イベントです。未プレイだと関係性がやや唐突に感じられます。'}],
+        summaryOf:'SQ-03'},
+    ]
+  },
+  {
+    code:'WQ', name:'世界任務線', sub:'World Quest', color:'#3f8479',
+    quests:[
+      {id:'WQ-01', title:'翠色の傷跡', chapter:'ナタ・地域探索', desc:'地域固有の生態と、争いの傷跡を辿るクエスト。'},
+      {id:'WQ-02', title:'黄金郷の残響', chapter:'ナタ・地域探索', desc:'古い言い伝えを追う探索クエスト群。'},
+      {id:'WQ-03', title:'火山秘話', chapter:'ナタ・地域探索', desc:'火山地帯に残る秘話を辿るクエスト。'},
+      {id:'WQ-04', title:'部族見聞任務', chapter:'ナタ・部族シリーズ', desc:'各部族の成り立ちと価値観、歴史的な確執を掘り下げる連続クエスト。多くの本編クエストの下敷きになっています。'},
+      {id:'WQ-05', title:'大樹の記憶', chapter:'ナタ・地域探索', desc:'大樹信仰にまつわる記憶を辿る探索クエスト。'},
+    ]
+  },
+  {
+    code:'SQ', name:'伝説任務線', sub:'Story / Character', color:'#8566c4',
+    quests:[
+      {id:'SQ-01', title:'伝説任務まとめ（第五章）', chapter:'アーカイブ', desc:'第五章序盤〜幕間までのダイジェスト。未視聴の会話や選択肢もここで確認できます。'},
+      {id:'SQ-02', title:'放浪者伝説任務「漂泊の記」', chapter:'キャラクター伝説任務', desc:'特定キャラクターの掘り下げクエスト。本編と独立して楽しめる。'},
+      {id:'SQ-03', title:'伝説任務まとめ（間章）', chapter:'アーカイブ', desc:'間章で語られた過去エピソードのダイジェスト。期間限定任務の内容もここで振り返れます。'},
+    ]
+  },
+  {
+    code:'EQ', name:'期間限定線', sub:'Event Quest（開催終了に注意）', color:'#c24b4b',
+    quests:[
+      {id:'EQ-01', title:'染夏！烈日？リゾート満喫', chapter:'2024夏イベント', desc:'夏の海辺リゾートを舞台にした期間限定ストーリー。', status:'ended'},
+      {id:'EQ-02', title:'陽夏！悪龍？童話の王国！', chapter:'2024夏イベント', desc:'童話仕立ての期間限定イベント。後の間章キャラクターの過去が語られる。', status:'ended', summaryTarget:'SQ-03'},
+    ]
+  },
+];
+
+/* build lookup maps */
+const QUESTS = {};
+LINES.forEach(line=>{
+  line.quests.forEach(q=>{
+    q._line = line;
+    QUESTS[q.id] = q;
+  });
+});
+
+/* dependents (reverse of prereqs) */
+function findDependents(id){
+  const out = [];
+  LINES.forEach(line=>line.quests.forEach(q=>{
+    if(q.prereqs) q.prereqs.forEach(p=>{ if(p.id===id) out.push(q); });
+  }));
+  return out;
+}
+
+/* ---------------- RENDER LEGEND ---------------- */
+const legendBar = document.getElementById('legendBar');
+LINES.forEach(line=>{
+  const chip = document.createElement('label');
+  chip.className = 'legend-chip';
+  chip.innerHTML = `<input type="checkbox" checked data-code="${line.code}">
+    <span class="sw" style="background:${line.color}"></span>${line.code} ${line.name}`;
+  legendBar.insertBefore(chip, legendBar.querySelector('.legend-note'));
+});
+
+/* ---------------- RENDER MAP ---------------- */
+const mapInner = document.getElementById('mapInner');
+
+LINES.forEach(line=>{
+  const row = document.createElement('div');
+  row.className = 'line-row';
+  row.dataset.code = line.code;
+
+  const label = document.createElement('div');
+  label.className = 'line-label';
+  label.innerHTML = `<span class="line-badge" style="background:${line.color}">${line.code}</span>
+    <span class="line-name">${line.name}<small>${line.sub}</small></span>`;
+  row.appendChild(label);
+
+  const track = document.createElement('div');
+  track.className = 'line-track';
+  track.style.setProperty('--rail-color', line.color);
+
+  line.quests.forEach(q=>{
+    const st = document.createElement('div');
+    st.className = 'station' + (q.status==='ended' ? ' ended' : '');
+    st.id = 'st-' + q.id;
+    st.dataset.id = q.id;
+    st.style.setProperty('--c', line.color);
+
+    let flags = '';
+    if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">乗換あり</span>`;
+    if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
+
+    st.innerHTML = `
+      <div class="code mono">${q.id}</div>
+      <div class="chapter">${q.chapter}</div>
+      <div class="title">${q.title}</div>
+      <div class="flags">${flags}</div>
+    `;
+    track.appendChild(st);
+  });
+
+  row.appendChild(track);
+  mapInner.appendChild(row);
+});
+
+/* re-append svg last so it's on top, but keep reference */
+const svg = document.getElementById('connectors');
+mapInner.appendChild(svg);
+
+/* ---------------- CONNECTORS ---------------- */
+function edgesList(){
+  const edges = [];
+  LINES.forEach(line=>line.quests.forEach(q=>{
+    if(q.prereqs) q.prereqs.forEach(p=>{
+      edges.push({from:p.id, to:q.id, type:'prereq', reason:p.reason});
+    });
+    if(q.summaryOf){
+      edges.push({from:q.id, to:q.summaryOf, type:'summary'});
+    }
+  }));
+  return edges;
+}
+const EDGES = edgesList();
+
+function isRowVisible(code){
+  const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+  return row && !row.classList.contains('hidden');
+}
+
+function drawConnectors(){
+  const innerRect = mapInner.getBoundingClientRect();
+  mapInner.style.height = mapInner.scrollHeight + 'px';
+  svg.setAttribute('width', mapInner.scrollWidth);
+  svg.setAttribute('height', mapInner.scrollHeight);
+  svg.innerHTML = `<defs>
+    ${LINES.map(l=>`<marker id="arrow-${l.code}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="${l.color}"></path>
+    </marker>`).join('')}
+  </defs>`;
+
+  EDGES.forEach(edge=>{
+    const fromQ = QUESTS[edge.from], toQ = QUESTS[edge.to];
+    if(!fromQ || !toQ) return;
+    if(!isRowVisible(fromQ._line.code) || !isRowVisible(toQ._line.code)) return;
+    const fromEl = document.getElementById('st-'+edge.from);
+    const toEl = document.getElementById('st-'+edge.to);
+    if(!fromEl || !toEl) return;
+
+    const fr = fromEl.getBoundingClientRect();
+    const tr = toEl.getBoundingClientRect();
+
+    const x1 = fr.left - innerRect.left + fr.width/2;
+    const y1 = fr.top - innerRect.top + (fr.top < tr.top ? fr.height : 0);
+    const x2 = tr.left - innerRect.left + tr.width/2;
+    const y2 = tr.top - innerRect.top + (tr.top < fr.top ? tr.height : 0);
+
+    const midY = (y1+y2)/2;
+    const color = fromQ._line.color;
+    const d = `M ${x1},${y1} C ${x1},${midY} ${x2},${midY} ${x2},${y2}`;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '1.6');
+    path.setAttribute('class','link ' + edge.type);
+    path.dataset.from = edge.from;
+    path.dataset.to = edge.to;
+
+    if(edge.type === 'prereq'){
+      path.setAttribute('stroke-dasharray','5 5');
+      path.setAttribute('marker-end', `url(#arrow-${fromQ._line.code})`);
+    } else {
+      path.setAttribute('stroke-opacity','0.55');
+    }
+    svg.appendChild(path);
+  });
+}
+
+/* ---------------- HOVER HIGHLIGHT ---------------- */
+function clearHighlight(){
+  document.querySelectorAll('.station').forEach(s=>s.classList.remove('dimmed','active-hover'));
+  svg.querySelectorAll('path').forEach(p=>p.classList.remove('dimmed','active'));
+}
+function highlight(id){
+  const related = new Set([id]);
+  const relatedEdges = [];
+  svg.querySelectorAll('path').forEach(p=>{
+    if(p.dataset.from===id || p.dataset.to===id){
+      related.add(p.dataset.from); related.add(p.dataset.to);
+      relatedEdges.push(p);
+    }
+  });
+  document.querySelectorAll('.station').forEach(s=>{
+    if(related.has(s.dataset.id)) s.classList.add('active-hover');
+    else s.classList.add('dimmed');
+  });
+  svg.querySelectorAll('path').forEach(p=>{
+    if(relatedEdges.includes(p)) p.classList.add('active');
+    else p.classList.add('dimmed');
+  });
+}
+
+mapInner.addEventListener('mouseover', e=>{
+  const st = e.target.closest('.station');
+  if(!st) return;
+  clearHighlight();
+  highlight(st.dataset.id);
+});
+mapInner.addEventListener('mouseleave', clearHighlight);
+
+/* ---------------- DETAIL PANEL ---------------- */
+const panel = document.getElementById('panel');
+const panelBody = document.getElementById('panelBody');
+const scrim = document.getElementById('scrim');
+
+function openPanel(id){
+  const q = QUESTS[id];
+  if(!q) return;
+  const line = q._line;
+  const prereqs = q.prereqs || [];
+  const dependents = findDependents(id);
+
+  let rescueHtml = '';
+  if(q.status === 'ended' && q.summaryTarget){
+    const target = QUESTS[q.summaryTarget];
+    rescueHtml = `<div class="rescue"><b>この期間限定任務は開催終了しています。</b><br>
+      本編を読む上で必要な情報は「${target ? target.title : q.summaryTarget}」の伝説任務まとめで振り返り可能です。</div>`;
+  }
+
+  panelBody.innerHTML = `
+    <div class="p-code mono" style="--c:${line.color}">${q.id} ・ ${line.name}</div>
+    <h2>${q.title}</h2>
+    <div class="p-chapter">${q.chapter}</div>
+    <div class="p-desc">${q.desc}</div>
+    ${rescueHtml}
+    <div class="p-section-title">先に乗っておきたい前提クエスト</div>
+    ${prereqs.length ? prereqs.map(p=>{
+      const pq = QUESTS[p.id];
+      return `<div class="p-item">
+        <span class="dot" style="background:${pq ? pq._line.color : '#999'}"></span>
+        <div class="body">
+          <b><span class="pcode mono">${p.id}</span>${pq ? pq.title : p.id}</b>
+          <div class="reason">${p.reason}</div>
+        </div>
+      </div>`;
+    }).join('') : '<div class="p-empty">特になし。単独で読み進めて問題ありません。</div>'}
+
+    <div class="p-section-title" style="margin-top:20px;">このクエストを前提としているクエスト</div>
+    ${dependents.length ? dependents.map(d=>`
+      <div class="p-item">
+        <span class="dot" style="background:${d._line.color}"></span>
+        <div class="body">
+          <b><span class="pcode mono">${d.id}</span>${d.title}</b>
+          <div class="reason">${d._line.name} ／ ${d.chapter}</div>
+        </div>
+      </div>`).join('') : '<div class="p-empty">現時点では確認されていません。</div>'}
+  `;
+  panel.classList.add('open');
+  scrim.classList.add('open');
+}
+function closePanel(){
+  panel.classList.remove('open');
+  scrim.classList.remove('open');
+}
+mapInner.addEventListener('click', e=>{
+  const st = e.target.closest('.station');
+  if(!st) return;
+  openPanel(st.dataset.id);
+});
+document.getElementById('panelClose').addEventListener('click', closePanel);
+scrim.addEventListener('click', closePanel);
+
+/* ---------------- FILTERS ---------------- */
+legendBar.addEventListener('change', e=>{
+  const cb = e.target.closest('input[type="checkbox"]');
+  if(!cb) return;
+  const code = cb.dataset.code;
+  const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+  const chip = cb.closest('.legend-chip');
+  if(cb.checked){ row.classList.remove('hidden'); chip.classList.remove('off'); }
+  else { row.classList.add('hidden'); chip.classList.add('off'); }
+  requestAnimationFrame(drawConnectors);
+});
+
+/* ---------------- TICKER CONTENT ---------------- */
+const tickerItems = EDGES.filter(e=>e.type==='prereq').map(e=>{
+  const fromQ = QUESTS[e.from], toQ = QUESTS[e.to];
+  return `<span>◆ <b>${toQ.id} ${toQ.title}</b> の前に <b>${fromQ.id} ${fromQ.title}</b> の乗車をおすすめします</span>`;
+});
+document.getElementById('tickerTrack').innerHTML = tickerItems.join('') + tickerItems.join('');
+
+/* ---------------- INIT ---------------- */
+function redraw(){ requestAnimationFrame(drawConnectors); }
+window.addEventListener('resize', redraw);
+window.addEventListener('load', redraw);
+redraw();
+setTimeout(redraw, 200); // fonts settle
+</script>
+</body>
+</html>
