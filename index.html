@@ -510,58 +510,75 @@
 </footer>
 
 <script>
-/* ---------------- DATA ---------------- */
-const LINES = [
-  {
-    code:'AQ', name:'魔神任務線', sub:'Archon Quest', color:'#cba135',
-    quests:[
-      {id:'AQ-01', title:'燃ゆる運命の虹光', chapter:'第五章 第四幕', desc:'ナタ編クライマックス直前の一幕。仲間たちとの決意が描かれる。'},
-      {id:'AQ-02', title:'万火、一に帰す', chapter:'第五章 幕間', desc:'複数の勢力が「一つの意志」として合流していく幕間クエスト。', summaryOf:'SQ-01'},
-      {id:'AQ-03', title:'灼烈の反魂の詩', chapter:'第五章 第五幕', desc:'ナタの部族に伝わる因縁が明らかになる、シリーズ屈指の重要な一幕。',
-        prereqs:[{id:'WQ-04', reason:'登場する部族の歴史と人物背景の前提知識が語られており、本編での感情の機微が理解しやすくなります。'}]},
-      {id:'AQ-04', title:'あなたがいる時空', chapter:'第五章 第六幕', desc:'第五章の帰結。ここまでの伏線が一つに収束する。'},
-      {id:'AQ-05', title:'背理', chapter:'間章 第四幕', desc:'間章で描かれる、過去に決着をつけられなかった因縁との再会。',
-        prereqs:[{id:'EQ-02', reason:'このクエストで対峙する敵キャラクターの過去と動機が描かれた期間限定イベントです。未プレイだと関係性がやや唐突に感じられます。'}],
-        summaryOf:'SQ-03'},
-    ]
-  },
-  {
-    code:'WQ', name:'世界任務線', sub:'World Quest', color:'#3f8479',
-    quests:[
-      {id:'WQ-01', title:'翠色の傷跡', chapter:'ナタ・地域探索', desc:'地域固有の生態と、争いの傷跡を辿るクエスト。'},
-      {id:'WQ-02', title:'黄金郷の残響', chapter:'ナタ・地域探索', desc:'古い言い伝えを追う探索クエスト群。'},
-      {id:'WQ-03', title:'火山秘話', chapter:'ナタ・地域探索', desc:'火山地帯に残る秘話を辿るクエスト。'},
-      {id:'WQ-04', title:'部族見聞任務', chapter:'ナタ・部族シリーズ', desc:'各部族の成り立ちと価値観、歴史的な確執を掘り下げる連続クエスト。多くの本編クエストの下敷きになっています。'},
-      {id:'WQ-05', title:'大樹の記憶', chapter:'ナタ・地域探索', desc:'大樹信仰にまつわる記憶を辿る探索クエスト。'},
-    ]
-  },
-  {
-    code:'SQ', name:'伝説任務線', sub:'Story / Character', color:'#8566c4',
-    quests:[
-      {id:'SQ-01', title:'伝説任務まとめ（第五章）', chapter:'アーカイブ', desc:'第五章序盤〜幕間までのダイジェスト。未視聴の会話や選択肢もここで確認できます。'},
-      {id:'SQ-02', title:'放浪者伝説任務「漂泊の記」', chapter:'キャラクター伝説任務', desc:'特定キャラクターの掘り下げクエスト。本編と独立して楽しめる。'},
-      {id:'SQ-03', title:'伝説任務まとめ（間章）', chapter:'アーカイブ', desc:'間章で語られた過去エピソードのダイジェスト。期間限定任務の内容もここで振り返れます。'},
-    ]
-  },
-  {
-    code:'EQ', name:'期間限定線', sub:'Event Quest（開催終了に注意）', color:'#c24b4b',
-    quests:[
-      {id:'EQ-01', title:'染夏！烈日？リゾート満喫', chapter:'2024夏イベント', desc:'夏の海辺リゾートを舞台にした期間限定ストーリー。', status:'ended'},
-      {id:'EQ-02', title:'陽夏！悪龍？童話の王国！', chapter:'2024夏イベント', desc:'童話仕立ての期間限定イベント。後の間章キャラクターの過去が語られる。', status:'ended', summaryTarget:'SQ-03'},
-    ]
-  },
-];
+/* ---------------- STATE ---------------- */
+let LINES = [];
+let QUESTS = {};
+let EDGES = [];
 
-/* build lookup maps */
-const QUESTS = {};
-LINES.forEach(line=>{
-  line.quests.forEach(q=>{
+const mapInner = document.getElementById('mapInner');
+const legendBar = document.getElementById('legendBar');
+const svg = document.getElementById('connectors');
+const panel = document.getElementById('panel');
+const panelBody = document.getElementById('panelBody');
+const scrim = document.getElementById('scrim');
+
+/* ---------------- LOAD DATA ---------------- */
+async function loadData(){
+  let data;
+  try{
+    const res = await fetch('quests.json');
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  }catch(err){
+    mapInner.innerHTML = `<div style="padding:40px 0; color:var(--parchment-dim); font-size:13px;">
+      quests.json の読み込みに失敗しました(${err.message})。同じフォルダに quests.json が置かれているか確認してください。
+    </div>`;
+    return;
+  }
+  buildModel(data);
+  renderLegend();
+  renderMap();
+  wireEvents();
+  buildTicker();
+  redraw();
+}
+
+/* ---------------- BUILD MODEL ---------------- */
+function isEnded(q){
+  if(!q.availableUntil) return false;
+  return new Date(q.availableUntil) < new Date();
+}
+
+function buildModel(data){
+  const lineByCode = {};
+  data.lines.forEach(l=>{ lineByCode[l.code] = { ...l, quests:[] }; });
+
+  data.quests.forEach(q=>{
+    const line = lineByCode[q.line];
+    if(!line) return; // 未知のline codeは黙ってスキップ(データミスの早期発見はvalidate.js側の役割)
     q._line = line;
-    QUESTS[q.id] = q;
+    line.quests.push(q);
   });
-});
 
-/* dependents (reverse of prereqs) */
+  LINES = Object.values(lineByCode);
+  LINES.forEach(line=>{
+    line.quests.sort((a,b)=> (a.order ?? 0) - (b.order ?? 0));
+  });
+
+  QUESTS = {};
+  LINES.forEach(line=>line.quests.forEach(q=>{ QUESTS[q.id] = q; }));
+
+  EDGES = [];
+  LINES.forEach(line=>line.quests.forEach(q=>{
+    (q.prereqs||[]).forEach(p=>{
+      EDGES.push({from:p.id, to:q.id, type:'prereq', reason:p.reason});
+    });
+    if(q.summaryOf){
+      EDGES.push({from:q.id, to:q.summaryOf, type:'summary'});
+    }
+  }));
+}
+
 function findDependents(id){
   const out = [];
   LINES.forEach(line=>line.quests.forEach(q=>{
@@ -571,76 +588,62 @@ function findDependents(id){
 }
 
 /* ---------------- RENDER LEGEND ---------------- */
-const legendBar = document.getElementById('legendBar');
-LINES.forEach(line=>{
-  const chip = document.createElement('label');
-  chip.className = 'legend-chip';
-  chip.innerHTML = `<input type="checkbox" checked data-code="${line.code}">
-    <span class="sw" style="background:${line.color}"></span>${line.code} ${line.name}`;
-  legendBar.insertBefore(chip, legendBar.querySelector('.legend-note'));
-});
+function renderLegend(){
+  LINES.forEach(line=>{
+    const chip = document.createElement('label');
+    chip.className = 'legend-chip';
+    chip.innerHTML = `<input type="checkbox" checked data-code="${line.code}">
+      <span class="sw" style="background:${line.color}"></span>${line.code} ${line.name}`;
+    legendBar.insertBefore(chip, legendBar.querySelector('.legend-note'));
+  });
+}
 
 /* ---------------- RENDER MAP ---------------- */
-const mapInner = document.getElementById('mapInner');
+function renderMap(){
+  LINES.forEach(line=>{
+    const row = document.createElement('div');
+    row.className = 'line-row';
+    row.dataset.code = line.code;
 
-LINES.forEach(line=>{
-  const row = document.createElement('div');
-  row.className = 'line-row';
-  row.dataset.code = line.code;
+    const label = document.createElement('div');
+    label.className = 'line-label';
+    label.innerHTML = `<span class="line-badge" style="background:${line.color}">${line.code}</span>
+      <span class="line-name">${line.name}<small>${line.sub||''}</small></span>`;
+    row.appendChild(label);
 
-  const label = document.createElement('div');
-  label.className = 'line-label';
-  label.innerHTML = `<span class="line-badge" style="background:${line.color}">${line.code}</span>
-    <span class="line-name">${line.name}<small>${line.sub}</small></span>`;
-  row.appendChild(label);
+    const track = document.createElement('div');
+    track.className = 'line-track';
+    track.style.setProperty('--rail-color', line.color);
 
-  const track = document.createElement('div');
-  track.className = 'line-track';
-  track.style.setProperty('--rail-color', line.color);
+    line.quests.forEach(q=>{
+      const st = document.createElement('div');
+      st.className = 'station' + (isEnded(q) ? ' ended' : '');
+      st.id = 'st-' + q.id;
+      st.dataset.id = q.id;
+      st.style.setProperty('--c', line.color);
 
-  line.quests.forEach(q=>{
-    const st = document.createElement('div');
-    st.className = 'station' + (q.status==='ended' ? ' ended' : '');
-    st.id = 'st-' + q.id;
-    st.dataset.id = q.id;
-    st.style.setProperty('--c', line.color);
+      let flags = '';
+      if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">乗換あり</span>`;
+      if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
 
-    let flags = '';
-    if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">乗換あり</span>`;
-    if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
+      st.innerHTML = `
+        <div class="code mono">${q.id}</div>
+        <div class="chapter">${q.chapter}</div>
+        <div class="title">${q.title}</div>
+        <div class="flags">${flags}</div>
+      `;
+      track.appendChild(st);
+    });
 
-    st.innerHTML = `
-      <div class="code mono">${q.id}</div>
-      <div class="chapter">${q.chapter}</div>
-      <div class="title">${q.title}</div>
-      <div class="flags">${flags}</div>
-    `;
-    track.appendChild(st);
+    row.appendChild(track);
+    mapInner.appendChild(row);
   });
 
-  row.appendChild(track);
-  mapInner.appendChild(row);
-});
-
-/* re-append svg last so it's on top, but keep reference */
-const svg = document.getElementById('connectors');
-mapInner.appendChild(svg);
+  /* re-append svg last so it's on top, but keep reference */
+  mapInner.appendChild(svg);
+}
 
 /* ---------------- CONNECTORS ---------------- */
-function edgesList(){
-  const edges = [];
-  LINES.forEach(line=>line.quests.forEach(q=>{
-    if(q.prereqs) q.prereqs.forEach(p=>{
-      edges.push({from:p.id, to:q.id, type:'prereq', reason:p.reason});
-    });
-    if(q.summaryOf){
-      edges.push({from:q.id, to:q.summaryOf, type:'summary'});
-    }
-  }));
-  return edges;
-}
-const EDGES = edgesList();
-
 function isRowVisible(code){
   const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
   return row && !row.classList.contains('hidden');
@@ -720,19 +723,7 @@ function highlight(id){
   });
 }
 
-mapInner.addEventListener('mouseover', e=>{
-  const st = e.target.closest('.station');
-  if(!st) return;
-  clearHighlight();
-  highlight(st.dataset.id);
-});
-mapInner.addEventListener('mouseleave', clearHighlight);
-
 /* ---------------- DETAIL PANEL ---------------- */
-const panel = document.getElementById('panel');
-const panelBody = document.getElementById('panelBody');
-const scrim = document.getElementById('scrim');
-
 function openPanel(id){
   const q = QUESTS[id];
   if(!q) return;
@@ -741,10 +732,10 @@ function openPanel(id){
   const dependents = findDependents(id);
 
   let rescueHtml = '';
-  if(q.status === 'ended' && q.summaryTarget){
-    const target = QUESTS[q.summaryTarget];
+  if(isEnded(q) && q.summaryOf){
+    const target = QUESTS[q.summaryOf];
     rescueHtml = `<div class="rescue"><b>この期間限定任務は開催終了しています。</b><br>
-      本編を読む上で必要な情報は「${target ? target.title : q.summaryTarget}」の伝説任務まとめで振り返り可能です。</div>`;
+      本編を読む上で必要な情報は「${target ? target.title : q.summaryOf}」の伝説任務まとめで振り返り可能です。</div>`;
   }
 
   panelBody.innerHTML = `
@@ -782,39 +773,53 @@ function closePanel(){
   panel.classList.remove('open');
   scrim.classList.remove('open');
 }
-mapInner.addEventListener('click', e=>{
-  const st = e.target.closest('.station');
-  if(!st) return;
-  openPanel(st.dataset.id);
-});
-document.getElementById('panelClose').addEventListener('click', closePanel);
-scrim.addEventListener('click', closePanel);
 
-/* ---------------- FILTERS ---------------- */
-legendBar.addEventListener('change', e=>{
-  const cb = e.target.closest('input[type="checkbox"]');
-  if(!cb) return;
-  const code = cb.dataset.code;
-  const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
-  const chip = cb.closest('.legend-chip');
-  if(cb.checked){ row.classList.remove('hidden'); chip.classList.remove('off'); }
-  else { row.classList.add('hidden'); chip.classList.add('off'); }
-  requestAnimationFrame(drawConnectors);
-});
+/* ---------------- EVENTS ---------------- */
+function wireEvents(){
+  mapInner.addEventListener('mouseover', e=>{
+    const st = e.target.closest('.station');
+    if(!st) return;
+    clearHighlight();
+    highlight(st.dataset.id);
+  });
+  mapInner.addEventListener('mouseleave', clearHighlight);
+
+  mapInner.addEventListener('click', e=>{
+    const st = e.target.closest('.station');
+    if(!st) return;
+    openPanel(st.dataset.id);
+  });
+  document.getElementById('panelClose').addEventListener('click', closePanel);
+  scrim.addEventListener('click', closePanel);
+
+  legendBar.addEventListener('change', e=>{
+    const cb = e.target.closest('input[type="checkbox"]');
+    if(!cb) return;
+    const code = cb.dataset.code;
+    const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+    const chip = cb.closest('.legend-chip');
+    if(cb.checked){ row.classList.remove('hidden'); chip.classList.remove('off'); }
+    else { row.classList.add('hidden'); chip.classList.add('off'); }
+    requestAnimationFrame(drawConnectors);
+  });
+
+  window.addEventListener('resize', redraw);
+}
 
 /* ---------------- TICKER CONTENT ---------------- */
-const tickerItems = EDGES.filter(e=>e.type==='prereq').map(e=>{
-  const fromQ = QUESTS[e.from], toQ = QUESTS[e.to];
-  return `<span>◆ <b>${toQ.id} ${toQ.title}</b> の前に <b>${fromQ.id} ${fromQ.title}</b> の乗車をおすすめします</span>`;
-});
-document.getElementById('tickerTrack').innerHTML = tickerItems.join('') + tickerItems.join('');
+function buildTicker(){
+  const tickerItems = EDGES.filter(e=>e.type==='prereq').map(e=>{
+    const fromQ = QUESTS[e.from], toQ = QUESTS[e.to];
+    if(!fromQ || !toQ) return '';
+    return `<span>◆ <b>${toQ.id} ${toQ.title}</b> の前に <b>${fromQ.id} ${fromQ.title}</b> の乗車をおすすめします</span>`;
+  }).filter(Boolean);
+  document.getElementById('tickerTrack').innerHTML = tickerItems.join('') + tickerItems.join('');
+}
 
 /* ---------------- INIT ---------------- */
 function redraw(){ requestAnimationFrame(drawConnectors); }
-window.addEventListener('resize', redraw);
-window.addEventListener('load', redraw);
-redraw();
-setTimeout(redraw, 200); // fonts settle
+loadData();
+setTimeout(redraw, 200); // フォント確定後に再計測
 </script>
 </body>
 </html>
