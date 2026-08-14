@@ -28,9 +28,26 @@
       "name": "期間限定任務",
       "sub": "Event Quest",
       "color": "#c24b4b"
+    },
+    {
+      "code": "MG",
+      "name": "漫画",
+      "sub": "Comic",
+      "color": "#a8456b"
     }
   ],
   "quests": [
+    {
+      "id": "MG-01",
+      "line": "MG",
+      "order": 1,
+      "title": "原神セレベンツ",
+      "chapter": "公式コミカライズ漫画（全16話）",
+      "region": "モンド",
+      "desc": "ゲーム本編以前の時代を描く公式漫画。ヴェネッサやファデュイのモンドへの関与、ディルックとガイアの過去などが描かれる。全16話・通読1時間程度。",
+      "sourceNote": "Fandom Wiki「漫画」ページの記述を基に追加。",
+      "prereqs": []
+    },
     {
       "id": "WQ-04",
       "line": "WQ",
@@ -190,7 +207,12 @@
       "region": "スメール",
       "desc": "スメール編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-11",
+          "reason": "ティナリの伝説任務「隼の章」。プレイヤーの実プレイで、この幕の前提として気づいた前提知識クエスト。"
+        }
+      ],
       "chapterGroup": "第三章"
     },
     {
@@ -460,7 +482,7 @@
     {
       "id": "AQ-34",
       "line": "AQ",
-      "order": 901,
+      "order": 150,
       "title": "風立ちし鶴の帰郷",
       "chapter": "間章 第一幕",
       "region": "璃月",
@@ -472,7 +494,7 @@
     {
       "id": "AQ-35",
       "line": "AQ",
-      "order": 902,
+      "order": 250,
       "title": "険路怪跡",
       "chapter": "間章 第二幕",
       "region": "璃月",
@@ -484,19 +506,28 @@
     {
       "id": "AQ-36",
       "line": "AQ",
-      "order": 903,
+      "order": 350,
       "title": "伽藍に落ちて",
       "chapter": "間章 第三幕",
       "region": "スメール",
       "desc": "放浪者の過去が掘り下げられる後日譚。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "WQ-30",
+          "reason": "たたら物語。プレイヤーの実プレイで見つかった前提知識クエスト。"
+        },
+        {
+          "id": "EQ-06",
+          "reason": "華やぐ紫苑の庭。プレイヤーの実プレイで見つかった前提知識クエスト。"
+        }
+      ],
       "chapterGroup": "間章"
     },
     {
       "id": "AQ-05",
       "line": "AQ",
-      "order": 904,
+      "order": 450,
       "title": "背理",
       "chapter": "間章 第四幕",
       "region": null,
@@ -509,6 +540,18 @@
         {
           "id": "SQ-23",
           "reason": "「背理」の実際の開放条件の一つ。アルベドの伝説任務で描かれる背景を先に知っておくと、間章の内容がより理解しやすくなります。"
+        },
+        {
+          "id": "EQ-03",
+          "reason": "白亜と黒龍。プレイヤーの実プレイで見つかった前提知識クエスト。"
+        },
+        {
+          "id": "EQ-04",
+          "reason": "白雪に潜みし影。プレイヤーの実プレイで見つかった前提知識クエスト。"
+        },
+        {
+          "id": "EQ-05",
+          "reason": "風花の吐息。プレイヤーの実プレイで見つかった前提知識クエスト。"
         }
       ],
       "chapterGroup": "間章"
@@ -620,7 +663,12 @@
       "region": "モンド",
       "desc": "ガイアの伝説任務",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [
+        {
+          "id": "MG-01",
+          "reason": "ガイアの過去が公式漫画で描かれており、伝説任務の背景を先に知ることができます。"
+        }
+      ]
     },
     {
       "id": "SQ-15",
@@ -653,7 +701,12 @@
       "region": "モンド",
       "desc": "ディルックの伝説任務",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [
+        {
+          "id": "MG-01",
+          "reason": "ディルックの過去が公式漫画で描かれており、伝説任務の背景を先に知ることができます。"
+        }
+      ]
     },
     {
       "id": "SQ-18",
@@ -1349,6 +1402,65 @@
       "region": "ナド・クライ",
       "desc": "ナド・クライの世界任務。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-03",
+      "line": "EQ",
+      "order": 3,
+      "title": "白亜と黒龍",
+      "chapter": "2020年 v1.2 期間限定イベント",
+      "region": "モンド",
+      "availableUntil": "2021-01-05",
+      "desc": "ドラゴンスパインを舞台に、アルベドの秘密の一端が明らかになるイベント。アルベドの伝説任務「白亜の章」クリアが開放条件。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.comには未収録のため、Web検索で裏付け。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-04",
+      "line": "EQ",
+      "order": 4,
+      "title": "白雪に潜みし影",
+      "chapter": "v2.3 期間限定イベント",
+      "region": "モンド",
+      "availableUntil": "2021-11-15",
+      "desc": "ドラゴンスパインを舞台にしたイベント。アルベドの正体にまつわる伏線が明かされる。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-05",
+      "line": "EQ",
+      "order": 5,
+      "title": "風花の吐息",
+      "chapter": "v3.5 期間限定イベント（風花祭）",
+      "region": "モンド",
+      "availableUntil": "2023-03-15",
+      "desc": "モンドの祭り「風花祭」にまつわる期間限定イベント。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-06",
+      "line": "EQ",
+      "order": 6,
+      "title": "華やぐ紫苑の庭",
+      "chapter": "v2.6 期間限定イベント（光華容彩祭）",
+      "region": "稲妻",
+      "availableUntil": "2022-04-25",
+      "desc": "稲妻の祭り「光華容彩祭」を舞台に、五歌仙にまつわる過去の秘密が描かれるイベント。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-30",
+      "line": "WQ",
+      "order": 30,
+      "title": "たたら物語",
+      "chapter": "稲妻・世界任務",
+      "region": "稲妻",
+      "desc": "稲妻・たたら砂を舞台にした世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": []
     }
   ]
