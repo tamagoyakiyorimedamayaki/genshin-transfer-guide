@@ -4,14 +4,32 @@
     "updatedAt": "2026-07-27",
     "note": "prereqs は片方向のみ保持。逆方向(依存されている側)はアプリ側で計算する。"
   },
-
   "lines": [
-    { "code": "AQ", "name": "魔神任務",     "sub": "Archon Quest",           "color": "#cba135" },
-    { "code": "WQ", "name": "世界任務",     "sub": "World Quest",           "color": "#3f8479" },
-    { "code": "SQ", "name": "伝説任務",     "sub": "Story / Character",     "color": "#8566c4" },
-    { "code": "EQ", "name": "期間限定任務", "sub": "Event Quest",           "color": "#c24b4b" }
+    {
+      "code": "AQ",
+      "name": "魔神任務",
+      "sub": "Archon Quest",
+      "color": "#cba135"
+    },
+    {
+      "code": "WQ",
+      "name": "世界任務",
+      "sub": "World Quest",
+      "color": "#3f8479"
+    },
+    {
+      "code": "SQ",
+      "name": "伝説任務",
+      "sub": "Story / Character",
+      "color": "#8566c4"
+    },
+    {
+      "code": "EQ",
+      "name": "期間限定任務",
+      "sub": "Event Quest",
+      "color": "#c24b4b"
+    }
   ],
-
   "quests": [
     {
       "id": "WQ-04",
@@ -97,7 +115,8 @@
           "id": "WQ-29",
           "reason": "note記事で紹介されていた履修ルートの一つ。花翼の集を巡るエピソードで、本編直前の内容として特に関連が深いとされています。"
         }
-      ]
+      ],
+      "chapterGroup": "第五章"
     },
     {
       "id": "WQ-06",
@@ -147,7 +166,8 @@
       "region": "スメール",
       "desc": "スメール編の開幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-10",
@@ -158,7 +178,8 @@
       "region": "スメール",
       "desc": "スメール編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-11",
@@ -169,7 +190,8 @@
       "region": "スメール",
       "desc": "スメール編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-12",
@@ -180,7 +202,8 @@
       "region": "スメール",
       "desc": "スメール編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-13",
@@ -191,7 +214,8 @@
       "region": "スメール",
       "desc": "スメール編の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-14",
@@ -202,7 +226,8 @@
       "region": "スメール",
       "desc": "ダインスレイヴとガイアが出会う、双子とカーンルイアに関わる物語。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第三章"
     },
     {
       "id": "AQ-15",
@@ -213,7 +238,8 @@
       "region": "フォンテーヌ",
       "desc": "フォンテーヌ編の開幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-16",
@@ -224,7 +250,8 @@
       "region": "フォンテーヌ",
       "desc": "フォンテーヌ編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-17",
@@ -235,7 +262,8 @@
       "region": "フォンテーヌ",
       "desc": "フォンテーヌ編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-18",
@@ -246,7 +274,8 @@
       "region": "フォンテーヌ",
       "desc": "フォンテーヌ編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-19",
@@ -257,7 +286,8 @@
       "region": "フォンテーヌ",
       "desc": "フォンテーヌ編の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-20",
@@ -268,7 +298,8 @@
       "region": "フォンテーヌ",
       "desc": "テイワット・カーンルイアの謎が明かされる番外編。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第四章"
     },
     {
       "id": "AQ-21",
@@ -279,7 +310,8 @@
       "region": "ナタ",
       "desc": "第五章の帰結。ここまでの伏線が一つに収束する。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第五章"
     },
     {
       "id": "AQ-22",
@@ -290,7 +322,8 @@
       "region": "モンド",
       "desc": "物語の始まり。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "序章"
     },
     {
       "id": "AQ-23",
@@ -301,7 +334,8 @@
       "region": "モンド",
       "desc": "序章の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "序章"
     },
     {
       "id": "AQ-24",
@@ -312,7 +346,8 @@
       "region": "モンド",
       "desc": "序章の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "序章"
     },
     {
       "id": "AQ-25",
@@ -323,7 +358,8 @@
       "region": "璃月",
       "desc": "璃月編の開幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第一章"
     },
     {
       "id": "AQ-26",
@@ -334,7 +370,8 @@
       "region": "璃月",
       "desc": "璃月編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第一章"
     },
     {
       "id": "AQ-27",
@@ -345,7 +382,8 @@
       "region": "璃月",
       "desc": "璃月編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第一章"
     },
     {
       "id": "AQ-28",
@@ -356,7 +394,8 @@
       "region": "璃月",
       "desc": "璃月編の終幕。主人公が男(空)の場合「私達」、女(蛍)の場合「俺達」表記。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第一章"
     },
     {
       "id": "AQ-29",
@@ -367,7 +406,8 @@
       "region": "稲妻",
       "desc": "稲妻編の導入部。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第二章"
     },
     {
       "id": "AQ-30",
@@ -378,7 +418,8 @@
       "region": "稲妻",
       "desc": "稲妻編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第二章"
     },
     {
       "id": "AQ-31",
@@ -389,7 +430,8 @@
       "region": "稲妻",
       "desc": "稲妻編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第二章"
     },
     {
       "id": "AQ-32",
@@ -400,7 +442,8 @@
       "region": "稲妻",
       "desc": "稲妻編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第二章"
     },
     {
       "id": "AQ-33",
@@ -411,7 +454,8 @@
       "region": "稲妻",
       "desc": "稲妻編の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "第二章"
     },
     {
       "id": "AQ-34",
@@ -422,7 +466,8 @@
       "region": "璃月",
       "desc": "群玉閣にまつわる後日譚。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "間章"
     },
     {
       "id": "AQ-35",
@@ -433,7 +478,8 @@
       "region": "璃月",
       "desc": "層岩巨淵を舞台にした後日譚。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "間章"
     },
     {
       "id": "AQ-36",
@@ -444,7 +490,8 @@
       "region": "スメール",
       "desc": "放浪者の過去が掘り下げられる後日譚。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "間章"
     },
     {
       "id": "AQ-05",
@@ -459,7 +506,8 @@
           "id": "EQ-02",
           "reason": "対峙する敵キャラクターの過去と動機が描かれた期間限定イベントです。未プレイだと関係性がやや唐突に感じられます。"
         }
-      ]
+      ],
+      "chapterGroup": "間章"
     },
     {
       "id": "SQ-03",
@@ -480,7 +528,8 @@
       "region": "ナド・クライ",
       "desc": "間章「空月の歌」の一幕。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "空月の歌"
     },
     {
       "id": "AQ-07",
@@ -491,7 +540,8 @@
       "region": "ナド・クライ／スメール",
       "desc": "間章「空月の歌」の一幕。スメールの六賢人が登場する。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "空月の歌"
     },
     {
       "id": "AQ-08",
@@ -502,7 +552,8 @@
       "region": "ナド・クライ／スメール",
       "desc": "間章「空月の歌」の一幕。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "chapterGroup": "空月の歌"
     },
     {
       "id": "SQ-04",
