@@ -165,7 +165,7 @@
     {
       "id": "EQ-02",
       "line": "EQ",
-      "order": 29,
+      "order": 31,
       "title": "陽夏！悪龍？童話の王国！",
       "chapter": "2024夏イベント",
       "region": null,
@@ -1185,7 +1185,7 @@
     {
       "id": "EQ-07",
       "line": "EQ",
-      "order": 30,
+      "order": 33,
       "title": "彼女にサプライズを",
       "chapter": "v5.1 期間限定イベント「キャンディと薔薇の歌」",
       "region": null,
@@ -1967,7 +1967,7 @@
     {
       "id": "EQ-31",
       "line": "EQ",
-      "order": 28,
+      "order": 30,
       "title": "荒瀧・生命のロックイリデッセンスビッグツアー",
       "chapter": "期間限定イベント",
       "region": "稲妻",
@@ -1975,6 +1975,219 @@
       "desc": "荒瀧一斗が中心の音楽祭イベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": []
+    },
+    {
+      "id": "EQ-32",
+      "line": "EQ",
+      "order": 28,
+      "title": "巧みなる錬金経営",
+      "chapter": "期間限定イベント",
+      "region": "フォンテーヌ",
+      "availableUntil": "2024-04-23",
+      "desc": "Ver4.5期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-33",
+      "line": "EQ",
+      "order": 29,
+      "title": "モフモフの城、にゃん冒険！",
+      "chapter": "期間限定イベント",
+      "region": "フォンテーヌ",
+      "availableUntil": "2024-04-23",
+      "desc": "Ver4.5期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-34",
+      "line": "EQ",
+      "order": 32,
+      "title": "スピリットを求めしウォーベン",
+      "chapter": "期間限定イベント",
+      "region": "ナタ",
+      "availableUntil": "2024-10-08",
+      "desc": "Ver5.2期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-35",
+      "line": "EQ",
+      "order": 35,
+      "title": "三川遊芸夢奇譚",
+      "chapter": "期間限定イベント",
+      "region": "稲妻",
+      "availableUntil": "2025-03-03",
+      "desc": "Ver5.4期間限定イベント。荒瀧一斗の伝説任務に登場したNPCも関わる。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-36",
+      "line": "EQ",
+      "order": 36,
+      "title": "ハーモニック・ワルツ",
+      "chapter": "期間限定イベント",
+      "region": "フォンテーヌ",
+      "availableUntil": "2025-05-26",
+      "desc": "Ver5.6期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-37",
+      "line": "EQ",
+      "order": 37,
+      "title": "シュヴァルマラン映影ランド",
+      "chapter": "期間限定イベント",
+      "region": "フォンテーヌ",
+      "availableUntil": "2025-05-26",
+      "desc": "Ver5.6期間限定イベント会場。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-38",
+      "line": "EQ",
+      "order": 38,
+      "title": "染夏！烈日？リゾート満喫！",
+      "chapter": "期間限定イベント",
+      "region": "ナタ",
+      "availableUntil": "2025-08-27",
+      "desc": "Ver5.8夏期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-39",
+      "line": "EQ",
+      "order": 39,
+      "title": "密かな追跡",
+      "chapter": "期間限定イベント",
+      "region": "ナタ",
+      "availableUntil": "2025-08-27",
+      "desc": "Ver5.8期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-40",
+      "line": "EQ",
+      "order": 40,
+      "title": "カチャカチャ大作戦",
+      "chapter": "期間限定イベント",
+      "region": "ナタ",
+      "availableUntil": "2025-10-08",
+      "desc": "Ver6.0(Luna I)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-41",
+      "line": "EQ",
+      "order": 41,
+      "title": "遺跡を探検？知行合一プロジェクト！",
+      "chapter": "期間限定イベント",
+      "region": "ナド・クライ",
+      "availableUntil": "2025-11-19",
+      "desc": "Ver6.1(Luna II)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-42",
+      "line": "EQ",
+      "order": 42,
+      "title": "魂を炎やす戦士の雪の旅",
+      "chapter": "期間限定イベント",
+      "region": "モンド",
+      "availableUntil": "2026-01-13",
+      "desc": "Ver6.2(Luna III)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-43",
+      "line": "EQ",
+      "order": 43,
+      "title": "海灯祭2026「天を翔ける玉輪の軌跡」",
+      "chapter": "期間限定イベント",
+      "region": "璃月",
+      "availableUntil": "2026-02-24",
+      "desc": "Ver6.3(Luna IV)期間限定の海灯祭イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-44",
+      "line": "EQ",
+      "order": 44,
+      "title": "風を捕まえる帰郷者",
+      "chapter": "期間限定イベント",
+      "region": "モンド",
+      "availableUntil": "2026-04-07",
+      "desc": "Ver6.4(Luna V)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-45",
+      "line": "EQ",
+      "order": 45,
+      "title": "波と岩礁の邂逅",
+      "chapter": "期間限定イベント",
+      "region": "ナド・クライ",
+      "availableUntil": "2026-05-19",
+      "desc": "Ver6.5(Luna VI)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-46",
+      "line": "EQ",
+      "order": 46,
+      "title": "空想の友と巡る旅",
+      "chapter": "期間限定イベント",
+      "region": "稲妻",
+      "availableUntil": "2026-06-30",
+      "desc": "Ver6.6(Luna VII)期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-47",
+      "line": "EQ",
+      "order": 47,
+      "title": "帰夏！映影？千霊祭！",
+      "chapter": "Ver6.7(Luna VIII) 期間限定イベント",
+      "region": "フォンテーヌ",
+      "availableUntil": "2026-08-11",
+      "desc": "Ver6.7期間限定イベント。",
+      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
+      "prereqs": []
+    },
+    {
+      "id": "EQ-48",
+      "line": "EQ",
+      "order": 34,
+      "title": "春光が描く桃符",
+      "chapter": "Ver5.3 期間限定イベント（海灯祭2025）",
+      "region": "璃月",
+      "availableUntil": "2025-02-09",
+      "desc": "海灯祭2025のテーマイベント。",
+      "sourceNote": "Fandom Wikiに明記された「推奨任務」を基に前提関係を追加。",
+      "prereqs": [
+        {
+          "id": "SQ-31",
+          "reason": "公式Wikiで「推奨任務」として明記。懸壺の章 第一幕。"
+        },
+        {
+          "id": "SQ-29",
+          "reason": "公式Wikiで「推奨任務」として明記。彼岸蝶の章 第一幕。"
+        }
+      ]
     }
   ]
 }
