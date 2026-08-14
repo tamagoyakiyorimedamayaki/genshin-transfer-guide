@@ -161,6 +161,19 @@
     align-items:center;
     gap:14px;
   }
+  .reset-btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    padding:6px 13px;
+    border-radius:20px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-2);
+    color:var(--parchment-dim);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .reset-btn:hover{border-color:var(--gold); color:var(--gold);}
   .legend-note .k{display:flex;align-items:center;gap:6px;}
   .legend-note .ln{width:20px;height:0;border-top:2px dashed var(--parchment-dim);}
   .legend-note .ln2{width:20px;height:0;border-top:2px solid var(--parchment-dim);}
@@ -515,6 +528,7 @@
 <div class="legend-bar" id="legendBar">
   <span class="legend-title">路線を表示 /</span>
   <!-- chips injected by JS -->
+  <button id="resetFiltersBtn" class="reset-btn">↺ 絞り込みを解除</button>
   <div class="legend-note">
     <span class="k"><span class="ln"></span>推奨前提（乗り換え）</span>
     <span class="k"><span class="ln2"></span>まとめ・収録</span>
@@ -887,7 +901,31 @@ function wireEvents(){
     requestAnimationFrame(drawConnectors);
   });
 
+  document.getElementById('resetFiltersBtn').addEventListener('click', resetAllFilters);
+
   window.addEventListener('resize', redraw);
+}
+
+function resetAllFilters(){
+  // 路線の表示/非表示チェックボックスを全てON
+  legendBar.querySelectorAll('input[type="checkbox"]').forEach(cb=>{
+    cb.checked = true;
+    const code = cb.dataset.code;
+    const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+    if(row) row.classList.remove('hidden');
+    const chip = cb.closest('.legend-chip');
+    if(chip) chip.classList.remove('off');
+  });
+
+  // 各路線の章/地域タブを「すべて」に戻す
+  Object.keys(lineChapterFilter).forEach(code=>{
+    lineChapterFilter[code] = 'all';
+    applyChapterFilter(code);
+    const tabs = mapInner.querySelectorAll(`.line-row[data-code="${code}"] .chapter-tab`);
+    tabs.forEach(t=>t.classList.toggle('active', t.dataset.group === 'all'));
+  });
+
+  redraw();
 }
 
 /* ---------------- TICKER CONTENT ---------------- */
