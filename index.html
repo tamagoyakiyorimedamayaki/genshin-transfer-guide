@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テイワット乗換案内</title>
+<title>テイワット任務順案内</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -499,10 +499,10 @@
 
 <header>
   <div class="eyebrow">GENSHIN IMPACT · UNOFFICIAL FAN GUIDE</div>
-  <h1>テイワット<span>乗換</span>案内</h1>
+  <h1>テイワット任務順案内</h1>
   <p class="lede">
-    クエストを路線に見立てた、原神ストーリーの「先に乗っておくべき前提クエスト」マップです。
-    魔神任務・世界任務・伝説任務・期間限定任務をまたいだ伏線を、乗り換え駅のように可視化します。
+    原神のストーリーを満喫するために、先にクリアしておいた方が良い任務情報を可視化しました。
+    魔神任務・世界任務・伝説任務・期間限定任務をまたいだ伏線を、まとめて確認できます。
     <br>
     <a href="reference.html" style="color:var(--jade); text-decoration:none; font-size:12.5px; display:inline-block; margin-top:8px;">🔍 世界任務を検索・参照する →</a>
   </p>
@@ -513,7 +513,7 @@
   <!-- chips injected by JS -->
   <button id="resetFiltersBtn" class="reset-btn">↺ 絞り込みを解除</button>
   <div class="legend-note">
-    <span class="k"><span class="ln"></span>推奨前提（乗り換え）</span>
+    <span class="k"><span class="ln"></span>おすすめ前提</span>
     <span class="k"><span class="ln2"></span>まとめ・収録</span>
   </div>
 </div>
@@ -693,7 +693,7 @@ function renderMap(){
       st.style.setProperty('--c', line.color);
 
       let flags = '';
-      if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">乗換あり</span>`;
+      if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">おすすめあり</span>`;
       if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
 
       st.innerHTML = `
