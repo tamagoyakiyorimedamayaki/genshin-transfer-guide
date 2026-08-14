@@ -1,0 +1,2054 @@
+[
+  {
+    "id": "a-ladys-invitation",
+    "title": "淑女のお誘い",
+    "note": "パーティにサンドローネが加入している状態で受付可能な世界任務",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "intel-exchange",
+    "title": "情報取引",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-haunted-pirate-shipwreck",
+    "title": "海賊船の幽霊騒ぎ",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "chance-commission",
+    "title": "偶然の依頼",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-disturbance-caused-by-theft",
+    "title": "貨物盗難事件",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-suspicious-hermit",
+    "title": "様子のおかしい隠者",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "minor-commission",
+    "title": "ちいさな依頼",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-vanishing-bounty-target",
+    "title": "消えた賞金首",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-dust-settles",
+    "title": "一件落着",
+    "note": "パーティにヤフォダかネフェルが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "they-who-abandoned-the-past",
+    "title": "かつて過去を捨てた者",
+    "note": "パーティにヤフォダが加入している状態で受付可能な世界任務",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-silent-theater",
+    "title": "音のない劇場",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-lost-palace",
+    "title": "失われた宮殿",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-forgotten-lighthouse",
+    "title": "憂いなき灯台",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-role-of-a-guilde",
+    "title": "導きの職務…?",
+    "note": "魔女の課題：ニコ「導きの職務…?」",
+    "region": "モンド"
+  },
+  {
+    "id": "stories-to-sate-the-glass-and-scroll",
+    "title": "杯と余白と空白の物語",
+    "note": "魔女の課題：ファルカ「無題の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "a-proposition-beyond-refutation",
+    "title": "反論できない命題",
+    "note": "魔女の課題：プルーネ「反論の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "beyond-silver-and-fine-gold",
+    "title": "金銀に勝るもの",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-joyous-floating-island",
+    "title": "賑わいの浮き島",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "forest-boar-pauses-for-the-bloom",
+    "title": "大和花畑にイノシシあり",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "winds-beneath-the-tower-of-silence",
+    "title": "塔の足元に吹く風",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "magic-mountain-temple-of-space",
+    "title": "魔の山",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-wind-has-ceased",
+    "title": "風が止む",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "paradise",
+    "title": "天国",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "a-day-the-grand-temple-inscribed-with-ages",
+    "title": "一日千秋の神殿",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "long-live-life",
+    "title": "美しき命",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "unofficial-chronicle-of-the-desert-pavilion",
+    "title": "「砂上の楼閣」雑記",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "counterfeit-classics",
+    "title": "贋作の古典",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "hell",
+    "title": "地獄",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "lions-celerity",
+    "title": "獅子奮迅",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "judgment",
+    "title": "審判",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-final-judgment",
+    "title": "最後の審判",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "tower-of-inversion",
+    "title": "逆位置の塔",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "to-turn-each-sin-against-the-sinner",
+    "title": "罪を以って罪人を罰す",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "a-toast-beneath-the-moon",
+    "title": "月下の一献",
+    "note": "伴月紀聞・2で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "a-gift-from-the-sea-spirits",
+    "title": "海の精霊たちの贈り物",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "prelude-to-the-night-vigil",
+    "title": "夜巡りのプレリュード",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "witchs-lodge",
+    "title": "魔女の小屋",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-moonlit-watcher",
+    "title": "月下の守り人",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "on-this-intoxicating-night",
+    "title": "みんなが酔った夜に",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-empty-courtyard",
+    "title": "誰もいない庭",
+    "note": "空月の歌 第六章クリアで発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "witchs-homework",
+    "title": "魔女の課題",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "unexpected-commission",
+    "title": "思いがけない依頼",
+    "note": "世界任務「魔女の課題」内ストーリー",
+    "region": "モンド"
+  },
+  {
+    "id": "tales-of-time-and-wind",
+    "title": "時と風の物語",
+    "note": "魔女の課題：ウェンティ「旅立ちの題」",
+    "region": "モンド"
+  },
+  {
+    "id": "the-great-mages-journey-of-trials",
+    "title": "大魔法使いの試練の旅",
+    "note": "魔女の課題：クレー「火花葉の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "old-friends-and-new-knowledge",
+    "title": "古き見識と新たな知恵",
+    "note": "魔女の課題：アルベド「題外の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "a-child-wandering-the-world",
+    "title": "現世を歩む子供",
+    "note": "魔女の課題：ドゥリン「現世の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "a-dry-well-doth-not-reflect-the-stars",
+    "title": "枯れ井戸に星空は映らない",
+    "note": "魔女の課題：モナ「乾慧の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "with-lupical",
+    "title": "「ルピカ」といっしょ",
+    "note": "魔女の課題：レザー「小狼の群れの題」",
+    "region": "モンド"
+  },
+  {
+    "id": "alan-smithee-author-of-fischl",
+    "title": "アラン・スミシー——フィッシュルの作者",
+    "note": "魔女の課題：フィッシュル「予想外の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "the-law-of-boundaries",
+    "title": "限界の法則",
+    "note": "魔女の課題：スクロース「仙境花の題」",
+    "region": "モンド"
+  },
+  {
+    "id": "lightkeepers-oath",
+    "title": "ライトキーパーの誓い",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "may-the-moonlight-connect-us",
+    "title": "月光が我らを結ばん",
+    "note": "伴月紀聞・1で発生するクエスト、又は霜月の子の間で用いられる挨拶",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-artist-by-the-moons-side-ii",
+    "title": "月のそばの小さな画家・２",
+    "note": "伴月紀聞・2で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-lost-childs-tale",
+    "title": "迷子の子どもの語り",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-chefs-tale",
+    "title": "料理人の語り",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "her-past",
+    "title": "彼女の過去",
+    "note": "伴月紀聞・1で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-artist-by-the-moons-side-i",
+    "title": "月のそばの小さな画家・1",
+    "note": "伴月紀聞・1で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "moonlight-sonata",
+    "title": "月光のソナタ",
+    "note": "伴月紀聞・1で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "homecomings-faint-glow",
+    "title": "回帰する微かな光",
+    "note": "伴月紀聞・1で発生するクエスト",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-bell-of-mouring-echoes",
+    "title": "哀しき鈴の音",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "sniffer-moles",
+    "title": "クンクンモグラ",
+    "note": "世界任務「転職はいつも不安になる」に登場するモグラ",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-last-survivor-of-tenochtzitoc",
+    "title": "最後のテノチズトク人",
+    "note": "世界任務のタイトル、およびナタの地方伝説の1人の人物。演者はパパール",
+    "region": "ナタ"
+  },
+  {
+    "id": "polkka-beneath-the-moons-oracle",
+    "title": "月諭のポルカ",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "east-of-the-moon-west-of-the-sun",
+    "title": "月の東、太陽の西",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "to-the-lighthouse",
+    "title": "灯台へ",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "problem-sorting-robot",
+    "title": "問題分別ロボット",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "food-matters",
+    "title": "食事は大事",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "the-stress-of-changing-careers",
+    "title": "転職はいつも不安になる",
+    "note": "",
+    "region": "ナド・クライ"
+  },
+  {
+    "id": "convert-investigation-dirty-money-misdeeds",
+    "title": "ハラハラ潜入捜査",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "all-good-reunions-follow-a-search",
+    "title": "待ち望んだ再会",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "encounters-always-happen-on-a-holiday",
+    "title": "出会いは余暇と共に",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "shine-on-pipilpan-idol",
+    "title": "輝け! ピピルパン・アイドルコンテスト!",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "traces-of-chroma",
+    "title": "流彩の軌跡",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "strange-encounter-of-the-tete-isle-kind",
+    "title": "ティティ島での出会い",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "dreamy-paititi",
+    "title": "夢のパイティティ",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "every-aspect-of-a-warrior",
+    "title": "勇士の姿",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "battlefield-of-dice-cats-and-cards",
+    "title": "サイコロ、猫とカードの戦場",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-ocean-pearl",
+    "title": "海上の花鈿",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-chi-of-yore",
+    "title": "「螭」の話",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "theres-no-restoring-this-past-land-of-beauty",
+    "title": "盛んだ国は廃土に戻る",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "luhua-landscape",
+    "title": "漉華の風景画",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "sacred-sakura-cleansing-ritual",
+    "title": "神櫻大祓",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "yougou-cleansing",
+    "title": "影向祓",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "tatara-tales",
+    "title": "たたら物語",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "fang-of-watatsumi",
+    "title": "「海祇の牙」",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "tail-of-watatsumi",
+    "title": "「海祇の尾」",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "heart-of-watatsumi",
+    "title": "「海祇の心」",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "yachimatahikos-trial",
+    "title": "八衢彦の試練",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "yachimatahimes-trial",
+    "title": "八衢姫の試練",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-sun-wheel-and-mt-kanna",
+    "title": "日輪とカンナ山",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "until-vana-is-healed",
+    "title": "「ヴァーナ」が完治するまで",
+    "note": "森林書から連なる世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "sour-sauce-ceviche",
+    "title": "セビチェ",
+    "note": "世界任務「とある竜マニアの平凡な暮らし」報酬",
+    "region": "ナタ"
+  },
+  {
+    "id": "aranyaka",
+    "title": "森林書",
+    "note": "スメールの世界任務名、及びその中で手に入る同名のアイテム名",
+    "region": "スメール"
+  },
+  {
+    "id": "flighty-flora-and-flora",
+    "title": "ふわふわした花とフローラ",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "mondstadt-and-its-archon",
+    "title": "風神とモンド",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "windrise-windfall",
+    "title": "吹いては止まる風",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "question-and-answer",
+    "title": "騎士団ガイドの応答",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "equivalent-exchange",
+    "title": "等量交換",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "lingering-malady",
+    "title": "暴風の後の問題",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "leaves-on-the-wind",
+    "title": "落ちた葉は風となる",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "thief-catcher",
+    "title": "盗賊を捕まえろ",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "after-the-storm",
+    "title": "風の後のお宝",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "cleanup-at-dawn",
+    "title": "ワイナリーの大掃除",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "in-the-aftermath",
+    "title": "後片付け",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "break-the-sword-cemetery-seal",
+    "title": "剣塚封印を探索",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "time-and-wind",
+    "title": "時と風",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "exploding-population",
+    "title": "魚群大発生",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "in-the-mountains",
+    "title": "山に隠されし物",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-festering-fang",
+    "title": "腐植の牙",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-great-mountain-survey",
+    "title": "雪山大踏査",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-great-mountain-survey-2",
+    "title": "雪山再踏査",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "ah-fresh-meat",
+    "title": "あぁ、新鮮な肉",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "a-land-entombed",
+    "title": "雪に覆われた国",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "lost-in-the-snow",
+    "title": "雪山迷走",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "come-try-genius-invokation-tcg",
+    "title": "「七聖召喚」をやってみよう!",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "what-do-adventurers-do-again",
+    "title": "冒険者…は何するの?",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "will-of-stone",
+    "title": "重岩の意志",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "a-quiet-day-in-liyue-harbor",
+    "title": "璃月港の穏やかな一日",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "blackcliff-woes",
+    "title": "黒岩の悩み",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "a-lone-ship-in-guyun",
+    "title": "孤雲の艦船",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "pressing-deadlines",
+    "title": "迫る仕事",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "an-adeptal-summons",
+    "title": "仙人の頼み",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-adventurers-guilds-affairs",
+    "title": "冒険者協会の数々な事情",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "necessary-procedures",
+    "title": "必要な手続き",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "words-worth-their-weight-in-mora",
+    "title": "万金に値する本",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "changchangs-little-friend",
+    "title": "チャンチャンと彼女の仲間",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-secret-of-nantianmen",
+    "title": "南天門の謎",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "an-ode-to-yonder-city",
+    "title": "この街にこの詩を",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "endless-research",
+    "title": "止まることのない研究",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "overstretched",
+    "title": "一人の見張り",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "treasure-lost-treasure-found",
+    "title": "帰離のお宝",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-tree-who-stands-alone",
+    "title": "頼れない孤木",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "old-tastes-die-hard",
+    "title": "懐かしい味",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "book-in-the-woods",
+    "title": "一緒に遊ぼう",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "share-not-your-treasures",
+    "title": "宝物は大事にすべし",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "a-provisional-arrangement",
+    "title": "一時的な策",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "big-business",
+    "title": "大商売",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-yakshas-wish",
+    "title": "夜叉の願い",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "nine-pillars-of-peace",
+    "title": "靖世の九柱",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "and-this-treasure-goes-to",
+    "title": "霊矩のお宝",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "trails-in-tianqiu",
+    "title": "仙跡を辿って天穹に戻り",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "tianqiu-treasure-trail",
+    "title": "天穹の宝の跡",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "a-little-game",
+    "title": "ゲームしよう",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "fishing-for-jade",
+    "title": "海上拾玉",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "return-of-the-jade-chamber",
+    "title": "群玉閣を…再現?",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "snapshots",
+    "title": "写真を撮ろう",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "perfect-shot",
+    "title": "完璧な写真",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "hereafter-the-trail-of-pervases",
+    "title": "死後の事・銅雀の跡",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "hereafter-all-is-well",
+    "title": "死後の事・平安の諸事",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "hereafter-return-to-the-mountains",
+    "title": "死後の事・山に還りて",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "on-the-stage-behind-the-stage",
+    "title": "舞台上と舞台下",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "garcias-paean",
+    "title": "ガルシアの賛歌",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-chasm-delvers",
+    "title": "層岩巨淵深遊記",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-chasm-charters",
+    "title": "層岩巨淵尋訪記",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "surreptitious-seven-star-seal-sundering",
+    "title": "七星を欺き磐鍵を解く",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "chasm-spelunkers",
+    "title": "巨淵初探査",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "first-miasmic-contact",
+    "title": "深淵瘴気と初の対面",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "meeting-new-people-and-foiling-some-bandits",
+    "title": "盗賊討伐と新たな出会い",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "the-chasms-bounty",
+    "title": "巨淵の恩恵",
+    "note": "",
+    "region": "璃月"
+  },
+  {
+    "id": "orobashis-legacy",
+    "title": "オロバシの遺事",
+    "note": "v2.1 以降、Orobashi と Orobaxi の両表記が混在しているが、こちらは Orobashi となっている",
+    "region": "稲妻"
+  },
+  {
+    "id": "treatment-on-the-island",
+    "title": "孤島診療譚",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "gazing-three-thousand-miles-away",
+    "title": "三千里の期待",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "fate-of-a-fighter",
+    "title": "武者の宿命",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "chisatos-letter",
+    "title": "千里の手紙",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "katheryne-in-inazuma",
+    "title": "キャサリン、稲妻にて",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-ritou-road",
+    "title": "離島の道",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-narukami-trail",
+    "title": "鳴神追跡",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "fertilizer-salesperson",
+    "title": "肥料…販売員?",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-art-of-horticulture",
+    "title": "栽培の方法",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "sakura-arborism",
+    "title": "医櫻",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-farmers-treasure",
+    "title": "農民の宝",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "gourmet-supremos-assemble",
+    "title": "全能グルメチーム!",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-gourmet-supremos-on-the-road",
+    "title": "全能グルメチーム・グルメ巡りの旅",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-gourmet-supremos-the-importance-of-eating-well",
+    "title": "全能グルメチーム・まんぷくの重要性",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "dreams-of-sword-art",
+    "title": "刀の夢",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "o-archon-have-i-done-right",
+    "title": "神様よ、僕は正しかったの?",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "battle-of-revenge",
+    "title": "屈辱を晴らす一戦",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "hiromis-watch",
+    "title": "広海の守護",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-seventh-samurai",
+    "title": "『七人目の武士』",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "in-another-land",
+    "title": "異郷にて",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "international-travel-log",
+    "title": "諸国旅行記",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "home-lies-over-the-ocean",
+    "title": "海の向こう側は故郷だ",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "yae-publishing-houses-invitation",
+    "title": "「八重堂」のお誘い",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "storytelling-method",
+    "title": "物語の構想法",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "lofty-gourmet",
+    "title": "孤高のグルメ",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-very-special-fortune-slip",
+    "title": "特別なおみくじ",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "film-notes",
+    "title": "映影が残す思い出",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "divine-plant-of-the-depths",
+    "title": "海淵仙草霊験記",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "solitary-sea-beast",
+    "title": "孤独な海獣",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "clean-house",
+    "title": "戸口の掃除",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-moon-bathed-deep",
+    "title": "月浴の淵",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "from-dusk-to-dawn-in-byakuyakoku",
+    "title": "白夜国晨昏記",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-entrance-to-tokoyo",
+    "title": "常世の入り口",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-subterranean-trials-of-drake-and-serpent",
+    "title": "龍蛇洞宮試練記",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-trail-of-drake-and-serpent",
+    "title": "龍蛇追跡",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "collection-of-dragons-and-snakes",
+    "title": "龍蛇宝帰集録",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "antigonus",
+    "title": "アンティゴノス",
+    "note": "龍蛇宝帰集録に連なる一連の世界任務の1つ",
+    "region": "稲妻"
+  },
+  {
+    "id": "dates-challenge",
+    "title": "伊達の挑戦状",
+    "note": "龍蛇宝帰集録に連なる一連の世界任務の1つ",
+    "region": "稲妻"
+  },
+  {
+    "id": "tricolor-file",
+    "title": "三色の帳面",
+    "note": "龍蛇宝帰集録に連なる一連の世界任務の1つ",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-heart-of-ouroboros",
+    "title": "ウロボロスの心",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "dreams-in-the-gaps",
+    "title": "隙間の夢",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "erebos-secret",
+    "title": "エレボスの秘密",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-three-great-martial-trials",
+    "title": "三隅道大演武",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "kunados-trial",
+    "title": "岐の試練",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "hyperions-dirge",
+    "title": "ハイペリオン哀歌",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "temple-inquiry",
+    "title": "寺の前を訪ねる",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "narrow-inquiry",
+    "title": "狭間を訪ねる",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "serpents-heart-inquiry",
+    "title": "蛇心を訪ねる",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "seirai-stormchasers",
+    "title": "セイライ逐雷記",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "neko-is-a-cat",
+    "title": "寝子は猫である",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "relics-of-seirai",
+    "title": "セイライの遺宝",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "reminiscence-of-seirai",
+    "title": "セイライの旧事",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "through-the-mists",
+    "title": "霧海紀行",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "a-particularly-particular-author",
+    "title": "注文の多い作家",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "octave-of-the-maushiro",
+    "title": "マウシロの音を聴く",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-sea-of-fog-and-the-rite-of-the-trees",
+    "title": "霧海と樹とのまつり",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-saga-of-mr-forgetful",
+    "title": "忘れん坊大王の大冒険",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "lotus-eater",
+    "title": "ロートパゴス族",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "the-phaethons-syrtos",
+    "title": "パエトーンたちはみな踊る",
+    "note": "",
+    "region": "稲妻"
+  },
+  {
+    "id": "a-short-encounter-with-a-rare-bird",
+    "title": "珍しき鳥との短い出会い",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "for-a-dream-i-tarry",
+    "title": "夢の気配がまだある内に",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "event-beasts-stumble",
+    "title": "獣も足を踏み外す",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "where-are-the-fierce-creatures",
+    "title": "凶猛動物はどこだ",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "garcias-paean-a-gift-of-compatibility",
+    "title": "ガルシアの賛歌・妥当な贈り物",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "treasure-of-wisdom-a-new-plan",
+    "title": "智にある宝・新計画",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "static-views",
+    "title": "静態的風景",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "the-foolish-fatuus",
+    "title": "騙す者は騙される",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "next-time-on-king-of-invokations",
+    "title": "『召喚王・下! って…』",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "cost-effective-hook",
+    "title": "釣り針の有効活用",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "gourmet-supremos-within-our-duties",
+    "title": "全能グルメチーム・責務の範囲内",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "the-gourmet-supremos-cleanup",
+    "title": "全能グルメチーム・収束",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "the-price",
+    "title": "代価",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "nursery-of-lost-dreams",
+    "title": "夢を失った苗畑",
+    "note": "森林書 第三章",
+    "region": "スメール"
+  },
+  {
+    "id": "agnihotra-sutra",
+    "title": "アグニホトラ経",
+    "note": "森林書から連なる世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "vimana-agama",
+    "title": "ヴィマナ聖典",
+    "note": "森林書から連なる世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "courage-is-in-the-heart",
+    "title": "勇気を心につけて",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "aranagas-memory",
+    "title": "アランナガの思い出",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "memorys-final-chapter",
+    "title": "回想終章",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "golden-slumber",
+    "title": "黄金の眠り",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "old-notes-and-new-friends",
+    "title": "古き物語と新しき友人",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "the-dirge-of-bilqis",
+    "title": "ビルキースの哀歌",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "rejoice-with-me-for-what-was-lost-is-now-found",
+    "title": "失せ者を取り返す喜びをともに",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "tadhla-the-falcon",
+    "title": "「猟鷹」タッドラー",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "the-falcons-hunt",
+    "title": "「鷹猟」",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "the-fallen-falcon",
+    "title": "翼の折れた猟鷹",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "apocalypse-lost",
+    "title": "過ぎ去りし終末",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "her-foes-rage-like-great-waters",
+    "title": "仇敵は沸き返る水の如く…",
+    "note": "「ビルキースの哀歌」に連なる一連の世界任務の1つ",
+    "region": "スメール"
+  },
+  {
+    "id": "blooming-sands",
+    "title": "砂の上の花",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "join-the-eremites-and-embrace-a-wonderful-new-life",
+    "title": "エルマイト旅団に入って、素晴らしい生活を!",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "a-gifted-rose-prickly-as-thorns",
+    "title": "或る人への薔薇〜荊のような刺々しさ〜",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "a-gifted-rose-long-day-ahead",
+    "title": "或る人への薔薇〜長い一日の過ごし方〜",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "khvarena-of-good-and-evil",
+    "title": "善悪のクヴァレナ",
+    "note": "クヴァレナ (Khvarena) とは、ゲーム中では霊光のことを意味する",
+    "region": "スメール"
+  },
+  {
+    "id": "pale-fire",
+    "title": "仄暗い炎",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "monumental-study",
+    "title": "碑銘の研究",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "an-artist-adrift",
+    "title": "画家漂流記",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "lightcall-resonance",
+    "title": "浮光鳴召",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "purbirunis-commandment",
+    "title": "プルビルニの戒め",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "recollections-of-a-fontainian",
+    "title": "とあるフォンテーヌ人の思い出",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "the-path-of-papers",
+    "title": "学を求む長き道",
+    "note": "",
+    "region": "スメール"
+  },
+  {
+    "id": "ancient-colors",
+    "title": "古き色合い",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-brush-of-seafoam-and-crimson",
+    "title": "シーフォームとクリムゾンの描染",
+    "note": "古き色合い・第一幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-gradient-of-dreams-and-ochre",
+    "title": "ドリームとオーカーの変化",
+    "note": "古き色合い・第二幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "there-will-come-soft-rains",
+    "title": "小雨の予兆",
+    "note": "古き色合い・第二幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "blue-longing-of-heart-and-moon",
+    "title": "ハートとブルームーンの情念",
+    "note": "古き色合い・第三幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "limner-dreamer-and-robotic-dog",
+    "title": "カイガ、ユメ&ロボット犬",
+    "note": "古き色合い・第三幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "the-final-question",
+    "title": "最終問題",
+    "note": "古き色合いのエピローグ的な世界任務",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "ann-of-the-narzissenkreuz",
+    "title": "水仙のアン",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "the-narzissenkreuz-adventure",
+    "title": "「水仙十字大冒険」",
+    "note": "水仙のアン・第一幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "kingdom-through-the-looking-glass",
+    "title": "「鏡の中の王国」",
+    "note": "水仙のアン・第二幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "anns-story",
+    "title": "アンの物語",
+    "note": "水仙のアン・第二幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "if-she-no-longer-dreams-of-you",
+    "title": "「もしも彼女が君の夢を見なくなったら…」",
+    "note": "水仙のアン・第三幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "mary-anns-story",
+    "title": "マリアンの物語",
+    "note": "水仙のアン・第三幕",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "unfinished-story",
+    "title": "まだ終わらない物語",
+    "note": "水仙のアンのエピローグ的な世界任務",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "aqueous-tidemarks",
+    "title": "水色の潮痕",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "hey-this-isnt-pumpkin-soup",
+    "title": "「こんなのかぼちゃスープじゃない…」",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "echoes-of-the-ancient-world",
+    "title": "旧世の残した音",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "book-of-esoteric-revelations",
+    "title": "秘教と啓示の書",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "the-lone-phantom-sail",
+    "title": "孤帆幽影",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-fontainian-message",
+    "title": "フォンテーヌからのメッセージ",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "danger-lurks-everywhere-in-fontaine",
+    "title": "危険だらけのフォンテーヌ廷",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "in-expert-company",
+    "title": "三人寄れば…明師を探せ",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-certain-notice",
+    "title": "一通の知らせ",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-certain-trifle",
+    "title": "些細な出来事",
+    "note": "「一通の知らせ」に連なる世界任務の1つ",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "a-certain-stamp",
+    "title": "とある印章",
+    "note": "「一通の知らせ」に連なる世界任務の1つ",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "the-fountain-flows-again",
+    "title": "泉は再び湧きいづる",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "upon-a-flowery-field-of-grass",
+    "title": "花咲き誇る芝生にて",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "another-horizon-of-adventure",
+    "title": "冒険は遠い地を目指す",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "steambird-interview",
+    "title": "「スチームバード新聞」の面接",
+    "note": "フォンテーヌの評判任務の開放クエスト",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "semi-automatic-forging",
+    "title": "半オート鍛造",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "strange-stone-chronicle",
+    "title": "奇石冒険記",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "were-it-so-easy",
+    "title": "好事魔多し",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "truly-mouthwatering",
+    "title": "ぜんぜんよだれが止まらない!",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "still-mouthwatering",
+    "title": "まだまだよだれが止まらない!",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "the-wild-fairy-of-erinnyes",
+    "title": "エリニュスのはぐれ精霊",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "in-the-wake-of-narcissus",
+    "title": "水仙の痕跡を追って",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "search-in-the-algae-sea",
+    "title": "藻海が残したもの",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "saviors-wake",
+    "title": "救世主のお守り",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "waking-from-the-great-dream",
+    "title": "大夢からの目覚め",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "rowboats-wake",
+    "title": "船尾が描く波",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "questioning-melusine-and-answering-machine",
+    "title": "問題メリュジーヌと解決ロボ",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "an-expected-plan",
+    "title": "想定内の計画",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "an-expected-lie",
+    "title": "想定内の嘘",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "free-verse",
+    "title": "格律のない自由詩",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "wish-fulfilling-treasure-hunt",
+    "title": "念願の宝探しの旅",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "impromptu-poem-of-the-crimson-dawn",
+    "title": "暁の即興詩",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "happy-birthday",
+    "title": "誕生日おめでとう",
+    "note": "",
+    "region": "フォンテーヌ"
+  },
+  {
+    "id": "between-pledge-and-forgettance",
+    "title": "約束と忘却の間に",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "in-the-footsteps-of-the-chosen-of-dragons",
+    "title": "龍に選ばれし者の旅路",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "shadows-of-the-mountains",
+    "title": "山々の影",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "tale-of-dreams-plucked-from-fire",
+    "title": "炎から夢を取り出す話",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "the-call-of-mystical-martial-arts",
+    "title": "伝説の武術のいざない",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "the-case-of-the-crafting-bench",
+    "title": "合成台の謎",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "the-road-ahead",
+    "title": "先へ続く道",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "to-wish-upon-a-star",
+    "title": "星に願いを",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "stride-on-rainbows-split-the-waves",
+    "title": "虹に乗って波を切り裂く！",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "to-the-night-what-is-the-nights",
+    "title": "夜に帰す夜",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "ripe-for-trouble",
+    "title": "熟れない実",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "toward-red-hot-adventure",
+    "title": "燃える冒険へ！",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "from-one-case-to-another",
+    "title": "事件は次々に",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "beat-the-clock-24-hours",
+    "title": "タイムリミットは二十四時間",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "dancin-in-the-moonlight",
+    "title": "月光に舞え",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "lost-traveler-in-the-ashen-realm",
+    "title": "流灰の国の迷える旅人",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "sauro-vets-dilemma",
+    "title": "竜医の悩み",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "a-saurian-lovers-ordinary-days",
+    "title": "とある竜マニアの平凡な暮らし",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "a-saurian-returns-to-the-nest",
+    "title": "竜の帰巣",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "charge-forward-go-go-go",
+    "title": "進め！進め！進め！",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "molting-season",
+    "title": "換羽期",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "a-heros-approval",
+    "title": "英雄たちのお墨付き！",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "path-to-the-flaming-peaks",
+    "title": "炎の崖に至る道",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "investigator-of-ancient-ruins",
+    "title": "拝山の道",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "nahuatzins-leap",
+    "title": "ナワツィンの跳躍",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "a-finale-emberforged",
+    "title": "炎を辿り、終局へと帰る",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "the-frozen-rekindling-land",
+    "title": "冷灰と再燃の地",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "an-omen-of-annihilation-and-the-final-entreaty",
+    "title": "破滅の予兆と最後の通牒",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "sing-ho-for-the-greatness-of-fat",
+    "title": "おお！偉大なる脂肪よ！",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "is-intensity-really-the-key",
+    "title": "「烈力」は役に立つ?",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "the-lone-isle-named-night",
+    "title": "夜という名の孤島",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "someday-we-all-must-walk-alone",
+    "title": "独り立ちの日",
+    "note": "",
+    "region": "ナタ"
+  },
+  {
+    "id": "to-the-winds-of-freedom",
+    "title": "自由の風に向かって",
+    "note": "",
+    "region": "モンド"
+  },
+  {
+    "id": "aphid-treasure",
+    "title": "ミツムシのお宝",
+    "note": "v5.1 期間限定イベント「追え! ミツムシのお宝」内で発生する世界任務",
+    "region": "ナタ"
+  },
+  {
+    "id": "last-ride-of-the-bugbuster-squad",
+    "title": "虫捕り隊最後の出撃",
+    "note": "v5.1 期間限定イベント「追え! ミツムシのお宝」内で発生する世界任務",
+    "region": "ナタ"
+  },
+  {
+    "id": "a-honest-promotion",
+    "title": "良心的なキャンペーン",
+    "note": "4周年記念 期間限定の世界任務",
+    "region": "不明"
+  }
+]

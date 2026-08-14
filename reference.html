@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界任務 検索/参照ツール — テイワット乗換案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #14110d;
+    --ink-2: #1c1812;
+    --ink-3: #221d15;
+    --parchment: #ece1c8;
+    --parchment-dim: #a89e86;
+    --hair: rgba(236,225,200,0.10);
+    --hair-strong: rgba(236,225,200,0.18);
+    --gold: #cba135;
+    --jade: #3f8479;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(203,161,53,0.07), transparent 60%),
+      var(--ink);
+    color:var(--parchment);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    min-height:100vh;
+  }
+  .mono{font-family:'JetBrains Mono', monospace;}
+  a{color:inherit;}
+
+  header{
+    padding:30px 5vw 20px;
+    border-bottom:1px solid var(--hair-strong);
+  }
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--parchment-dim);
+    text-decoration:none;
+    margin-bottom:14px;
+  }
+  .back-link:hover{color:var(--gold);}
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    color:var(--jade);
+    text-transform:uppercase;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:6px;height:6px;border-radius:50%;
+    background:var(--jade);
+    box-shadow:0 0 8px var(--jade);
+  }
+  h1{
+    font-family:'Shippori Mincho', serif;
+    font-weight:800;
+    font-size:clamp(24px, 3.4vw, 36px);
+    margin:0 0 10px;
+  }
+  .lede{
+    max-width:640px;
+    color:var(--parchment-dim);
+    font-size:13.5px;
+    line-height:1.8;
+    margin:0;
+  }
+
+  .controls{
+    padding:20px 5vw;
+    border-bottom:1px solid var(--hair);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    position:sticky;
+    top:0;
+    background:var(--ink);
+    z-index:10;
+  }
+  .search-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--ink-2);
+    border:1px solid var(--hair-strong);
+    border-radius:10px;
+    padding:11px 16px;
+  }
+  .search-box svg{flex:0 0 auto; opacity:.5;}
+  .search-box input{
+    flex:1;
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--parchment);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-size:14px;
+  }
+  .search-box input::placeholder{color:var(--parchment-dim);}
+  .region-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .region-chip{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    padding:6px 13px;
+    border-radius:20px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-2);
+    color:var(--parchment-dim);
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .region-chip:hover{border-color:var(--parchment-dim);}
+  .region-chip.active{
+    background:var(--jade);
+    border-color:var(--jade);
+    color:#0e1614;
+    font-weight:700;
+  }
+  .result-count{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--parchment-dim);
+  }
+
+  .results{
+    padding:10px 5vw 60px;
+  }
+  .result-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:13px 14px;
+    border-bottom:1px solid var(--hair);
+    transition:background .12s ease;
+  }
+  .result-row:hover{background:var(--ink-2);}
+  .result-main{
+    flex:1 1 auto;
+    min-width:0;
+  }
+  .result-title{
+    font-size:14px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .result-note{
+    font-size:12px;
+    color:var(--parchment-dim);
+    margin-top:3px;
+    line-height:1.6;
+  }
+  .badge{
+    font-size:10px;
+    padding:2px 8px;
+    border-radius:20px;
+    font-weight:700;
+    white-space:nowrap;
+    flex:0 0 auto;
+  }
+  .badge.region{
+    background:rgba(63,132,121,.15);
+    color:var(--jade);
+    border:1px solid rgba(63,132,121,.4);
+  }
+  .badge.registered{
+    background:rgba(203,161,53,.15);
+    color:var(--gold);
+    border:1px solid rgba(203,161,53,.4);
+  }
+  .row-actions{
+    flex:0 0 auto;
+  }
+  .copy-btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    padding:7px 14px;
+    border-radius:8px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-3);
+    color:var(--parchment);
+    cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .copy-btn:hover{border-color:var(--gold); color:var(--gold);}
+  .copy-btn.copied{border-color:var(--jade); color:var(--jade); background:rgba(63,132,121,.1);}
+
+  .empty-state{
+    padding:60px 0;
+    text-align:center;
+    color:var(--parchment-dim);
+    font-size:13px;
+  }
+
+  @media (max-width:640px){
+    .result-row{flex-wrap:wrap;}
+    .row-actions{width:100%;}
+    .copy-btn{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">← 乗換案内マップへ戻る</a>
+  <div class="eyebrow">REFERENCE TOOL</div>
+  <h1>世界任務 検索/参照ツール</h1>
+  <p class="lede">
+    前提関係を探すときの候補探し用のツールです。genshin-dictionary.comのデータをもとにした342件の世界任務から、
+    キーワードや地域で絞り込めます。「登録済み」バッジは、現在の quests.json に同じタイトルが既にあるかどうかを示します。
+  </p>
+</header>
+
+<div class="controls">
+  <div class="search-box">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="タイトル・備考で検索（例: 部族見聞、烟谜主、リオセスリ）">
+  </div>
+  <div class="region-chips" id="regionChips"></div>
+  <div class="result-count" id="resultCount"></div>
+</div>
+
+<div class="results" id="results"></div>
+
+<script>
+let WORLD_QUESTS = [];
+let REGISTERED_TITLES = new Set();
+let activeRegion = 'すべて';
+
+async function loadData(){
+  try{
+    const [refRes, questsRes] = await Promise.all([
+      fetch('world-quests-reference.json'),
+      fetch('quests.json').catch(()=>null)
+    ]);
+    WORLD_QUESTS = await refRes.json();
+    if(questsRes && questsRes.ok){
+      const questsData = await questsRes.json();
+      REGISTERED_TITLES = new Set(questsData.quests.map(q=>q.title));
+    }
+  }catch(err){
+    document.getElementById('results').innerHTML = `<div class="empty-state">データの読み込みに失敗しました(${err.message})。world-quests-reference.json が同じフォルダにあるか確認してください。</div>`;
+    return;
+  }
+  renderRegionChips();
+  render();
+}
+
+function renderRegionChips(){
+  const regions = ['すべて', ...new Set(WORLD_QUESTS.map(w=>w.region))];
+  const wrap = document.getElementById('regionChips');
+  wrap.innerHTML = '';
+  regions.forEach(r=>{
+    const chip = document.createElement('button');
+    chip.className = 'region-chip' + (r === activeRegion ? ' active' : '');
+    chip.textContent = r;
+    chip.addEventListener('click', ()=>{
+      activeRegion = r;
+      renderRegionChips();
+      render();
+    });
+    wrap.appendChild(chip);
+  });
+}
+
+function nextWqNumber(){
+  let max = 0;
+  REGISTERED_TITLES; // noop to keep reference
+  return null; // 実際の連番は quests.json 側の状態次第なので、ひな形では固定プレースホルダを使う
+}
+
+function buildSnippet(item){
+  return `{
+  "id": "WQ-??",
+  "line": "WQ",
+  "order": 0,
+  "title": "${item.title}",
+  "chapter": "${item.region}・世界任務",
+  "region": "${item.region}",
+  "desc": "${item.note || item.title + 'にまつわる世界任務。'}",
+  "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+  "prereqs": []
+}`;
+}
+
+function render(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const filtered = WORLD_QUESTS.filter(w=>{
+    if(activeRegion !== 'すべて' && w.region !== activeRegion) return false;
+    if(!q) return true;
+    return w.title.toLowerCase().includes(q) || (w.note||'').toLowerCase().includes(q);
+  });
+
+  document.getElementById('resultCount').textContent = `${filtered.length} 件 / 全 ${WORLD_QUESTS.length} 件`;
+
+  const results = document.getElementById('results');
+  if(filtered.length === 0){
+    results.innerHTML = `<div class="empty-state">該当する世界任務が見つかりませんでした。</div>`;
+    return;
+  }
+
+  results.innerHTML = '';
+  filtered.forEach(item=>{
+    const row = document.createElement('div');
+    row.className = 'result-row';
+    const isRegistered = REGISTERED_TITLES.has(item.title);
+    row.innerHTML = `
+      <div class="result-main">
+        <div class="result-title">
+          ${item.title}
+          <span class="badge region">${item.region}</span>
+          ${isRegistered ? '<span class="badge registered">登録済み</span>' : ''}
+        </div>
+        ${item.note ? `<div class="result-note">${item.note}</div>` : ''}
+      </div>
+      <div class="row-actions">
+        <button class="copy-btn">コピー</button>
+      </div>
+    `;
+    row.querySelector('.copy-btn').addEventListener('click', async (e)=>{
+      const btn = e.target;
+      try{
+        await navigator.clipboard.writeText(buildSnippet(item));
+        btn.textContent = 'コピーしました';
+        btn.classList.add('copied');
+        setTimeout(()=>{ btn.textContent = 'コピー'; btn.classList.remove('copied'); }, 1500);
+      }catch(err){
+        btn.textContent = '失敗しました';
+      }
+    });
+    results.appendChild(row);
+  });
+}
+
+document.getElementById('searchInput').addEventListener('input', render);
+loadData();
+</script>
+</body>
+</html>
