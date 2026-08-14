@@ -630,7 +630,10 @@ function renderLegend(){
 }
 
 /* ---------------- RENDER MAP ---------------- */
-const lineChapterFilter = {}; // line.code -> 'all' | chapterGroup名
+const lineChapterFilter = {}; // line.code -> 'all' | グループ名
+function tabGroupOf(q){
+  return q.chapterGroup || q.region || '未分類';
+}
 
 function renderMap(){
   LINES.forEach(line=>{
@@ -648,7 +651,7 @@ function renderMap(){
     body.className = 'line-body';
 
     // 章グループが2種類以上ある路線だけ、章タブを出す
-    const groups = [...new Set(line.quests.map(q=>q.chapterGroup).filter(Boolean))];
+    const groups = [...new Set(line.quests.map(tabGroupOf).filter(Boolean))];
     if(groups.length > 1){
       lineChapterFilter[line.code] = 'all';
       const tabs = document.createElement('div');
@@ -686,7 +689,7 @@ function renderMap(){
       st.className = 'station' + (isEnded(q) ? ' ended' : '');
       st.id = 'st-' + q.id;
       st.dataset.id = q.id;
-      if(q.chapterGroup) st.dataset.group = q.chapterGroup;
+      st.dataset.group = tabGroupOf(q);
       st.style.setProperty('--c', line.color);
 
       let flags = '';
