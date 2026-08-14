@@ -17,17 +17,61 @@
       "id": "WQ-04",
       "line": "WQ",
       "order": 4,
-      "title": "部族紀聞「烟谜主」（茜特菈莉伝説任務）",
-      "chapter": "ナタ・部族紀聞シリーズ",
+      "title": "部族見聞「烟谜主」（茜特菈莉伝説任務）",
+      "chapter": "ナタ・部族見聞シリーズ",
       "region": "ナタ",
-      "desc": "茜特菈莉を巡る部族紀聞。ナタに潜伏する愚人衆執行官の部下の暗躍が描かれる。",
-      "sourceNote": "中国語圏レビュー記事(知乎)での指摘を基に追加。原文は要約・言い換え済み。",
+      "desc": "茜特菈莉を巡る部族見聞。ナタに潜伏する愚人衆執行官の部下の暗躍が描かれる。",
+      "sourceNote": "中国語圏レビュー記事(知乎)での指摘を基に追加。原文は要約・言い換え済み。表記はgenshin-dictionary.comで確認済み。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-26",
+      "line": "WQ",
+      "order": 26,
+      "title": "流泉の帰す場所",
+      "chapter": "ナタ・部族見聞シリーズ（流泉の衆）",
+      "region": "ナタ",
+      "desc": "流泉の衆を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-27",
+      "line": "WQ",
+      "order": 27,
+      "title": "ユパンキの廻焔",
+      "chapter": "ナタ・部族見聞シリーズ（懸木の民）",
+      "region": "ナタ",
+      "desc": "懸木の民を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-28",
+      "line": "WQ",
+      "order": 28,
+      "title": "祝福を祈り、テペトルに告ぐ",
+      "chapter": "ナタ・部族見聞シリーズ（こだまの子）",
+      "region": "ナタ",
+      "desc": "こだまの子を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-29",
+      "line": "WQ",
+      "order": 29,
+      "title": "塵に帰す花、堕ちる羽",
+      "chapter": "ナタ・部族見聞シリーズ（花翼の集）",
+      "region": "ナタ",
+      "desc": "花翼の集を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
       "prereqs": []
     },
     {
       "id": "AQ-03",
       "line": "AQ",
-      "order": 3,
+      "order": 505,
       "title": "灼烈の反魂の詩",
       "chapter": "第五章 第五幕",
       "region": "ナタ",
@@ -35,7 +79,23 @@
       "prereqs": [
         {
           "id": "WQ-04",
-          "reason": "本編に登場する執行官「博士」の暗躍が、部族紀聞「烟谜主」で描かれる別の執行官の部下の動きと呼応しており、先に読んでおくと愚人衆側の動機が繋がって見えます。"
+          "reason": "本編に登場する執行官「博士」の暗躍が、部族見聞「烟谜主」で描かれる別の執行官の部下の動きと呼応しており、先に読んでおくと愚人衆側の動機が繋がって見えます。"
+        },
+        {
+          "id": "WQ-26",
+          "reason": "note記事で紹介されていた履修ルートの一つ。流泉の衆の歴史を知ることで、本編での彼らの立ち位置が理解しやすくなります。"
+        },
+        {
+          "id": "WQ-27",
+          "reason": "note記事で紹介されていた履修ルートの一つ。懸木の民を巡るエピソードです。"
+        },
+        {
+          "id": "WQ-28",
+          "reason": "note記事で紹介されていた履修ルートの一つ。こだまの子を巡るエピソードです。"
+        },
+        {
+          "id": "WQ-29",
+          "reason": "note記事で紹介されていた履修ルートの一つ。花翼の集を巡るエピソードで、本編直前の内容として特に関連が深いとされています。"
         }
       ]
     },
@@ -79,9 +139,317 @@
       "summaryOf": "SQ-03"
     },
     {
+      "id": "AQ-09",
+      "line": "AQ",
+      "order": 301,
+      "title": "煙霧のベールと暗き森を抜けて",
+      "chapter": "第三章 第一幕",
+      "region": "スメール",
+      "desc": "スメール編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-10",
+      "line": "AQ",
+      "order": 302,
+      "title": "黎明を告げる千の薔薇",
+      "chapter": "第三章 第二幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-11",
+      "line": "AQ",
+      "order": 303,
+      "title": "迷夢と虚幻と欺瞞",
+      "chapter": "第三章 第三幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-12",
+      "line": "AQ",
+      "order": 304,
+      "title": "赤砂の王と三人の巡礼者",
+      "chapter": "第三章 第四幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-13",
+      "line": "AQ",
+      "order": 305,
+      "title": "虚空の鼓動、熾盛の劫火",
+      "chapter": "第三章 第五幕",
+      "region": "スメール",
+      "desc": "スメール編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-14",
+      "line": "AQ",
+      "order": 306,
+      "title": "カリベルト",
+      "chapter": "第三章 第六幕",
+      "region": "スメール",
+      "desc": "ダインスレイヴとガイアが出会う、双子とカーンルイアに関わる物語。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-15",
+      "line": "AQ",
+      "order": 401,
+      "title": "白露と黒潮の序詩",
+      "chapter": "第四章 第一幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-16",
+      "line": "AQ",
+      "order": 402,
+      "title": "ゆえなく煙る霧雨のように",
+      "chapter": "第四章 第二幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-17",
+      "line": "AQ",
+      "order": 403,
+      "title": "深海に煌めく星たちへ",
+      "chapter": "第四章 第三幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-18",
+      "line": "AQ",
+      "order": 404,
+      "title": "胎動を諭す終焉の刻",
+      "chapter": "第四章 第四幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-19",
+      "line": "AQ",
+      "order": 405,
+      "title": "罪人の円舞曲",
+      "chapter": "第四章 第五幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-20",
+      "line": "AQ",
+      "order": 406,
+      "title": "ベッドタイムストーリー",
+      "chapter": "第四章 第六幕",
+      "region": "フォンテーヌ",
+      "desc": "テイワット・カーンルイアの謎が明かされる番外編。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-21",
+      "line": "AQ",
+      "order": 506,
+      "title": "あなたのいる時空",
+      "chapter": "第五章 第六幕",
+      "region": "ナタ",
+      "desc": "第五章の帰結。ここまでの伏線が一つに収束する。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-22",
+      "line": "AQ",
+      "order": 1,
+      "title": "風を捕まえる異邦人",
+      "chapter": "序章 第一幕",
+      "region": "モンド",
+      "desc": "物語の始まり。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-23",
+      "line": "AQ",
+      "order": 2,
+      "title": "涙のない明日のために",
+      "chapter": "序章 第二幕",
+      "region": "モンド",
+      "desc": "序章の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-24",
+      "line": "AQ",
+      "order": 3,
+      "title": "龍と自由の歌",
+      "chapter": "序章 第三幕",
+      "region": "モンド",
+      "desc": "序章の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-25",
+      "line": "AQ",
+      "order": 101,
+      "title": "浮世浮生千岩間",
+      "chapter": "第一章 第一幕",
+      "region": "璃月",
+      "desc": "璃月編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-26",
+      "line": "AQ",
+      "order": 102,
+      "title": "久遠の体との別れ",
+      "chapter": "第一章 第二幕",
+      "region": "璃月",
+      "desc": "璃月編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-27",
+      "line": "AQ",
+      "order": 103,
+      "title": "迫る客星",
+      "chapter": "第一章 第三幕",
+      "region": "璃月",
+      "desc": "璃月編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-28",
+      "line": "AQ",
+      "order": 104,
+      "title": "私達はいずれ再会する",
+      "chapter": "第一章 第四幕",
+      "region": "璃月",
+      "desc": "璃月編の終幕。主人公が男(空)の場合「私達」、女(蛍)の場合「俺達」表記。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-29",
+      "line": "AQ",
+      "order": 200,
+      "title": "秋風に舞いし紅葉",
+      "chapter": "第二章 プロローグ",
+      "region": "稲妻",
+      "desc": "稲妻編の導入部。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-30",
+      "line": "AQ",
+      "order": 201,
+      "title": "鳴神不動、恒常楽土",
+      "chapter": "第二章 第一幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-31",
+      "line": "AQ",
+      "order": 202,
+      "title": "無念無想、泡影を滅す",
+      "chapter": "第二章 第二幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-32",
+      "line": "AQ",
+      "order": 203,
+      "title": "千手百目の浮世",
+      "chapter": "第二章 第三幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-33",
+      "line": "AQ",
+      "order": 204,
+      "title": "淵底に響くレクイエム",
+      "chapter": "第二章 第四幕",
+      "region": "稲妻",
+      "desc": "稲妻編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-34",
+      "line": "AQ",
+      "order": 901,
+      "title": "風立ちし鶴の帰郷",
+      "chapter": "間章 第一幕",
+      "region": "璃月",
+      "desc": "群玉閣にまつわる後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-35",
+      "line": "AQ",
+      "order": 902,
+      "title": "険路怪跡",
+      "chapter": "間章 第二幕",
+      "region": "璃月",
+      "desc": "層岩巨淵を舞台にした後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-36",
+      "line": "AQ",
+      "order": 903,
+      "title": "伽藍に落ちて",
+      "chapter": "間章 第三幕",
+      "region": "スメール",
+      "desc": "放浪者の過去が掘り下げられる後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
       "id": "AQ-05",
       "line": "AQ",
-      "order": 5,
+      "order": 904,
       "title": "背理",
       "chapter": "間章 第四幕",
       "region": null,
@@ -106,7 +474,7 @@
     {
       "id": "AQ-06",
       "line": "AQ",
-      "order": 7,
+      "order": 607,
       "title": "冬の夜、ある旅人が",
       "chapter": "空月の歌 第七幕",
       "region": "ナド・クライ",
@@ -117,7 +485,7 @@
     {
       "id": "AQ-07",
       "line": "AQ",
-      "order": 9,
+      "order": 609,
       "title": "身土壊空、五蘊識転",
       "chapter": "空月の歌 第九幕",
       "region": "ナド・クライ／スメール",
@@ -128,7 +496,7 @@
     {
       "id": "AQ-08",
       "line": "AQ",
-      "order": 10,
+      "order": 610,
       "title": "虚空劫灰のプラーナ",
       "chapter": "空月の歌 第十幕",
       "region": "ナド・クライ／スメール",
