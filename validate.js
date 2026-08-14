@@ -54,6 +54,18 @@ data.quests.forEach((q, i) => {
     errors.push(`${where}: availableUntil "${q.availableUntil}" が日付として解釈できません`);
   }
 
+  if (q.availableFrom) {
+    if (isNaN(Date.parse(q.availableFrom))) {
+      errors.push(`${where}: availableFrom "${q.availableFrom}" が日付として解釈できません`);
+    } else if (q.availableUntil && q.availableFrom > q.availableUntil) {
+      errors.push(`${where}: availableFrom(${q.availableFrom})がavailableUntil(${q.availableUntil})より後になっています`);
+    }
+  }
+
+  if (q.version && !/^\d+\.\d+$/.test(q.version)) {
+    errors.push(`${where}: version "${q.version}" の形式が不正です(例: "5.3")`);
+  }
+
   if (q.videoUrls !== undefined) {
     if (!Array.isArray(q.videoUrls)) {
       errors.push(`${where}: videoUrls は配列である必要があります`);

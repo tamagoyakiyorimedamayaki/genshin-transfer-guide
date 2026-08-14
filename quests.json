@@ -169,9 +169,11 @@
       "title": "陽夏！悪龍？童話の王国！",
       "chapter": "2024夏イベント",
       "region": null,
-      "availableUntil": "2024-08-15",
+      "availableUntil": "2024-08-27",
       "desc": "童話仕立ての期間限定イベント。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2024-07-17",
+      "version": "4.8"
     },
     {
       "id": "AQ-09",
@@ -1193,7 +1195,9 @@
       "sourceNote": "genshin-dictionary.com(CSV)ではquest-storyタグだったが、実際は期間限定イベント任務のため路線を修正(2026年再監査)。",
       "prereqs": [],
       "releaseDate": "2024-10-09",
-      "availableUntil": "2024-11-07"
+      "availableUntil": "2024-11-07",
+      "availableFrom": "2024-10-23",
+      "version": "5.1"
     },
     {
       "id": "AQ-06",
@@ -1463,7 +1467,9 @@
       "availableUntil": "2021-01-05",
       "desc": "ドラゴンスパインを舞台に、アルベドの秘密の一端が明らかになるイベント。アルベドの伝説任務「白亜の章」クリアが開放条件。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.comには未収録のため、Web検索で裏付け。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2020-12-23",
+      "version": "1.2"
     },
     {
       "id": "EQ-04",
@@ -1472,7 +1478,7 @@
       "title": "白雪に潜みし影",
       "chapter": "v2.3 期間限定イベント",
       "region": "モンド",
-      "availableUntil": "2021-11-15",
+      "availableUntil": "2022-01-05",
       "desc": "ドラゴンスパインを舞台にしたイベント。アルベドの正体にまつわる伏線が明かされる。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
@@ -1480,7 +1486,9 @@
           "id": "EQ-03",
           "reason": "ブログ記事いわく「アルベドについてはver2.3の『白雪に潜みし影』で色々と明らかになるので、そちらを見る前にこっちを見ておくといいかもしれません」とのことです。"
         }
-      ]
+      ],
+      "availableFrom": "2021-11-24",
+      "version": "2.3"
     },
     {
       "id": "EQ-05",
@@ -1489,10 +1497,12 @@
       "title": "風花の吐息",
       "chapter": "v3.5 期間限定イベント（風花祭）",
       "region": "モンド",
-      "availableUntil": "2023-03-15",
+      "availableUntil": "2023-04-11",
       "desc": "モンドの祭り「風花祭」にまつわる期間限定イベント。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-03-01",
+      "version": "3.5"
     },
     {
       "id": "EQ-06",
@@ -1504,7 +1514,9 @@
       "availableUntil": "2022-04-25",
       "desc": "稲妻の祭り「光華容彩祭」を舞台に、五歌仙にまつわる過去の秘密が描かれるイベント。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-03-30",
+      "version": "2.6"
     },
     {
       "id": "WQ-30",
@@ -1688,7 +1700,9 @@
           "id": "SQ-21",
           "reason": "公式Wikiで「推奨任務」として明記されている、モナの伝説任務「映天の章」第一幕。クリアしておくとイベントをより楽しめます。"
         }
-      ]
+      ],
+      "availableFrom": "2022-07-13",
+      "version": "2.8"
     },
     {
       "id": "EQ-09",
@@ -1700,7 +1714,9 @@
       "availableUntil": "2023-02-28",
       "desc": "海灯祭3回目のテーマイベント。甘雨・刻晴・ヨォーヨ・夜蘭・申鶴・魈・胡桃が出演。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-01-18",
+      "version": "3.4"
     },
     {
       "id": "EQ-10",
@@ -1712,7 +1728,9 @@
       "availableUntil": "2023-08-15",
       "desc": "クレー・ガイア・エウルア・コレイ・珊瑚宮心海が出演。フォンテーヌ編の前置き的な要素を含む。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-07-05",
+      "version": "3.8"
     },
     {
       "id": "EQ-11",
@@ -1729,7 +1747,9 @@
           "id": "EQ-09",
           "reason": "ブログ記事いわく「まさかのver.3.4 海灯祭の伏線回収」とのことで、エピローグの内容を先に知っておくと本編の繋がりが分かりやすくなります。"
         }
-      ]
+      ],
+      "availableFrom": "2023-09-27",
+      "version": "4.1"
     },
     {
       "id": "EQ-12",
@@ -1746,7 +1766,9 @@
           "id": "SQ-51",
           "reason": "ブログ記事いわく「これから動画を見る人は『閑雲の伝説任務』をやってから見ることをおすすめします」とのことです。"
         }
-      ]
+      ],
+      "availableFrom": "2024-01-31",
+      "version": "4.4"
     },
     {
       "id": "EQ-13",
@@ -1758,7 +1780,9 @@
       "availableUntil": "2020-11-11",
       "desc": "モンド編初期のテーマイベント。バーバラにまつわる物語が描かれる。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2020-09-28",
+      "version": "1.0"
     },
     {
       "id": "EQ-14",
@@ -1770,7 +1794,9 @@
       "availableUntil": "2020-12-23",
       "desc": "隕石の雨によって人々が眠りに落ちる事件を、フィッシュル・モナと共に調査するイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2020-11-11",
+      "version": "1.1"
     },
     {
       "id": "EQ-15",
@@ -1782,7 +1808,9 @@
       "availableUntil": "2021-03-17",
       "desc": "璃月で開催される新年の祭り「海灯祭」を舞台にしたイベント。魈が中心となる。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-02-03",
+      "version": "1.3"
     },
     {
       "id": "EQ-16",
@@ -1794,7 +1822,9 @@
       "availableUntil": "2021-04-28",
       "desc": "モンドの風花祭を舞台に、ウェンティの手伝いをするイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-03-18",
+      "version": "1.4"
     },
     {
       "id": "EQ-17",
@@ -1806,7 +1836,9 @@
       "availableUntil": "2021-06-09",
       "desc": "モンドを舞台にした期間限定イベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-04-28",
+      "version": "1.5"
     },
     {
       "id": "EQ-18",
@@ -1818,7 +1850,9 @@
       "availableUntil": "2021-07-21",
       "desc": "金リンゴ群島を舞台に、クレー・ジン・バーバラ・ガイア・ディルック・アルベド・レザーが活躍するイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-06-09",
+      "version": "1.6"
     },
     {
       "id": "EQ-19",
@@ -1830,7 +1864,9 @@
       "availableUntil": "2021-09-01",
       "desc": "稲妻編開幕期のテーマイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-07-21",
+      "version": "2.0"
     },
     {
       "id": "EQ-20",
@@ -1842,7 +1878,9 @@
       "availableUntil": "2021-10-13",
       "desc": "月逐い祭の料理大会に出場する香菱を、刻晴と共に手伝うイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-09-01",
+      "version": "2.1"
     },
     {
       "id": "EQ-21",
@@ -1854,7 +1892,9 @@
       "availableUntil": "2021-11-24",
       "desc": "辛炎の旅券問題をきっかけに、天領奉行の秘境に挑むイベント。タルタリヤ・九条裟羅が登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2021-10-13",
+      "version": "2.2"
     },
     {
       "id": "EQ-22",
@@ -1866,7 +1906,9 @@
       "availableUntil": "2022-02-16",
       "desc": "2回目の海灯祭。花火大会を担当する刻晴と、心配する凝光・鍾離が描かれる。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-01-05",
+      "version": "2.4"
     },
     {
       "id": "EQ-23",
@@ -1878,7 +1920,9 @@
       "availableUntil": "2022-03-30",
       "desc": "淵下宮の調査にまつわる複雑な謎解きイベント。心海が絡む。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-02-16",
+      "version": "2.5"
     },
     {
       "id": "EQ-24",
@@ -1890,7 +1934,9 @@
       "availableUntil": "2022-11-02",
       "desc": "ブリーズブリュー祭を舞台に、レザーの両親の謎に迫るイベント。クレー・ベネット・ウェンティが登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-09-28",
+      "version": "3.1"
     },
     {
       "id": "EQ-25",
@@ -1902,7 +1948,9 @@
       "availableUntil": "2022-12-07",
       "desc": "魔物「キノコン」を戦わせる大会イベント。新キャラのレイラ・八重神子が登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-11-02",
+      "version": "3.2"
     },
     {
       "id": "EQ-26",
@@ -1914,7 +1962,9 @@
       "availableUntil": "2023-01-18",
       "desc": "社奉行主催の肝試し大会。荒瀧一斗・鹿野院平蔵・神里綾人が中心。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2022-12-07",
+      "version": "3.3"
     },
     {
       "id": "EQ-27",
@@ -1926,7 +1976,9 @@
       "availableUntil": "2023-05-23",
       "desc": "スメールの学院祭・学院トーナメントを舞台にしたイベント。ティナリ・セノ・カーヴェ・ファルザンが登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-04-12",
+      "version": "3.6"
     },
     {
       "id": "EQ-28",
@@ -1938,7 +1990,9 @@
       "availableUntil": "2023-07-04",
       "desc": "七聖召喚の国際大会を舞台にした、新キャラ中心のイベント。シャルロット・綺良々が初登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-05-24",
+      "version": "3.7"
     },
     {
       "id": "EQ-29",
@@ -1950,7 +2004,9 @@
       "availableUntil": "2023-12-19",
       "desc": "人魚伝説の謎を調査する、フレミネが中心のイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-11-08",
+      "version": "4.2"
     },
     {
       "id": "EQ-30",
@@ -1962,7 +2018,9 @@
       "availableUntil": "2024-01-30",
       "desc": "千霊祭を舞台にした復讐劇。神里綾華と新キャラのシュヴルーズが中心。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2023-12-20",
+      "version": "4.3"
     },
     {
       "id": "EQ-31",
@@ -1974,7 +2032,9 @@
       "availableUntil": "2024-06-04",
       "desc": "荒瀧一斗が中心の音楽祭イベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2024-04-24",
+      "version": "4.6"
     },
     {
       "id": "EQ-32",
@@ -1986,7 +2046,9 @@
       "availableUntil": "2024-04-23",
       "desc": "Ver4.5期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2024-03-13",
+      "version": "4.5"
     },
     {
       "id": "EQ-33",
@@ -1998,7 +2060,9 @@
       "availableUntil": "2024-04-23",
       "desc": "Ver4.5期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2024-03-13",
+      "version": "4.5"
     },
     {
       "id": "EQ-34",
@@ -2010,7 +2074,9 @@
       "availableUntil": "2024-10-08",
       "desc": "Ver5.2期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2024-08-28",
+      "version": "5.0"
     },
     {
       "id": "EQ-35",
@@ -2022,7 +2088,9 @@
       "availableUntil": "2025-03-03",
       "desc": "Ver5.4期間限定イベント。荒瀧一斗の伝説任務に登場したNPCも関わる。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-02-14",
+      "version": "5.4"
     },
     {
       "id": "EQ-36",
@@ -2034,7 +2102,9 @@
       "availableUntil": "2025-05-26",
       "desc": "Ver5.6期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-05-07",
+      "version": "5.6"
     },
     {
       "id": "EQ-37",
@@ -2046,7 +2116,9 @@
       "availableUntil": "2025-05-26",
       "desc": "Ver5.6期間限定イベント会場。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-05-07",
+      "version": "5.6"
     },
     {
       "id": "EQ-38",
@@ -2058,7 +2130,9 @@
       "availableUntil": "2025-08-27",
       "desc": "Ver5.8夏期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-07-30",
+      "version": "5.8"
     },
     {
       "id": "EQ-39",
@@ -2070,7 +2144,9 @@
       "availableUntil": "2025-08-27",
       "desc": "Ver5.8期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-07-30",
+      "version": "5.8"
     },
     {
       "id": "EQ-40",
@@ -2082,7 +2158,9 @@
       "availableUntil": "2025-10-08",
       "desc": "Ver6.0(Luna I)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-09-10",
+      "version": "6.0"
     },
     {
       "id": "EQ-41",
@@ -2094,7 +2172,9 @@
       "availableUntil": "2025-11-19",
       "desc": "Ver6.1(Luna II)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-10-22",
+      "version": "6.1"
     },
     {
       "id": "EQ-42",
@@ -2106,7 +2186,9 @@
       "availableUntil": "2026-01-13",
       "desc": "Ver6.2(Luna III)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2025-12-03",
+      "version": "6.2"
     },
     {
       "id": "EQ-43",
@@ -2118,7 +2200,9 @@
       "availableUntil": "2026-02-24",
       "desc": "Ver6.3(Luna IV)期間限定の海灯祭イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2026-01-14",
+      "version": "6.3"
     },
     {
       "id": "EQ-44",
@@ -2130,7 +2214,9 @@
       "availableUntil": "2026-04-07",
       "desc": "Ver6.4(Luna V)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2026-02-25",
+      "version": "6.4"
     },
     {
       "id": "EQ-45",
@@ -2142,7 +2228,9 @@
       "availableUntil": "2026-05-19",
       "desc": "Ver6.5(Luna VI)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2026-04-08",
+      "version": "6.5"
     },
     {
       "id": "EQ-46",
@@ -2154,7 +2242,9 @@
       "availableUntil": "2026-06-30",
       "desc": "Ver6.6(Luna VII)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2026-05-20",
+      "version": "6.6"
     },
     {
       "id": "EQ-47",
@@ -2166,7 +2256,9 @@
       "availableUntil": "2026-08-11",
       "desc": "Ver6.7期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": []
+      "prereqs": [],
+      "availableFrom": "2026-07-01",
+      "version": "6.7"
     },
     {
       "id": "EQ-48",
@@ -2187,7 +2279,9 @@
           "id": "SQ-29",
           "reason": "公式Wikiで「推奨任務」として明記。彼岸蝶の章 第一幕。"
         }
-      ]
+      ],
+      "availableFrom": "2025-01-24",
+      "version": "5.3"
     }
   ]
 }

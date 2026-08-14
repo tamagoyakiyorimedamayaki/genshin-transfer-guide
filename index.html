@@ -424,7 +424,22 @@
   .panel .p-chapter{
     font-size:12.5px;
     color:var(--parchment-dim);
+    margin-bottom:8px;
+  }
+  .p-period{
+    display:flex;
+    align-items:center;
+    gap:8px;
     margin-bottom:16px;
+  }
+  .badge.version{
+    background:rgba(236,225,200,.08);
+    color:var(--parchment-dim);
+    border:1px solid var(--hair-strong);
+  }
+  .period-text{
+    font-size:11px;
+    color:var(--parchment-dim);
   }
   .panel .p-desc{
     font-size:13.5px;
@@ -859,10 +874,23 @@ function openPanel(id){
     `;
   }
 
+  let periodHtml = '';
+  if(q.availableFrom || q.version){
+    const fmt = (d) => d ? d.replace(/-/g, '/') : '?';
+    const periodText = (q.availableFrom || q.availableUntil)
+      ? `${fmt(q.availableFrom)} 〜 ${fmt(q.availableUntil)}`
+      : '';
+    periodHtml = `<div class="p-period">
+      ${q.version ? `<span class="badge version">Ver.${q.version}</span>` : ''}
+      ${periodText ? `<span class="period-text mono">${periodText}</span>` : ''}
+    </div>`;
+  }
+
   panelBody.innerHTML = `
     <div class="p-code mono" style="--c:${line.color}">${q.id} ・ ${line.name}</div>
     <h2>${q.title}</h2>
     <div class="p-chapter">${q.chapter}</div>
+    ${periodHtml}
     <div class="p-desc">${q.desc}</div>
     ${rescueHtml}
     <div class="p-section-title">先に乗っておきたい前提クエスト</div>
