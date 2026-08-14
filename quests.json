@@ -1178,16 +1178,17 @@
       "releaseDate": "2024-08-06"
     },
     {
-      "id": "SQ-57",
-      "line": "SQ",
-      "order": 46,
+      "id": "EQ-07",
+      "line": "EQ",
+      "order": 7,
       "title": "彼女にサプライズを",
-      "chapter": "v5.1 期間限定イベント",
+      "chapter": "v5.1 期間限定イベント「キャンディと薔薇の歌」",
       "region": null,
-      "desc": "v5.1 期間限定イベント",
-      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "desc": "v5.1テーマイベント「キャンディと薔薇の歌」の最初の話。伝説任務ではなく期間限定イベントのため、SQからEQへ分類を修正。",
+      "sourceNote": "genshin-dictionary.com(CSV)ではquest-storyタグだったが、実際は期間限定イベント任務のため路線を修正(2026年再監査)。",
       "prereqs": [],
-      "releaseDate": "2024-10-09"
+      "releaseDate": "2024-10-09",
+      "availableUntil": "2024-11-07"
     },
     {
       "id": "AQ-06",
