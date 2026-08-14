@@ -1,0 +1,728 @@
+{
+  "meta": {
+    "version": 1,
+    "updatedAt": "2026-07-27",
+    "note": "prereqs は片方向のみ保持。逆方向(依存されている側)はアプリ側で計算する。"
+  },
+
+  "lines": [
+    { "code": "AQ", "name": "魔神任務",     "sub": "Archon Quest",           "color": "#cba135" },
+    { "code": "WQ", "name": "世界任務",     "sub": "World Quest",           "color": "#3f8479" },
+    { "code": "SQ", "name": "伝説任務",     "sub": "Story / Character",     "color": "#8566c4" },
+    { "code": "EQ", "name": "期間限定任務", "sub": "Event Quest",           "color": "#c24b4b" }
+  ],
+
+  "quests": [
+    {
+      "id": "WQ-04",
+      "line": "WQ",
+      "order": 4,
+      "title": "部族見聞「烟谜主」（茜特菈莉伝説任務）",
+      "chapter": "ナタ・部族見聞シリーズ",
+      "region": "ナタ",
+      "desc": "茜特菈莉を巡る部族見聞。ナタに潜伏する愚人衆執行官の部下の暗躍が描かれる。",
+      "sourceNote": "中国語圏レビュー記事(知乎)での指摘を基に追加。原文は要約・言い換え済み。表記はgenshin-dictionary.comで確認済み。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-26",
+      "line": "WQ",
+      "order": 26,
+      "title": "流泉の帰す場所",
+      "chapter": "ナタ・部族見聞シリーズ（流泉の衆）",
+      "region": "ナタ",
+      "desc": "流泉の衆を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-27",
+      "line": "WQ",
+      "order": 27,
+      "title": "ユパンキの廻焔",
+      "chapter": "ナタ・部族見聞シリーズ（懸木の民）",
+      "region": "ナタ",
+      "desc": "懸木の民を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-28",
+      "line": "WQ",
+      "order": 28,
+      "title": "祝福を祈り、テペトルに告ぐ",
+      "chapter": "ナタ・部族見聞シリーズ（こだまの子）",
+      "region": "ナタ",
+      "desc": "こだまの子を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-29",
+      "line": "WQ",
+      "order": 29,
+      "title": "塵に帰す花、堕ちる羽",
+      "chapter": "ナタ・部族見聞シリーズ（花翼の集）",
+      "region": "ナタ",
+      "desc": "花翼の集を巡る部族見聞。",
+      "sourceNote": "note記事(個人ブログ)＋genshin-dictionary.comで表記確認。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-03",
+      "line": "AQ",
+      "order": 505,
+      "title": "灼烈の反魂の詩",
+      "chapter": "第五章 第五幕",
+      "region": "ナタ",
+      "desc": "ナタの部族に伝わる因縁が明らかになる一幕。",
+      "prereqs": [
+        {
+          "id": "WQ-04",
+          "reason": "本編に登場する執行官「博士」の暗躍が、部族見聞「烟谜主」で描かれる別の執行官の部下の動きと呼応しており、先に読んでおくと愚人衆側の動機が繋がって見えます。"
+        },
+        {
+          "id": "WQ-26",
+          "reason": "note記事で紹介されていた履修ルートの一つ。流泉の衆の歴史を知ることで、本編での彼らの立ち位置が理解しやすくなります。"
+        },
+        {
+          "id": "WQ-27",
+          "reason": "note記事で紹介されていた履修ルートの一つ。懸木の民を巡るエピソードです。"
+        },
+        {
+          "id": "WQ-28",
+          "reason": "note記事で紹介されていた履修ルートの一つ。こだまの子を巡るエピソードです。"
+        },
+        {
+          "id": "WQ-29",
+          "reason": "note記事で紹介されていた履修ルートの一つ。花翼の集を巡るエピソードで、本編直前の内容として特に関連が深いとされています。"
+        }
+      ]
+    },
+    {
+      "id": "WQ-06",
+      "line": "WQ",
+      "order": 6,
+      "title": "「灰燼に埋もれた都市」シリーズ",
+      "chapter": "オシカ・ナタ地域 長編世界任務",
+      "region": "ナタ",
+      "desc": "ナタに入って出会う仔竜との絆を描く長編世界任務シリーズ。全編クリアが前提として推奨される。",
+      "sourceNote": "note記事(個人ブログ)を要約・言い換えして追加。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-07",
+      "line": "WQ",
+      "order": 7,
+      "title": "「古の聖山」世界任務シリーズ",
+      "chapter": "地下マップ・古の聖山",
+      "region": "ナタ",
+      "desc": "かつて竜がナタを支配していた時代の歴史が明かされる、ボイス無しだが情報量の多い長編世界任務。仔竜の正体にも関わる。",
+      "sourceNote": "note記事(個人ブログ)を要約・言い換えして追加。前提ではなく事後(この任務クリア後に読むと理解が深まる)の関係。",
+      "prereqs": [
+        {
+          "id": "AQ-03",
+          "reason": "魔神任務だけでは分からない古竜の歴史と、仔竜の相棒の背景がここで明かされます。エンディング後の余韻として非常に評価が高い世界任務です。"
+        }
+      ]
+    },
+    {
+      "id": "EQ-02",
+      "line": "EQ",
+      "order": 2,
+      "title": "陽夏！悪龍？童話の王国！",
+      "chapter": "2024夏イベント",
+      "region": null,
+      "availableUntil": "2024-08-15",
+      "desc": "童話仕立ての期間限定イベント。",
+      "prereqs": [],
+      "summaryOf": "SQ-03"
+    },
+    {
+      "id": "AQ-09",
+      "line": "AQ",
+      "order": 301,
+      "title": "煙霧のベールと暗き森を抜けて",
+      "chapter": "第三章 第一幕",
+      "region": "スメール",
+      "desc": "スメール編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-10",
+      "line": "AQ",
+      "order": 302,
+      "title": "黎明を告げる千の薔薇",
+      "chapter": "第三章 第二幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-11",
+      "line": "AQ",
+      "order": 303,
+      "title": "迷夢と虚幻と欺瞞",
+      "chapter": "第三章 第三幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-12",
+      "line": "AQ",
+      "order": 304,
+      "title": "赤砂の王と三人の巡礼者",
+      "chapter": "第三章 第四幕",
+      "region": "スメール",
+      "desc": "スメール編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-13",
+      "line": "AQ",
+      "order": 305,
+      "title": "虚空の鼓動、熾盛の劫火",
+      "chapter": "第三章 第五幕",
+      "region": "スメール",
+      "desc": "スメール編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-14",
+      "line": "AQ",
+      "order": 306,
+      "title": "カリベルト",
+      "chapter": "第三章 第六幕",
+      "region": "スメール",
+      "desc": "ダインスレイヴとガイアが出会う、双子とカーンルイアに関わる物語。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-15",
+      "line": "AQ",
+      "order": 401,
+      "title": "白露と黒潮の序詩",
+      "chapter": "第四章 第一幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-16",
+      "line": "AQ",
+      "order": 402,
+      "title": "ゆえなく煙る霧雨のように",
+      "chapter": "第四章 第二幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-17",
+      "line": "AQ",
+      "order": 403,
+      "title": "深海に煌めく星たちへ",
+      "chapter": "第四章 第三幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-18",
+      "line": "AQ",
+      "order": 404,
+      "title": "胎動を諭す終焉の刻",
+      "chapter": "第四章 第四幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-19",
+      "line": "AQ",
+      "order": 405,
+      "title": "罪人の円舞曲",
+      "chapter": "第四章 第五幕",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-20",
+      "line": "AQ",
+      "order": 406,
+      "title": "ベッドタイムストーリー",
+      "chapter": "第四章 第六幕",
+      "region": "フォンテーヌ",
+      "desc": "テイワット・カーンルイアの謎が明かされる番外編。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-21",
+      "line": "AQ",
+      "order": 506,
+      "title": "あなたのいる時空",
+      "chapter": "第五章 第六幕",
+      "region": "ナタ",
+      "desc": "第五章の帰結。ここまでの伏線が一つに収束する。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-22",
+      "line": "AQ",
+      "order": 1,
+      "title": "風を捕まえる異邦人",
+      "chapter": "序章 第一幕",
+      "region": "モンド",
+      "desc": "物語の始まり。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-23",
+      "line": "AQ",
+      "order": 2,
+      "title": "涙のない明日のために",
+      "chapter": "序章 第二幕",
+      "region": "モンド",
+      "desc": "序章の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-24",
+      "line": "AQ",
+      "order": 3,
+      "title": "龍と自由の歌",
+      "chapter": "序章 第三幕",
+      "region": "モンド",
+      "desc": "序章の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-25",
+      "line": "AQ",
+      "order": 101,
+      "title": "浮世浮生千岩間",
+      "chapter": "第一章 第一幕",
+      "region": "璃月",
+      "desc": "璃月編の開幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-26",
+      "line": "AQ",
+      "order": 102,
+      "title": "久遠の体との別れ",
+      "chapter": "第一章 第二幕",
+      "region": "璃月",
+      "desc": "璃月編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-27",
+      "line": "AQ",
+      "order": 103,
+      "title": "迫る客星",
+      "chapter": "第一章 第三幕",
+      "region": "璃月",
+      "desc": "璃月編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-28",
+      "line": "AQ",
+      "order": 104,
+      "title": "私達はいずれ再会する",
+      "chapter": "第一章 第四幕",
+      "region": "璃月",
+      "desc": "璃月編の終幕。主人公が男(空)の場合「私達」、女(蛍)の場合「俺達」表記。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-29",
+      "line": "AQ",
+      "order": 200,
+      "title": "秋風に舞いし紅葉",
+      "chapter": "第二章 プロローグ",
+      "region": "稲妻",
+      "desc": "稲妻編の導入部。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-30",
+      "line": "AQ",
+      "order": 201,
+      "title": "鳴神不動、恒常楽土",
+      "chapter": "第二章 第一幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-31",
+      "line": "AQ",
+      "order": 202,
+      "title": "無念無想、泡影を滅す",
+      "chapter": "第二章 第二幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-32",
+      "line": "AQ",
+      "order": 203,
+      "title": "千手百目の浮世",
+      "chapter": "第二章 第三幕",
+      "region": "稲妻",
+      "desc": "稲妻編の一幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-33",
+      "line": "AQ",
+      "order": 204,
+      "title": "淵底に響くレクイエム",
+      "chapter": "第二章 第四幕",
+      "region": "稲妻",
+      "desc": "稲妻編の終幕。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-34",
+      "line": "AQ",
+      "order": 901,
+      "title": "風立ちし鶴の帰郷",
+      "chapter": "間章 第一幕",
+      "region": "璃月",
+      "desc": "群玉閣にまつわる後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-35",
+      "line": "AQ",
+      "order": 902,
+      "title": "険路怪跡",
+      "chapter": "間章 第二幕",
+      "region": "璃月",
+      "desc": "層岩巨淵を舞台にした後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-36",
+      "line": "AQ",
+      "order": 903,
+      "title": "伽藍に落ちて",
+      "chapter": "間章 第三幕",
+      "region": "スメール",
+      "desc": "放浪者の過去が掘り下げられる後日譚。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-05",
+      "line": "AQ",
+      "order": 904,
+      "title": "背理",
+      "chapter": "間章 第四幕",
+      "region": null,
+      "desc": "間章で描かれる、過去に決着をつけられなかった因縁との再会。",
+      "prereqs": [
+        {
+          "id": "EQ-02",
+          "reason": "対峙する敵キャラクターの過去と動機が描かれた期間限定イベントです。未プレイだと関係性がやや唐突に感じられます。"
+        }
+      ]
+    },
+    {
+      "id": "SQ-03",
+      "line": "SQ",
+      "order": 3,
+      "title": "伝説任務まとめ（間章）",
+      "chapter": "アーカイブ",
+      "region": null,
+      "desc": "間章で語られた過去エピソードのダイジェスト。期間限定任務の内容もここで振り返れます。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-06",
+      "line": "AQ",
+      "order": 607,
+      "title": "冬の夜、ある旅人が",
+      "chapter": "空月の歌 第七幕",
+      "region": "ナド・クライ",
+      "desc": "間章「空月の歌」の一幕。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-07",
+      "line": "AQ",
+      "order": 609,
+      "title": "身土壊空、五蘊識転",
+      "chapter": "空月の歌 第九幕",
+      "region": "ナド・クライ／スメール",
+      "desc": "間章「空月の歌」の一幕。スメールの六賢人が登場する。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "AQ-08",
+      "line": "AQ",
+      "order": 610,
+      "title": "虚空劫灰のプラーナ",
+      "chapter": "空月の歌 第十幕",
+      "region": "ナド・クライ／スメール",
+      "desc": "間章「空月の歌」の一幕。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "SQ-04",
+      "line": "SQ",
+      "order": 4,
+      "title": "天狼の章",
+      "chapter": "ファルカ伝説任務",
+      "region": "モンド／ナド・クライ",
+      "desc": "ファルカを巡る伝説任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "SQ-05",
+      "line": "SQ",
+      "order": 5,
+      "title": "騎士兎の章",
+      "chapter": "ローエン伝説任務",
+      "region": "モンド",
+      "desc": "ローエンを巡る伝説任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-08",
+      "line": "WQ",
+      "order": 8,
+      "title": "淑女のお誘い",
+      "chapter": "フォンテーヌ・世界任務",
+      "region": "フォンテーヌ",
+      "desc": "サンドローネがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-09",
+      "line": "WQ",
+      "order": 9,
+      "title": "情報取引",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-10",
+      "line": "WQ",
+      "order": 10,
+      "title": "海賊船の幽霊騒ぎ",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-11",
+      "line": "WQ",
+      "order": 11,
+      "title": "偶然の依頼",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-12",
+      "line": "WQ",
+      "order": 12,
+      "title": "貨物盗難事件",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-13",
+      "line": "WQ",
+      "order": 13,
+      "title": "様子のおかしい隠者",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-14",
+      "line": "WQ",
+      "order": 14,
+      "title": "ちいさな依頼",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-15",
+      "line": "WQ",
+      "order": 15,
+      "title": "消えた賞金首",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-16",
+      "line": "WQ",
+      "order": 16,
+      "title": "一件落着",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-17",
+      "line": "WQ",
+      "order": 17,
+      "title": "かつて過去を捨てた者",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ヤフォダがパーティにいる状態で受注できる世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-18",
+      "line": "WQ",
+      "order": 18,
+      "title": "音のない劇場",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ナド・クライの世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-19",
+      "line": "WQ",
+      "order": 19,
+      "title": "失われた宮殿",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ナド・クライの世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-20",
+      "line": "WQ",
+      "order": 20,
+      "title": "憂いなき灯台",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ナド・クライの世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-21",
+      "line": "WQ",
+      "order": 21,
+      "title": "導きの職務…?",
+      "chapter": "モンド・魔女の課題（ニコ）",
+      "region": "モンド",
+      "desc": "魔女の課題シリーズ、ニコに関する世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-22",
+      "line": "WQ",
+      "order": 22,
+      "title": "杯と余白と空白の物語",
+      "chapter": "モンド・魔女の課題（ファルカ）",
+      "region": "モンド",
+      "desc": "魔女の課題シリーズ、ファルカに関する世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-23",
+      "line": "WQ",
+      "order": 23,
+      "title": "反論できない命題",
+      "chapter": "モンド・魔女の課題（プルーネ）",
+      "region": "モンド",
+      "desc": "魔女の課題シリーズ、プルーネに関する世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-24",
+      "line": "WQ",
+      "order": 24,
+      "title": "金銀に勝るもの",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ナド・クライの世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-25",
+      "line": "WQ",
+      "order": 25,
+      "title": "賑わいの浮き島",
+      "chapter": "ナド・クライ・世界任務",
+      "region": "ナド・クライ",
+      "desc": "ナド・クライの世界任務。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "prereqs": []
+    }
+  ]
+}
