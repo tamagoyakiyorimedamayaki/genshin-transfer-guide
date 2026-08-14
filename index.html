@@ -344,7 +344,8 @@
     transition:opacity .2s ease;
     z-index:20;
   }
-  .scrim.open{opacity:1; pointer-events:auto;}
+  .scrim.open{opacity:1; pointer-events:auto; cursor:grab;}
+  .scrim.open.dragging{cursor:grabbing;}
   .panel{
     position:fixed;
     top:0; right:0; bottom:0;
@@ -549,6 +550,8 @@ const mapInner = document.getElementById('mapInner');
 const mapScroll = document.getElementById('mapScroll');
 const legendBar = document.getElementById('legendBar');
 let suppressNextClick = false;
+let pinnedId = null; // パネル表示中に固定するハイライト対象
+let isMapDragging = false; // ドラッグ中はホバー判定を止める
 const svg = document.getElementById('connectors');
 const panel = document.getElementById('panel');
 const panelBody = document.getElementById('panelBody');
@@ -879,10 +882,17 @@ function openPanel(id){
   `;
   panel.classList.add('open');
   scrim.classList.add('open');
+
+  // パネルを開いている間は、ドラッグやマウス移動でハイライトが消えないよう固定する
+  pinnedId = id;
+  clearHighlight();
+  highlight(id);
 }
 function closePanel(){
   panel.classList.remove('open');
   scrim.classList.remove('open');
+  pinnedId = null;
+  clearHighlight();
 }
 
 /* ---------------- EVENTS ---------------- */
@@ -892,14 +902,26 @@ function wireDragScroll(){
   let dragMoved = false;
   let startX = 0;
   let startScroll = 0;
+  let startedOnScrim = false;
 
-  mapScroll.addEventListener('pointerdown', e=>{
-    // 右クリックや、パネル・チェックボックスなど別要素の操作は素通りさせる
+  function startDrag(e, fromScrim){
     if(e.button !== 0) return;
     isDown = true;
     dragMoved = false;
+    startedOnScrim = fromScrim;
     startX = e.clientX;
     startScroll = mapScroll.scrollLeft;
+  }
+
+  mapScroll.addEventListener('pointerdown', e=>{
+    // チェックボックスやボタンなど、他の操作要素の上からは開始させない
+    if(e.target.closest('button, input, a')) return;
+    startDrag(e, false);
+  });
+
+  // パネル表示中はscrimが画面全体を覆うので、scrim上でもドラッグを拾う
+  scrim.addEventListener('pointerdown', e=>{
+    startDrag(e, true);
   });
 
   window.addEventListener('pointermove', e=>{
@@ -908,6 +930,8 @@ function wireDragScroll(){
     if(!dragMoved && Math.abs(dx) > 4){
       dragMoved = true;
       mapScroll.classList.add('dragging');
+      scrim.classList.add('dragging');
+      isMapDragging = true;
     }
     if(dragMoved){
       mapScroll.scrollLeft = startScroll - dx;
@@ -915,18 +939,32 @@ function wireDragScroll(){
   });
 
   window.addEventListener('pointerup', ()=>{
-    if(isDown && dragMoved) suppressNextClick = true;
+    if(isDown && dragMoved){
+      suppressNextClick = true;
+    } else if(isDown && startedOnScrim){
+      // scrim上でドラッグせずに離した場合は、今まで通りクリックでパネルを閉じる
+      closePanel();
+    }
     isDown = false;
+    dragMoved = false;
+    startedOnScrim = false;
+    isMapDragging = false;
     mapScroll.classList.remove('dragging');
+    scrim.classList.remove('dragging');
   });
   window.addEventListener('pointercancel', ()=>{
     isDown = false;
+    dragMoved = false;
+    startedOnScrim = false;
+    isMapDragging = false;
     mapScroll.classList.remove('dragging');
+    scrim.classList.remove('dragging');
   });
 }
 
 function wireEvents(){
   mapInner.addEventListener('mouseover', e=>{
+    if(pinnedId || isMapDragging) return; // パネル表示中・ドラッグ中はホバーで動かさない
     const st = e.target.closest('.station');
     if(st){
       clearHighlight();
@@ -936,7 +974,10 @@ function wireEvents(){
       clearHighlight();
     }
   });
-  mapInner.addEventListener('mouseleave', clearHighlight);
+  mapInner.addEventListener('mouseleave', ()=>{
+    if(pinnedId) return;
+    clearHighlight();
+  });
 
   mapInner.addEventListener('click', e=>{
     if(suppressNextClick){ suppressNextClick = false; return; }
@@ -945,7 +986,6 @@ function wireEvents(){
     openPanel(st.dataset.id);
   });
   document.getElementById('panelClose').addEventListener('click', closePanel);
-  scrim.addEventListener('click', closePanel);
 
   wireDragScroll();
 
