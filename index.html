@@ -183,6 +183,16 @@
     overflow-x:auto;
     overflow-y:hidden;
     padding:28px 0 40px;
+    cursor:grab;
+    user-select:none;
+    -webkit-user-select:none;
+  }
+  .map-scroll.dragging{
+    cursor:grabbing;
+    scroll-behavior:auto;
+  }
+  .map-scroll.dragging .station{
+    pointer-events:none;
   }
   .map-inner{
     position:relative;
@@ -558,7 +568,7 @@
   </div>
 </div>
 
-<div class="map-scroll">
+<div class="map-scroll" id="mapScroll">
   <div class="map-inner" id="mapInner">
     <svg id="connectors"></svg>
     <!-- line rows injected by JS -->
@@ -586,7 +596,9 @@ let QUESTS = {};
 let EDGES = [];
 
 const mapInner = document.getElementById('mapInner');
+const mapScroll = document.getElementById('mapScroll');
 const legendBar = document.getElementById('legendBar');
+let suppressNextClick = false;
 const svg = document.getElementById('connectors');
 const panel = document.getElementById('panel');
 const panelBody = document.getElementById('panelBody');
@@ -925,6 +937,45 @@ function closePanel(){
 }
 
 /* ---------------- EVENTS ---------------- */
+/* ---------------- DRAG TO SCROLL ---------------- */
+function wireDragScroll(){
+  let isDown = false;
+  let dragMoved = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  mapScroll.addEventListener('pointerdown', e=>{
+    // 右クリックや、パネル・チェックボックスなど別要素の操作は素通りさせる
+    if(e.button !== 0) return;
+    isDown = true;
+    dragMoved = false;
+    startX = e.clientX;
+    startScroll = mapScroll.scrollLeft;
+  });
+
+  window.addEventListener('pointermove', e=>{
+    if(!isDown) return;
+    const dx = e.clientX - startX;
+    if(!dragMoved && Math.abs(dx) > 4){
+      dragMoved = true;
+      mapScroll.classList.add('dragging');
+    }
+    if(dragMoved){
+      mapScroll.scrollLeft = startScroll - dx;
+    }
+  });
+
+  window.addEventListener('pointerup', ()=>{
+    if(isDown && dragMoved) suppressNextClick = true;
+    isDown = false;
+    mapScroll.classList.remove('dragging');
+  });
+  window.addEventListener('pointercancel', ()=>{
+    isDown = false;
+    mapScroll.classList.remove('dragging');
+  });
+}
+
 function wireEvents(){
   mapInner.addEventListener('mouseover', e=>{
     const st = e.target.closest('.station');
@@ -935,12 +986,15 @@ function wireEvents(){
   mapInner.addEventListener('mouseleave', clearHighlight);
 
   mapInner.addEventListener('click', e=>{
+    if(suppressNextClick){ suppressNextClick = false; return; }
     const st = e.target.closest('.station');
     if(!st) return;
     openPanel(st.dataset.id);
   });
   document.getElementById('panelClose').addEventListener('click', closePanel);
   scrim.addEventListener('click', closePanel);
+
+  wireDragScroll();
 
   legendBar.addEventListener('change', e=>{
     const cb = e.target.closest('input[type="checkbox"]');
