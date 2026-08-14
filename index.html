@@ -459,6 +459,14 @@
     align-items:flex-start;
   }
   .p-item:last-child{border-bottom:none;}
+  a.p-item{
+    color:inherit;
+    text-decoration:none;
+    cursor:pointer;
+    transition:opacity .15s ease;
+  }
+  a.p-item:hover{opacity:.75;}
+  a.p-item:hover .body b{color:var(--gold);}
   .p-item .dot{
     width:9px;height:9px;border-radius:50%;
     margin-top:4px;
@@ -836,6 +844,21 @@ function openPanel(id){
       本編を読む上で必要な情報は「${target ? target.title : q.summaryOf}」の伝説任務まとめで振り返り可能です。</div>`;
   }
 
+  let videoHtml = '';
+  if(q.videoUrls && q.videoUrls.length){
+    videoHtml = `
+    <div class="p-section-title" style="margin-top:20px;">▶ 関連動画</div>
+    ${q.videoUrls.map(v=>`
+      <a class="p-item video-link" href="${v.url}" target="_blank" rel="noopener noreferrer">
+        <span class="dot" style="background:${line.color}"></span>
+        <div class="body">
+          <b>${v.title}</b>
+          <div class="reason">公式YouTubeで見る ↗</div>
+        </div>
+      </a>`).join('')}
+    `;
+  }
+
   panelBody.innerHTML = `
     <div class="p-code mono" style="--c:${line.color}">${q.id} ・ ${line.name}</div>
     <h2>${q.title}</h2>
@@ -863,6 +886,7 @@ function openPanel(id){
           <div class="reason">${d._line.name} ／ ${d.chapter}</div>
         </div>
       </div>`).join('') : '<div class="p-empty">現時点では確認されていません。</div>'}
+    ${videoHtml}
   `;
   panel.classList.add('open');
   scrim.classList.add('open');

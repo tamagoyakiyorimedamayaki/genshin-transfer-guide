@@ -53,6 +53,17 @@ data.quests.forEach((q, i) => {
   if (q.availableUntil && isNaN(Date.parse(q.availableUntil))) {
     errors.push(`${where}: availableUntil "${q.availableUntil}" が日付として解釈できません`);
   }
+
+  if (q.videoUrls !== undefined) {
+    if (!Array.isArray(q.videoUrls)) {
+      errors.push(`${where}: videoUrls は配列である必要があります`);
+    } else {
+      q.videoUrls.forEach((v, vi) => {
+        if (!v.title || !v.title.trim()) errors.push(`${where}: videoUrls[${vi}] に title がありません`);
+        if (!v.url || !/^https?:\/\//.test(v.url)) errors.push(`${where}: videoUrls[${vi}] の url が不正です("${v.url}")`);
+      });
+    }
+  }
 });
 
 // 結果表示
