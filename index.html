@@ -184,6 +184,37 @@
     margin-bottom:6px;
   }
   .line-row.hidden{display:none;}
+  .line-body{
+    display:flex;
+    flex-direction:column;
+    flex:1 1 auto;
+    min-width:0;
+  }
+  .chapter-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    padding:10px 24px 0 6px;
+  }
+  .chapter-tab{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10.5px;
+    padding:4px 11px;
+    border-radius:20px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink-2);
+    color:var(--parchment-dim);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .chapter-tab:hover{border-color:var(--parchment-dim);}
+  .chapter-tab.active{
+    background:var(--c, var(--gold));
+    border-color:var(--c, var(--gold));
+    color:#14110d;
+    font-weight:700;
+  }
   .line-label{
     position:sticky;
     left:0;
@@ -599,6 +630,8 @@ function renderLegend(){
 }
 
 /* ---------------- RENDER MAP ---------------- */
+const lineChapterFilter = {}; // line.code -> 'all' | chapterGroup名
+
 function renderMap(){
   LINES.forEach(line=>{
     const row = document.createElement('div');
@@ -611,6 +644,39 @@ function renderMap(){
       <span class="line-name">${line.name}<small>${line.sub||''}</small></span>`;
     row.appendChild(label);
 
+    const body = document.createElement('div');
+    body.className = 'line-body';
+
+    // 章グループが2種類以上ある路線だけ、章タブを出す
+    const groups = [...new Set(line.quests.map(q=>q.chapterGroup).filter(Boolean))];
+    if(groups.length > 1){
+      lineChapterFilter[line.code] = 'all';
+      const tabs = document.createElement('div');
+      tabs.className = 'chapter-tabs';
+      tabs.style.setProperty('--c', line.color);
+      const allTab = document.createElement('button');
+      allTab.className = 'chapter-tab active';
+      allTab.textContent = 'すべて';
+      allTab.dataset.group = 'all';
+      tabs.appendChild(allTab);
+      groups.forEach(g=>{
+        const tab = document.createElement('button');
+        tab.className = 'chapter-tab';
+        tab.textContent = g;
+        tab.dataset.group = g;
+        tabs.appendChild(tab);
+      });
+      tabs.addEventListener('click', e=>{
+        const btn = e.target.closest('.chapter-tab');
+        if(!btn) return;
+        lineChapterFilter[line.code] = btn.dataset.group;
+        tabs.querySelectorAll('.chapter-tab').forEach(t=>t.classList.toggle('active', t===btn));
+        applyChapterFilter(line.code);
+        redraw();
+      });
+      body.appendChild(tabs);
+    }
+
     const track = document.createElement('div');
     track.className = 'line-track';
     track.style.setProperty('--rail-color', line.color);
@@ -620,6 +686,7 @@ function renderMap(){
       st.className = 'station' + (isEnded(q) ? ' ended' : '');
       st.id = 'st-' + q.id;
       st.dataset.id = q.id;
+      if(q.chapterGroup) st.dataset.group = q.chapterGroup;
       st.style.setProperty('--c', line.color);
 
       let flags = '';
@@ -635,7 +702,8 @@ function renderMap(){
       track.appendChild(st);
     });
 
-    row.appendChild(track);
+    body.appendChild(track);
+    row.appendChild(body);
     mapInner.appendChild(row);
   });
 
@@ -643,10 +711,21 @@ function renderMap(){
   mapInner.appendChild(svg);
 }
 
+function applyChapterFilter(code){
+  const filter = lineChapterFilter[code];
+  mapInner.querySelectorAll(`.line-row[data-code="${code}"] .station`).forEach(st=>{
+    const show = filter === 'all' || st.dataset.group === filter;
+    st.style.display = show ? '' : 'none';
+  });
+}
+
 /* ---------------- CONNECTORS ---------------- */
-function isRowVisible(code){
-  const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
-  return row && !row.classList.contains('hidden');
+function isStationVisible(id){
+  const el = document.getElementById('st-'+id);
+  if(!el) return false;
+  const row = el.closest('.line-row');
+  if(row && row.classList.contains('hidden')) return false;
+  return el.style.display !== 'none';
 }
 
 function drawConnectors(){
@@ -663,7 +742,7 @@ function drawConnectors(){
   EDGES.forEach(edge=>{
     const fromQ = QUESTS[edge.from], toQ = QUESTS[edge.to];
     if(!fromQ || !toQ) return;
-    if(!isRowVisible(fromQ._line.code) || !isRowVisible(toQ._line.code)) return;
+    if(!isStationVisible(edge.from) || !isStationVisible(edge.to)) return;
     const fromEl = document.getElementById('st-'+edge.from);
     const toEl = document.getElementById('st-'+edge.to);
     if(!fromEl || !toEl) return;
