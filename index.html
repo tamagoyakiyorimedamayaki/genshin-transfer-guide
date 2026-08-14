@@ -72,54 +72,6 @@
     margin:0;
   }
 
-  /* ---------- Ticker (運行情報) ---------- */
-  .ticker-wrap{
-    margin-top:22px;
-    border:1px solid var(--hair-strong);
-    background:var(--ink-2);
-    border-radius:8px;
-    overflow:hidden;
-    display:flex;
-    align-items:stretch;
-  }
-  .ticker-label{
-    flex:0 0 auto;
-    background:linear-gradient(180deg, #2a2318, #1c1812);
-    color:var(--gold);
-    font-family:'JetBrains Mono', monospace;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.1em;
-    padding:9px 14px;
-    display:flex;
-    align-items:center;
-    gap:6px;
-    border-right:1px solid var(--hair-strong);
-    white-space:nowrap;
-  }
-  .ticker-label .dot{width:6px;height:6px;border-radius:50%;background:#e0553f;box-shadow:0 0 6px #e0553f;}
-  .ticker-viewport{
-    flex:1 1 auto;
-    overflow:hidden;
-    position:relative;
-    min-width:0;
-  }
-  .ticker-track{
-    display:inline-flex;
-    white-space:nowrap;
-    padding:9px 0;
-    animation: scroll-left 32s linear infinite;
-    font-family:'JetBrains Mono', monospace;
-    font-size:12.5px;
-    color:var(--parchment-dim);
-  }
-  .ticker-track span{padding:0 28px;}
-  .ticker-track b{color:var(--parchment);font-weight:700;}
-  @keyframes scroll-left{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-50%);}
-  }
-
   /* ---------- Legend / filters ---------- */
   .legend-bar{
     display:flex;
@@ -549,13 +501,6 @@
     <br>
     <a href="reference.html" style="color:var(--jade); text-decoration:none; font-size:12.5px; display:inline-block; margin-top:8px;">🔍 世界任務を検索・参照する →</a>
   </p>
-
-  <div class="ticker-wrap">
-    <div class="ticker-label"><span class="dot"></span>運行情報</div>
-    <div class="ticker-viewport">
-      <div class="ticker-track" id="tickerTrack"></div>
-    </div>
-  </div>
 </header>
 
 <div class="legend-bar" id="legendBar">
@@ -621,7 +566,6 @@ async function loadData(){
   renderLegend();
   renderMap();
   wireEvents();
-  buildTicker();
   redraw();
 }
 
@@ -979,9 +923,13 @@ function wireDragScroll(){
 function wireEvents(){
   mapInner.addEventListener('mouseover', e=>{
     const st = e.target.closest('.station');
-    if(!st) return;
-    clearHighlight();
-    highlight(st.dataset.id);
+    if(st){
+      clearHighlight();
+      highlight(st.dataset.id);
+    } else {
+      // 任務タイル以外(隙間・接続線・路線ラベルなど)にカーソルが乗ったら即座に解除
+      clearHighlight();
+    }
   });
   mapInner.addEventListener('mouseleave', clearHighlight);
 
@@ -1032,16 +980,6 @@ function resetAllFilters(){
   });
 
   redraw();
-}
-
-/* ---------------- TICKER CONTENT ---------------- */
-function buildTicker(){
-  const tickerItems = EDGES.filter(e=>e.type==='prereq').map(e=>{
-    const fromQ = QUESTS[e.from], toQ = QUESTS[e.to];
-    if(!fromQ || !toQ) return '';
-    return `<span>◆ <b>${toQ.id} ${toQ.title}</b> の前に <b>${fromQ.id} ${fromQ.title}</b> の乗車をおすすめします</span>`;
-  }).filter(Boolean);
-  document.getElementById('tickerTrack').innerHTML = tickerItems.join('') + tickerItems.join('');
 }
 
 /* ---------------- INIT ---------------- */
