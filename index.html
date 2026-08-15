@@ -129,6 +129,7 @@
   .legend-note .k{display:flex;align-items:center;gap:6px;}
   .legend-note .ln{width:20px;height:0;border-top:2px dashed var(--parchment-dim);}
   .legend-note .ln2{width:20px;height:0;border-top:2px solid var(--parchment-dim);}
+  .legend-note .ln3{width:20px;height:0;border-top:3px solid var(--jade);}
 
   /* ---------- Map ---------- */
   .map-scroll{
@@ -174,7 +175,13 @@
     display:flex;
     flex-wrap:wrap;
     gap:6px;
-    padding:10px 24px 0 6px;
+    padding:10px 24px 10px 6px;
+    position:sticky;
+    left:168px; /* line-labelの幅ぶんだけ右にずらして、その隣に固定表示する */
+    width:fit-content;
+    z-index:4;
+    background:var(--ink);
+    border-radius:0 10px 10px 0;
   }
   .chapter-tab{
     font-family:'JetBrains Mono', monospace;
@@ -206,6 +213,11 @@
     padding:14px 16px 14px 5vw;
     margin-left:-5vw;
     background:linear-gradient(90deg, var(--ink) 78%, rgba(20,17,13,0));
+    align-self:flex-start; /* 行全体ではなく、自分のコンテンツ量に応じた高さにする */
+  }
+  /* 章/地域タブがある行は、タブの高さぶんラベルを下にずらしてタイルの中央付近に合わせる */
+  .line-row:has(.chapter-tabs) .line-label{
+    margin-top:82px;
   }
   .line-badge{
     width:34px;height:34px;
@@ -231,20 +243,24 @@
   }
   .line-track{
     display:flex;
-    align-items:center;
-    gap:22px;
+    align-items:flex-start;
+    gap:60px;
     padding:20px 24px 20px 6px;
     position:relative;
   }
   .line-track::before{
     content:"";
     position:absolute;
-    left:6px; right:24px; top:50%;
+    left:6px; right:24px; top:66px; /* タイル1枚分の高さを基準にした固定位置(行全体の高さに依存させない) */
     height:3px;
     background:var(--rail-color, var(--hair-strong));
     opacity:.35;
     transform:translateY(-50%);
     z-index:0;
+  }
+  /* 伝説任務は分岐が多く横線が煩雑になるため非表示にする */
+  .line-row[data-code="SQ"] .line-track::before{
+    display:none;
   }
 
   .station-slot{
@@ -256,14 +272,14 @@
     flex:0 0 208px; /* line-track(横並び)内での幅をここで固定 */
   }
   .station-slot.has-branch{
-    padding:8px 0;
+    padding:0 0 8px 0; /* 上は0(他の列と上揃えを保つ)、下だけ少し余白 */
   }
   .station-slot.has-branch::before{
     /* 分岐スロットであることを示す縦の連結線 */
     content:"";
     position:absolute;
     left:-2px;
-    top:8px;
+    top:0;
     bottom:8px;
     width:2px;
     background:var(--rail-color, var(--hair-strong));
@@ -476,6 +492,12 @@
   }
   a.p-item:hover{opacity:.75;}
   a.p-item:hover .body b{color:var(--gold);}
+  .p-item-nav{
+    cursor:pointer;
+    transition:opacity .15s ease;
+  }
+  .p-item-nav:hover{opacity:.75;}
+  .p-item-nav:hover .body b{color:var(--gold);}
   .p-item .dot{
     width:9px;height:9px;border-radius:50%;
     margin-top:4px;
@@ -496,6 +518,18 @@
     background:rgba(194,75,75,.15);
     color:#e0716f;
     border:1px solid rgba(194,75,75,.4);
+    vertical-align:middle;
+  }
+  .unlock-badge{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    padding:2px 7px;
+    margin-left:6px;
+    border-radius:20px;
+    background:rgba(63,132,121,.15);
+    color:var(--jade);
+    border:1px solid rgba(63,132,121,.4);
     vertical-align:middle;
   }
   .p-item .body span.pcode{
@@ -553,6 +587,7 @@
   <button id="resetFiltersBtn" class="reset-btn">↺ 絞り込みを解除</button>
   <div class="legend-note">
     <span class="k"><span class="ln"></span>おすすめ前提</span>
+    <span class="k"><span class="ln3"></span>解放条件</span>
     <span class="k"><span class="ln2"></span>まとめ・収録</span>
   </div>
 </div>
@@ -643,7 +678,7 @@ function buildModel(data){
   EDGES = [];
   LINES.forEach(line=>line.quests.forEach(q=>{
     (q.prereqs||[]).forEach(p=>{
-      EDGES.push({from:p.id, to:q.id, type:'prereq', reason:p.reason});
+      EDGES.push({from:p.id, to:q.id, type:'prereq', prereqType:p.type||'story', reason:p.reason});
     });
     if(q.summaryOf){
       EDGES.push({from:q.id, to:q.summaryOf, type:'summary'});
@@ -671,7 +706,6 @@ function renderLegend(){
 }
 
 /* ---------------- RENDER MAP ---------------- */
-const lineChapterFilter = {}; // line.code -> 'all' | グループ名
 function tabGroupOf(q){
   return q.chapterGroup || q.region || '未分類';
 }
@@ -691,21 +725,15 @@ function renderMap(){
     const body = document.createElement('div');
     body.className = 'line-body';
 
-    // 章グループが2種類以上ある路線だけ、章タブを出す
+    // 章タブは魔神任務(AQ)だけに表示する。押すとその章の位置へジャンプする(絞り込みはしない)
     const groups = [...new Set(line.quests.map(tabGroupOf).filter(Boolean))];
-    if(groups.length > 1){
-      lineChapterFilter[line.code] = 'all';
+    if(line.code === 'AQ' && groups.length > 1){
       const tabs = document.createElement('div');
       tabs.className = 'chapter-tabs';
       tabs.style.setProperty('--c', line.color);
-      const allTab = document.createElement('button');
-      allTab.className = 'chapter-tab active';
-      allTab.textContent = 'すべて';
-      allTab.dataset.group = 'all';
-      tabs.appendChild(allTab);
-      groups.forEach(g=>{
+      groups.forEach((g, i)=>{
         const tab = document.createElement('button');
-        tab.className = 'chapter-tab';
+        tab.className = 'chapter-tab' + (i===0 ? ' active' : '');
         tab.textContent = g;
         tab.dataset.group = g;
         tabs.appendChild(tab);
@@ -713,10 +741,8 @@ function renderMap(){
       tabs.addEventListener('click', e=>{
         const btn = e.target.closest('.chapter-tab');
         if(!btn) return;
-        lineChapterFilter[line.code] = btn.dataset.group;
         tabs.querySelectorAll('.chapter-tab').forEach(t=>t.classList.toggle('active', t===btn));
-        applyChapterFilter(line.code);
-        redraw();
+        scrollToChapterGroup(line.code, btn.dataset.group);
       });
       body.appendChild(tabs);
     }
@@ -724,6 +750,14 @@ function renderMap(){
     const track = document.createElement('div');
     track.className = 'line-track';
     track.style.setProperty('--rail-color', line.color);
+    if(line.code === 'WQ'){
+      // 魔神任務との垂直な接続線を避けるため、世界任務の路線全体を右にずらして表示する
+      track.style.marginLeft = '220px';
+    }
+    if(line.code === 'SQ'){
+      // 同様に、魔神任務との垂直な接続線を避けるため右にずらす(縦積みが多いので少し多め)
+      track.style.marginLeft = '260px';
+    }
 
     // 同じorder値を持つクエストは1つの「スロット」にまとめ、縦に積んで表示する
     // (公式ストーリーマップで分岐として並列表示される幕に対応するため)
@@ -734,13 +768,33 @@ function renderMap(){
       slotMap.get(key).push(q);
     });
 
+    // 章/地域グループの境目ごとの余白量(px)。指定が無い境目はデフォルト値を使う。
+    const GROUP_GAP_DEFAULT = 36;
+    const GROUP_GAP_OVERRIDES = {
+      '序章→第一章': 900,
+      '第一章→第二章': 900,
+      '第二章→第三章': 900,
+      '第三章→第四章': 900,
+      '第四章→第五章': 900,
+    };
+
+    let prevGroup = null;
     [...slotMap.entries()]
       .sort((a,b)=> a[0]-b[0])
-      .forEach(([, questsInSlot])=>{
+      .forEach(([orderKey, questsInSlot])=>{
         questsInSlot.sort((a,b)=> (a.branchRow||0) - (b.branchRow||0));
 
         const slot = document.createElement('div');
         slot.className = 'station-slot' + (questsInSlot.length > 1 ? ' has-branch' : '');
+        slot.dataset.order = orderKey;
+
+        // 章/地域グループが切り替わるタイミングで、視覚的な余白を追加する
+        const currentGroup = tabGroupOf(questsInSlot[0]);
+        if(prevGroup !== null && currentGroup !== prevGroup){
+          const key = `${prevGroup}→${currentGroup}`;
+          slot.style.marginLeft = (GROUP_GAP_OVERRIDES[key] ?? GROUP_GAP_DEFAULT) + 'px';
+        }
+        prevGroup = currentGroup;
 
         questsInSlot.forEach(q=>{
           const st = document.createElement('div');
@@ -751,7 +805,8 @@ function renderMap(){
           st.style.setProperty('--c', line.color);
 
           let flags = '';
-          if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">おすすめあり</span>`;
+          const hasRecommendation = q.prereqs && q.prereqs.some(p => (p.type||'story') !== 'unlock');
+          if(hasRecommendation) flags += `<span class="flag transfer">おすすめあり</span>`;
           if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
 
           st.innerHTML = `
@@ -775,21 +830,84 @@ function renderMap(){
   mapInner.appendChild(svg);
 }
 
-function applyChapterFilter(code){
-  const filter = lineChapterFilter[code];
+/**
+ * 基準路線(通常はAQ)の各スロットの実際の横位置を測定し、
+ * 他の路線の同じorder値を持つスロットをその位置にピッタリ揃える。
+ * (路線ごとに独立したflexレイアウトのため、放っておくと累積でズレていくのを補正する)
+ */
+function alignSlotsToReference(refCode, targetOffsets){
+  const refRow = mapInner.querySelector(`.line-row[data-code="${refCode}"]`);
+  if(!refRow) return;
+  const mapInnerRect = mapInner.getBoundingClientRect();
+
+  const refOrderToX = new Map();
+  refRow.querySelectorAll('.station-slot').forEach(slot=>{
+    if(slot.style.display === 'none') return;
+    const rect = slot.getBoundingClientRect();
+    refOrderToX.set(slot.dataset.order, rect.left - mapInnerRect.left);
+  });
+
+  Object.entries(targetOffsets).forEach(([code, offsetX])=>{
+    const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+    if(!row) return;
+    // 左から順に処理する(前のスロットの余白変更が後続の位置に影響するため)
+    const slots = [...row.querySelectorAll('.station-slot')]
+      .filter(s=>s.style.display !== 'none');
+    slots.forEach(slot=>{
+      const baseX = refOrderToX.get(slot.dataset.order);
+      if(baseX === undefined) return;
+      const targetX = baseX + offsetX; // 公式マップ風に、基準位置から少し右にずらす
+      const currentRect = slot.getBoundingClientRect();
+      const currentX = currentRect.left - mapInnerRect.left;
+      const delta = targetX - currentX;
+      const currentMargin = parseFloat(slot.style.marginLeft || '0');
+      slot.style.marginLeft = (currentMargin + delta) + 'px';
+    });
+  });
+}
+
+/**
+ * 章タブをクリックした時に、その章の最初のタイルが見える位置までマップをスクロールする
+ * (絞り込みはせず、全タイル表示のまま移動するだけ)
+ */
+function scrollToChapterGroup(code, group){
   const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
   if(!row) return;
 
-  row.querySelectorAll('.station').forEach(st=>{
-    const show = filter === 'all' || st.dataset.group === filter;
-    st.style.display = show ? '' : 'none';
-  });
+  const target = row.querySelector(`.station[data-group="${group}"]`);
+  if(!target) return;
 
-  // スロット内の全タイルが隠れている場合は、スロット自体(隙間)も隠す
-  row.querySelectorAll('.station-slot').forEach(slot=>{
-    const anyVisible = [...slot.querySelectorAll('.station')].some(st=>st.style.display !== 'none');
-    slot.style.display = anyVisible ? '' : 'none';
-  });
+  // 固定表示(sticky)されているラベル・章タブの実際の幅を測り、その手前に隠れないよう余分にオフセットする
+  const computeDelta = () => {
+    const scrollRect = mapScroll.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+    let stickyRight = scrollRect.left;
+    const label = row.querySelector('.line-label');
+    const tabs = row.querySelector('.chapter-tabs');
+    if(label) stickyRight = Math.max(stickyRight, label.getBoundingClientRect().right);
+    if(tabs) stickyRight = Math.max(stickyRight, tabs.getBoundingClientRect().right);
+    return targetRect.left - stickyRight - 20; // 固定要素の右端からさらに少し余白
+  };
+
+  mapScroll.scrollTo({ left: mapScroll.scrollLeft + computeDelta(), behavior: 'smooth' });
+
+  // スムーズスクロールが本当に完了したタイミングで再計測し、まだズレていれば微調整する
+  // (距離が長いと完了までの時間が伸びるため、固定の待ち時間ではなくscrollendイベントを使う)
+  let corrected = false;
+  const settle = () => {
+    if(corrected) return;
+    corrected = true;
+    const delta2 = computeDelta();
+    if(Math.abs(delta2) > 4){
+      mapScroll.scrollTo({ left: mapScroll.scrollLeft + delta2, behavior: 'smooth' });
+    }
+  };
+  if('onscrollend' in mapScroll){
+    mapScroll.addEventListener('scrollend', settle, { once: true });
+    setTimeout(settle, 3000); // 万一scrollendが発火しない場合の保険
+  } else {
+    setTimeout(settle, 1200); // scrollend未対応ブラウザ向けのフォールバック(余裕を持った待ち時間)
+  }
 }
 
 /* ---------------- CONNECTORS ---------------- */
@@ -799,6 +917,48 @@ function isStationVisible(id){
   const row = el.closest('.line-row');
   if(row && row.classList.contains('hidden')) return false;
   return el.style.display !== 'none';
+}
+
+/**
+ * 縦→横のL字1回曲がりパスを生成し、接続先の「左端」に水平に入るようにする
+ * (公式ストーリーマップで、伝説任務等が左から矢印を受ける見た目に合わせる)。
+ * r は角の丸め半径。y1===y2 の場合は単純な横の直線にする。
+ */
+function elbowPathToLeft(x1, y1, x2, y2, r = 10){
+  if(Math.abs(y1 - y2) < 1){
+    return `M ${x1},${y1} L ${x2},${y2}`;
+  }
+  const rr = Math.min(r, Math.abs(x2 - x1), Math.abs(y2 - y1) / 2);
+  const dy = y2 > y1 ? 1 : -1; // 縦区間の向き(下向き=1, 上向き=-1)
+  const dx = x2 > x1 ? 1 : -1; // 横区間の向き(右向き=1, 左向き=-1)
+  return [
+    `M ${x1},${y1}`,
+    `L ${x1},${y2 - rr*dy}`,
+    `Q ${x1},${y2} ${x1 + rr*dx},${y2}`,
+    `L ${x2},${y2}`
+  ].join(' ');
+}
+
+/**
+ * 縦→横→縦の直角折れ線パスを生成する(公式ストーリーマップ風)。
+ * r は角の丸め半径。x1===x2 の場合は単純な縦の直線にする。
+ */
+function elbowPath(x1, y1, x2, y2, midY, r = 10){
+  if(Math.abs(x1 - x2) < 1){
+    return `M ${x1},${y1} L ${x2},${y2}`;
+  }
+  const rr = Math.min(r, Math.abs(midY - y1), Math.abs(midY - y2), Math.abs(x2 - x1) / 2);
+  const dy1 = y2 > y1 ? 1 : -1; // 縦区間1本目の向き(下向き=1, 上向き=-1)
+  const dy2 = y2 > y1 ? 1 : -1; // 縦区間2本目も同じ向き(midYからy2へ)
+  const dx = x2 > x1 ? 1 : -1;
+  return [
+    `M ${x1},${y1}`,
+    `L ${x1},${midY - rr*dy1}`,
+    `Q ${x1},${midY} ${x1 + rr*dx},${midY}`,
+    `L ${x2 - rr*dx},${midY}`,
+    `Q ${x2},${midY} ${x2},${midY + rr*dy2}`,
+    `L ${x2},${y2}`
+  ].join(' ');
 }
 
 function drawConnectors(){
@@ -822,29 +982,48 @@ function drawConnectors(){
 
     const fr = fromEl.getBoundingClientRect();
     const tr = toEl.getBoundingClientRect();
+    const isElbow = edge.type === 'prereq' && edge.prereqType === 'unlock';
 
-    const x1 = fr.left - innerRect.left + fr.width/2;
-    const y1 = fr.top - innerRect.top + (fr.top < tr.top ? fr.height : 0);
-    const x2 = tr.left - innerRect.left + tr.width/2;
-    const y2 = tr.top - innerRect.top + (tr.top < fr.top ? tr.height : 0);
+    let d;
+    if(isElbow){
+      // 解放条件: 直角の折れ線・タイル左端に水平に入る
+      const x1 = fr.left - innerRect.left + fr.width/2;
+      const y1 = fr.top - innerRect.top + (fr.top < tr.top ? fr.height : 0);
+      const x2 = tr.left - innerRect.left;
+      const y2 = tr.top - innerRect.top + tr.height/2;
+      d = elbowPathToLeft(x1, y1, x2, y2);
+    } else {
+      // おすすめ前提・まとめ: 昔からの滑らかな曲線・タイル上下端の中央に入る
+      const x1 = fr.left - innerRect.left + fr.width/2;
+      const y1 = fr.top - innerRect.top + (fr.top < tr.top ? fr.height : 0);
+      const x2 = tr.left - innerRect.left + tr.width/2;
+      const y2 = tr.top - innerRect.top + (tr.top < fr.top ? tr.height : 0);
+      const midY = (y1+y2)/2;
+      d = `M ${x1},${y1} C ${x1},${midY} ${x2},${midY} ${x2},${y2}`;
+    }
 
-    const midY = (y1+y2)/2;
     const color = fromQ._line.color;
-    const d = `M ${x1},${y1} C ${x1},${midY} ${x2},${midY} ${x2},${y2}`;
 
     const path = document.createElementNS('http://www.w3.org/2000/svg','path');
     path.setAttribute('d', d);
     path.setAttribute('fill','none');
     path.setAttribute('stroke', color);
-    path.setAttribute('stroke-width', '1.6');
-    path.setAttribute('class','link ' + edge.type);
+    path.setAttribute('class','link ' + edge.type + (edge.prereqType ? ' ptype-'+edge.prereqType : ''));
     path.dataset.from = edge.from;
     path.dataset.to = edge.to;
 
     if(edge.type === 'prereq'){
-      path.setAttribute('stroke-dasharray','5 5');
       path.setAttribute('marker-end', `url(#arrow-${fromQ._line.code})`);
+      if(edge.prereqType === 'unlock'){
+        // 解放条件(ゲーム的な条件): 実線・少し太めにして「前提(点線)」と区別する
+        path.setAttribute('stroke-width', '2.2');
+        path.setAttribute('stroke-opacity', '0.75');
+      } else {
+        path.setAttribute('stroke-width', '1.6');
+        path.setAttribute('stroke-dasharray','5 5');
+      }
     } else {
+      path.setAttribute('stroke-width', '1.6');
       path.setAttribute('stroke-opacity','0.55');
     }
     svg.appendChild(path);
@@ -876,6 +1055,27 @@ function highlight(id){
 }
 
 /* ---------------- DETAIL PANEL ---------------- */
+/**
+ * 詳細パネル内の関連クエスト項目をクリックした時に、
+ * マップをそのタイルが見える位置までスクロールし、パネルをそのクエストに切り替える。
+ */
+function navigateToQuest(id){
+  requestAnimationFrame(()=>{
+    const target = document.getElementById('st-' + id);
+    if(target){
+      const scrollRect = mapScroll.getBoundingClientRect();
+      const targetRect = target.getBoundingClientRect();
+      // タイルが画面の中央あたりに来るよう、横(マップ内)・縦(ページ全体)のスクロール位置を計算
+      const deltaX = (targetRect.left + targetRect.width/2) - (scrollRect.left + scrollRect.width/2);
+      mapScroll.scrollTo({ left: mapScroll.scrollLeft + deltaX, behavior: 'smooth' });
+
+      const deltaY = (targetRect.top + targetRect.height/2) - (window.innerHeight/2);
+      window.scrollBy({ top: deltaY, left: 0, behavior: 'smooth' });
+    }
+    openPanel(id);
+  });
+}
+
 function openPanel(id){
   const q = QUESTS[id];
   if(!q) return;
@@ -927,13 +1127,15 @@ function openPanel(id){
     <div class="p-section-title">先に乗っておきたい前提クエスト</div>
     ${prereqs.length ? prereqs.map(p=>{
       const pq = QUESTS[p.id];
-      const warningBadge = p.type === 'warning'
+      const typeBadge = p.type === 'warning'
         ? `<span class="badge warning-badge">⚠ 進行注意</span>`
+        : p.type === 'unlock'
+        ? `<span class="badge unlock-badge">🔓 解放条件</span>`
         : '';
-      return `<div class="p-item">
+      return `<div class="p-item p-item-nav" data-nav-id="${p.id}">
         <span class="dot" style="background:${pq ? pq._line.color : '#999'}"></span>
         <div class="body">
-          <b><span class="pcode mono">${p.id}</span>${pq ? pq.title : p.id}${warningBadge}</b>
+          <b><span class="pcode mono">${p.id}</span>${pq ? pq.title : p.id}${typeBadge}</b>
           <div class="reason">${p.reason}</div>
         </div>
       </div>`;
@@ -941,7 +1143,7 @@ function openPanel(id){
 
     <div class="p-section-title" style="margin-top:20px;">このクエストを前提としているクエスト</div>
     ${dependents.length ? dependents.map(d=>`
-      <div class="p-item">
+      <div class="p-item p-item-nav" data-nav-id="${d.id}">
         <span class="dot" style="background:${d._line.color}"></span>
         <div class="body">
           <b><span class="pcode mono">${d.id}</span>${d.title}</b>
@@ -1057,6 +1259,14 @@ function wireEvents(){
   });
   document.getElementById('panelClose').addEventListener('click', closePanel);
 
+  panelBody.addEventListener('click', e=>{
+    const item = e.target.closest('.p-item-nav');
+    if(!item) return;
+    const targetId = item.dataset.navId;
+    if(!QUESTS[targetId]) return; // データ不整合などで未解決の参照は無視
+    navigateToQuest(targetId);
+  });
+
   wireDragScroll();
 
   legendBar.addEventListener('change', e=>{
@@ -1086,19 +1296,16 @@ function resetAllFilters(){
     if(chip) chip.classList.remove('off');
   });
 
-  // 各路線の章/地域タブを「すべて」に戻す
-  Object.keys(lineChapterFilter).forEach(code=>{
-    lineChapterFilter[code] = 'all';
-    applyChapterFilter(code);
-    const tabs = mapInner.querySelectorAll(`.line-row[data-code="${code}"] .chapter-tab`);
-    tabs.forEach(t=>t.classList.toggle('active', t.dataset.group === 'all'));
-  });
-
   redraw();
 }
 
 /* ---------------- INIT ---------------- */
-function redraw(){ requestAnimationFrame(drawConnectors); }
+function redraw(){
+  requestAnimationFrame(()=>{
+    alignSlotsToReference('AQ', { SQ: 150, WQ: 150 });
+    drawConnectors();
+  });
+}
 loadData();
 setTimeout(redraw, 200); // フォント確定後に再計測
 </script>
