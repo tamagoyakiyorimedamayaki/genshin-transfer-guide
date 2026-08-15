@@ -44,6 +44,9 @@ data.quests.forEach((q, i) => {
     if (!p.reason || !p.reason.trim()) {
       errors.push(`${where}: prereqs "${p.id}" に reason がありません`);
     }
+    if (p.type !== undefined && !['story', 'warning'].includes(p.type)) {
+      errors.push(`${where}: prereqs "${p.id}" の type "${p.type}" は "story" か "warning" である必要があります`);
+    }
   });
 
   if (q.summaryOf && !questIds.has(q.summaryOf)) {

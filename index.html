@@ -460,6 +460,18 @@
     display:block;
     margin-bottom:3px;
   }
+  .warning-badge{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    padding:2px 7px;
+    margin-left:6px;
+    border-radius:20px;
+    background:rgba(194,75,75,.15);
+    color:#e0716f;
+    border:1px solid rgba(194,75,75,.4);
+    vertical-align:middle;
+  }
   .p-item .body span.pcode{
     font-family:'JetBrains Mono', monospace;
     font-size:10.5px;
@@ -860,10 +872,13 @@ function openPanel(id){
     <div class="p-section-title">先に乗っておきたい前提クエスト</div>
     ${prereqs.length ? prereqs.map(p=>{
       const pq = QUESTS[p.id];
+      const warningBadge = p.type === 'warning'
+        ? `<span class="badge warning-badge">⚠ 進行注意</span>`
+        : '';
       return `<div class="p-item">
         <span class="dot" style="background:${pq ? pq._line.color : '#999'}"></span>
         <div class="body">
-          <b><span class="pcode mono">${p.id}</span>${pq ? pq.title : p.id}</b>
+          <b><span class="pcode mono">${p.id}</span>${pq ? pq.title : p.id}${warningBadge}</b>
           <div class="reason">${p.reason}</div>
         </div>
       </div>`;
