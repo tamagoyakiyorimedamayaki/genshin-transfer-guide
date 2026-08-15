@@ -49,6 +49,10 @@ data.quests.forEach((q, i) => {
     }
   });
 
+  if (q.branchRow !== undefined && typeof q.branchRow !== 'number') {
+    errors.push(`${where}: branchRow は数値である必要があります`);
+  }
+
   if (q.summaryOf && !questIds.has(q.summaryOf)) {
     errors.push(`${where}: summaryOf の参照先 "${q.summaryOf}" が存在しません`);
   }

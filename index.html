@@ -247,10 +247,36 @@
     z-index:0;
   }
 
+  .station-slot{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    position:relative;
+    z-index:2;
+    flex:0 0 208px; /* line-track(横並び)内での幅をここで固定 */
+  }
+  .station-slot.has-branch{
+    padding:8px 0;
+  }
+  .station-slot.has-branch::before{
+    /* 分岐スロットであることを示す縦の連結線 */
+    content:"";
+    position:absolute;
+    left:-2px;
+    top:8px;
+    bottom:8px;
+    width:2px;
+    background:var(--rail-color, var(--hair-strong));
+    opacity:.4;
+  }
+  .station-slot .station{
+    flex:0 0 auto;
+    width:100%; /* スロットの幅いっぱいに広がる(高さはコンテンツに応じて自動) */
+  }
+
   .station{
     position:relative;
     z-index:2;
-    flex:0 0 208px;
     background:#1e1a13;
     border:1px solid var(--hair-strong);
     border-left:4px solid var(--c, var(--gold));
@@ -699,26 +725,46 @@ function renderMap(){
     track.className = 'line-track';
     track.style.setProperty('--rail-color', line.color);
 
+    // 同じorder値を持つクエストは1つの「スロット」にまとめ、縦に積んで表示する
+    // (公式ストーリーマップで分岐として並列表示される幕に対応するため)
+    const slotMap = new Map();
     line.quests.forEach(q=>{
-      const st = document.createElement('div');
-      st.className = 'station' + (isEnded(q) ? ' ended' : '');
-      st.id = 'st-' + q.id;
-      st.dataset.id = q.id;
-      st.dataset.group = tabGroupOf(q);
-      st.style.setProperty('--c', line.color);
-
-      let flags = '';
-      if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">おすすめあり</span>`;
-      if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
-
-      st.innerHTML = `
-        <div class="code mono">${q.id}</div>
-        <div class="chapter">${q.chapter}</div>
-        <div class="title">${q.title}</div>
-        <div class="flags">${flags}</div>
-      `;
-      track.appendChild(st);
+      const key = q.order;
+      if(!slotMap.has(key)) slotMap.set(key, []);
+      slotMap.get(key).push(q);
     });
+
+    [...slotMap.entries()]
+      .sort((a,b)=> a[0]-b[0])
+      .forEach(([, questsInSlot])=>{
+        questsInSlot.sort((a,b)=> (a.branchRow||0) - (b.branchRow||0));
+
+        const slot = document.createElement('div');
+        slot.className = 'station-slot' + (questsInSlot.length > 1 ? ' has-branch' : '');
+
+        questsInSlot.forEach(q=>{
+          const st = document.createElement('div');
+          st.className = 'station' + (isEnded(q) ? ' ended' : '');
+          st.id = 'st-' + q.id;
+          st.dataset.id = q.id;
+          st.dataset.group = tabGroupOf(q);
+          st.style.setProperty('--c', line.color);
+
+          let flags = '';
+          if(q.prereqs && q.prereqs.length) flags += `<span class="flag transfer">おすすめあり</span>`;
+          if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
+
+          st.innerHTML = `
+            <div class="code mono">${q.id}</div>
+            <div class="chapter">${q.chapter}</div>
+            <div class="title">${q.title}</div>
+            <div class="flags">${flags}</div>
+          `;
+          slot.appendChild(st);
+        });
+
+        track.appendChild(slot);
+      });
 
     body.appendChild(track);
     row.appendChild(body);
@@ -731,9 +777,18 @@ function renderMap(){
 
 function applyChapterFilter(code){
   const filter = lineChapterFilter[code];
-  mapInner.querySelectorAll(`.line-row[data-code="${code}"] .station`).forEach(st=>{
+  const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
+  if(!row) return;
+
+  row.querySelectorAll('.station').forEach(st=>{
     const show = filter === 'all' || st.dataset.group === filter;
     st.style.display = show ? '' : 'none';
+  });
+
+  // スロット内の全タイルが隠れている場合は、スロット自体(隙間)も隠す
+  row.querySelectorAll('.station-slot').forEach(slot=>{
+    const anyVisible = [...slot.querySelectorAll('.station')].some(st=>st.style.display !== 'none');
+    slot.style.display = anyVisible ? '' : 'none';
   });
 }
 

@@ -332,7 +332,8 @@
       "desc": "テイワット・カーンルイアの謎が明かされる番外編。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "branchRow": 0
     },
     {
       "id": "AQ-21",
@@ -538,7 +539,7 @@
     {
       "id": "AQ-05",
       "line": "AQ",
-      "order": 450,
+      "order": 406,
       "title": "背理",
       "chapter": "間章 第四幕",
       "region": null,
@@ -565,7 +566,8 @@
           "reason": "風花の吐息。プレイヤーの実プレイで見つかった前提知識クエスト。"
         }
       ],
-      "chapterGroup": "間章"
+      "chapterGroup": "間章",
+      "branchRow": 1
     },
     {
       "id": "SQ-06",
@@ -1278,7 +1280,12 @@
       "region": "フォンテーヌ",
       "desc": "サンドローネがパーティにいる状態で受注できる世界任務。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
+      "prereqs": [
+        {
+          "id": "EQ-47",
+          "reason": "実プレイで判明した前提知識。「帰夏！映影？千霊祭！」を先にクリアしておくと理解が深まります。"
+        }
+      ]
     },
     {
       "id": "WQ-09",
@@ -2277,7 +2284,12 @@
       "availableUntil": "2026-08-11",
       "desc": "Ver6.7期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "EQ-30",
+          "reason": "実プレイで判明した前提知識。「薔薇と銃士」を先にクリアしておくと理解が深まります。"
+        }
+      ],
       "availableFrom": "2026-07-01",
       "version": "6.7"
     },
