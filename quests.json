@@ -76,6 +76,18 @@
         {
           "id": "SQ-76",
           "reason": "本編に登場する執行官「博士」の暗躍が、シトラリの部族見聞(謎煙の主)第3幕で描かれる別の執行官の部下の動きと呼応しており、先に読んでおくと愚人衆側の動機が繋がって見えます。"
+        },
+        {
+          "id": "SQ-75",
+          "reason": "流れゆく色の記憶(第2幕)を先にプレイしておくのが推奨。"
+        },
+        {
+          "id": "SQ-78",
+          "reason": "キノコ奇譚(第2幕)を先にプレイしておくのが推奨。"
+        },
+        {
+          "id": "WQ-06",
+          "reason": "「灰燼に埋もれた都市」シリーズを先にプレイしておくのが推奨。"
         }
       ],
       "chapterGroup": "第五章"
@@ -83,7 +95,7 @@
     {
       "id": "WQ-06",
       "line": "WQ",
-      "order": 7,
+      "order": 501,
       "title": "「灰燼に埋もれた都市」シリーズ",
       "chapter": "オシカ・ナタ地域 長編世界任務",
       "region": "ナタ",
@@ -94,7 +106,7 @@
     {
       "id": "WQ-07",
       "line": "WQ",
-      "order": 8,
+      "order": 502,
       "title": "「古の聖山」世界任務シリーズ",
       "chapter": "地下マップ・古の聖山",
       "region": "ナタ",
@@ -110,7 +122,7 @@
     {
       "id": "EQ-02",
       "line": "EQ",
-      "order": 31,
+      "order": 401.35,
       "title": "陽夏！悪龍？童話の王国！",
       "chapter": "v4.8 期間限定イベント",
       "region": null,
@@ -118,7 +130,8 @@
       "desc": "童話仕立ての期間限定イベント。",
       "prereqs": [],
       "availableFrom": "2024-07-17",
-      "version": "4.8"
+      "version": "4.8",
+      "branchRow": 0
     },
     {
       "id": "AQ-09",
@@ -418,7 +431,12 @@
       "region": "稲妻",
       "desc": "稲妻編の一幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "EQ-14",
+          "reason": "「帰らぬ熄星」で散兵(スカラマシュ)が初登場し、この幕で散兵と再会する際、このイベントをプレイしたかどうかで会話が「再会」か「初対面」かに分岐します。"
+        }
+      ],
       "chapterGroup": "第二章"
     },
     {
@@ -518,28 +536,40 @@
     {
       "id": "SQ-06",
       "line": "SQ",
-      "order": 1015,
+      "order": 605,
       "title": "予見鳥の章",
       "chapter": "リンネアの伝説任務",
       "region": null,
       "desc": "リンネアの伝説任務",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-47",
+          "reason": "空月の歌第五幕クリアで解放されるリンネアの伝説任務「予見鳥の章」(第一幕)。",
+          "type": "unlock"
+        }
+      ],
       "releaseDate": "2026-04-08",
       "branchRow": 0
     },
     {
       "id": "SQ-07",
       "line": "SQ",
-      "order": 1014,
+      "order": 607,
       "title": "ドラコ・ルベドの章",
       "chapter": "ドゥリンの伝説任務",
       "region": "モンド",
       "desc": "ドゥリンの伝説任務",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-06",
+          "reason": "空月の歌第七幕クリアで解放されるドゥリンの伝説任務「ドラコ・ルベドの章」(第一幕)。",
+          "type": "unlock"
+        }
+      ],
       "releaseDate": "2025-12-03",
-      "branchRow": 1
+      "branchRow": 0
     },
     {
       "id": "SQ-08",
@@ -1488,7 +1518,7 @@
     {
       "id": "EQ-07",
       "line": "EQ",
-      "order": 33,
+      "order": 501.05,
       "title": "彼女にサプライズを",
       "chapter": "v5.1 期間限定イベント",
       "region": null,
@@ -1498,7 +1528,8 @@
       "releaseDate": "2024-10-09",
       "availableUntil": "2024-11-07",
       "availableFrom": "2024-10-23",
-      "version": "5.1"
+      "version": "5.1",
+      "branchRow": 0
     },
     {
       "id": "AQ-06",
@@ -1527,45 +1558,57 @@
     {
       "id": "AQ-08",
       "line": "AQ",
-      "order": 610,
+      "order": 611,
       "title": "虚空劫灰のプラーナ",
-      "chapter": "空月の歌 第十幕",
+      "chapter": "空月の歌 第十一幕(仮)",
       "region": "ナド・クライ／スメール",
       "desc": "間章「空月の歌」の一幕。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
+      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。 2026年再監査: 実際の第十幕は「千尋の道、因果の異滅」と判明したため、この幕の正確な位置は要確認。",
       "prereqs": [],
       "chapterGroup": "空月の歌"
     },
     {
       "id": "SQ-04",
       "line": "SQ",
-      "order": 1014,
+      "order": 609,
       "title": "天狼の章",
       "chapter": "ファルカ伝説任務",
       "region": "モンド",
       "desc": "ファルカを巡る伝説任務。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-07",
+          "reason": "空月の歌第九幕クリアで解放されるファルカの伝説任務「天狼の章」(第一幕)。",
+          "type": "unlock"
+        }
+      ],
       "releaseDate": "2026-02-25",
-      "branchRow": 2
+      "branchRow": 0
     },
     {
       "id": "SQ-05",
       "line": "SQ",
-      "order": 1015,
+      "order": 610,
       "title": "騎士兎の章",
       "chapter": "ローエン伝説任務",
       "region": "モンド",
       "desc": "ローエンを巡る伝説任務。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-50",
+          "reason": "空月の歌第十幕クリアで解放されるローエンの伝説任務「騎士兎の章」(第一幕)。",
+          "type": "unlock"
+        }
+      ],
       "releaseDate": "2026-05-20",
-      "branchRow": 1
+      "branchRow": 0
     },
     {
       "id": "WQ-08",
       "line": "WQ",
-      "order": 5,
+      "order": 610,
       "title": "淑女のお誘い",
       "chapter": "フォンテーヌ・世界任務",
       "region": "フォンテーヌ",
@@ -1576,199 +1619,13 @@
           "id": "EQ-47",
           "reason": "実プレイで判明した前提知識。「帰夏！映影？千霊祭！」を先にクリアしておくと理解が深まります。"
         }
-      ]
-    },
-    {
-      "id": "WQ-09",
-      "line": "WQ",
-      "order": 13,
-      "title": "情報取引",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-10",
-      "line": "WQ",
-      "order": 14,
-      "title": "海賊船の幽霊騒ぎ",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-11",
-      "line": "WQ",
-      "order": 15,
-      "title": "偶然の依頼",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-12",
-      "line": "WQ",
-      "order": 16,
-      "title": "貨物盗難事件",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-13",
-      "line": "WQ",
-      "order": 17,
-      "title": "様子のおかしい隠者",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-14",
-      "line": "WQ",
-      "order": 18,
-      "title": "ちいさな依頼",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-15",
-      "line": "WQ",
-      "order": 19,
-      "title": "消えた賞金首",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-16",
-      "line": "WQ",
-      "order": 20,
-      "title": "一件落着",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダかネフェルがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-17",
-      "line": "WQ",
-      "order": 21,
-      "title": "かつて過去を捨てた者",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ヤフォダがパーティにいる状態で受注できる世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-18",
-      "line": "WQ",
-      "order": 22,
-      "title": "音のない劇場",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ナド・クライの世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-19",
-      "line": "WQ",
-      "order": 23,
-      "title": "失われた宮殿",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ナド・クライの世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-20",
-      "line": "WQ",
-      "order": 24,
-      "title": "憂いなき灯台",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ナド・クライの世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-21",
-      "line": "WQ",
-      "order": 1,
-      "title": "導きの職務…?",
-      "chapter": "モンド・魔女の課題（ニコ）",
-      "region": "モンド",
-      "desc": "魔女の課題シリーズ、ニコに関する世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-22",
-      "line": "WQ",
-      "order": 2,
-      "title": "杯と余白と空白の物語",
-      "chapter": "モンド・魔女の課題（ファルカ）",
-      "region": "モンド",
-      "desc": "魔女の課題シリーズ、ファルカに関する世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-23",
-      "line": "WQ",
-      "order": 3,
-      "title": "反論できない命題",
-      "chapter": "モンド・魔女の課題（プルーネ）",
-      "region": "モンド",
-      "desc": "魔女の課題シリーズ、プルーネに関する世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-24",
-      "line": "WQ",
-      "order": 25,
-      "title": "金銀に勝るもの",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ナド・クライの世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
-    },
-    {
-      "id": "WQ-25",
-      "line": "WQ",
-      "order": 26,
-      "title": "賑わいの浮き島",
-      "chapter": "ナド・クライ・世界任務",
-      "region": "ナド・クライ",
-      "desc": "ナド・クライの世界任務。",
-      "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
-      "prereqs": []
+      ],
+      "branchRow": 0
     },
     {
       "id": "EQ-03",
       "line": "EQ",
-      "order": 3,
+      "order": 1.1,
       "title": "白亜と黒龍",
       "chapter": "v1.2 期間限定イベント",
       "region": "モンド",
@@ -1777,12 +1634,13 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.comには未収録のため、Web検索で裏付け。",
       "prereqs": [],
       "availableFrom": "2020-12-23",
-      "version": "1.2"
+      "version": "1.2",
+      "branchRow": 0
     },
     {
       "id": "EQ-04",
       "line": "EQ",
-      "order": 10,
+      "order": 200.15,
       "title": "白雪に潜みし影",
       "chapter": "v2.3 期間限定イベント",
       "region": "モンド",
@@ -1796,12 +1654,13 @@
         }
       ],
       "availableFrom": "2021-11-24",
-      "version": "2.3"
+      "version": "2.3",
+      "branchRow": 0
     },
     {
       "id": "EQ-05",
       "line": "EQ",
-      "order": 20,
+      "order": 301.2,
       "title": "風花の吐息",
       "chapter": "v3.5 期間限定イベント",
       "region": "モンド",
@@ -1810,12 +1669,13 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "availableFrom": "2023-03-01",
-      "version": "3.5"
+      "version": "3.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-06",
       "line": "EQ",
-      "order": 14,
+      "order": 200.3,
       "title": "華やぐ紫苑の庭",
       "chapter": "v2.6 期間限定イベント",
       "region": "稲妻",
@@ -1824,12 +1684,13 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "availableFrom": "2022-03-30",
-      "version": "2.6"
+      "version": "2.6",
+      "branchRow": 0
     },
     {
       "id": "WQ-30",
       "line": "WQ",
-      "order": 4,
+      "order": 200,
       "title": "たたら物語",
       "chapter": "稲妻・世界任務",
       "region": "稲妻",
@@ -2007,7 +1868,7 @@
     {
       "id": "EQ-08",
       "line": "EQ",
-      "order": 15,
+      "order": 200.35,
       "title": "サマータイムオデッセイ",
       "chapter": "v2.8 期間限定イベント",
       "region": "モンド",
@@ -2021,12 +1882,13 @@
         }
       ],
       "availableFrom": "2022-07-13",
-      "version": "2.8"
+      "version": "2.8",
+      "branchRow": 0
     },
     {
       "id": "EQ-09",
       "line": "EQ",
-      "order": 19,
+      "order": 301.15,
       "title": "華舞う夜の旋律",
       "chapter": "v3.4 期間限定イベント",
       "region": "璃月",
@@ -2035,12 +1897,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [],
       "availableFrom": "2023-01-18",
-      "version": "3.4"
+      "version": "3.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-10",
       "line": "EQ",
-      "order": 23,
+      "order": 301.35,
       "title": "涼夏！楽園？大秘境！",
       "chapter": "v3.8 期間限定イベント",
       "region": "スメール",
@@ -2049,12 +1912,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [],
       "availableFrom": "2023-07-05",
-      "version": "3.8"
+      "version": "3.8",
+      "branchRow": 0
     },
     {
       "id": "EQ-11",
       "line": "EQ",
-      "order": 24,
+      "order": 401.0,
       "title": "流れゆく水に詩を紡いで",
       "chapter": "v4.1 期間限定イベント",
       "region": "モンド",
@@ -2068,12 +1932,13 @@
         }
       ],
       "availableFrom": "2023-09-27",
-      "version": "4.1"
+      "version": "4.1",
+      "branchRow": 0
     },
     {
       "id": "EQ-12",
       "line": "EQ",
-      "order": 27,
+      "order": 401.15,
       "title": "春立つ風を梳かす彩鳶",
       "chapter": "v4.4 期間限定イベント",
       "region": "璃月",
@@ -2087,12 +1952,13 @@
         }
       ],
       "availableFrom": "2024-01-31",
-      "version": "4.4"
+      "version": "4.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-13",
       "line": "EQ",
-      "order": 1,
+      "order": 1.0,
       "title": "バーバラ、キラッと登場☆",
       "chapter": "v1.0 期間限定イベント",
       "region": "モンド",
@@ -2101,12 +1967,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2020-09-28",
-      "version": "1.0"
+      "version": "1.0",
+      "branchRow": 0
     },
     {
       "id": "EQ-14",
       "line": "EQ",
-      "order": 2,
+      "order": 1.05,
       "title": "帰らぬ熄星",
       "chapter": "v1.1 期間限定イベント",
       "region": "モンド",
@@ -2115,12 +1982,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2020-11-11",
-      "version": "1.1"
+      "version": "1.1",
+      "branchRow": 0
     },
     {
       "id": "EQ-15",
       "line": "EQ",
-      "order": 4,
+      "order": 101.0,
       "title": "海灯祭",
       "chapter": "v1.3 期間限定イベント",
       "region": "璃月",
@@ -2129,12 +1997,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-02-03",
-      "version": "1.3"
+      "version": "1.3",
+      "branchRow": 0
     },
     {
       "id": "EQ-16",
       "line": "EQ",
-      "order": 5,
+      "order": 101.05,
       "title": "風花の招待",
       "chapter": "v1.4 期間限定イベント",
       "region": "モンド",
@@ -2143,12 +2012,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-03-18",
-      "version": "1.4"
+      "version": "1.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-17",
       "line": "EQ",
-      "order": 6,
+      "order": 101.1,
       "title": "エネルギー原盤・序論",
       "chapter": "v1.5 期間限定イベント",
       "region": "モンド",
@@ -2157,12 +2027,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-04-28",
-      "version": "1.5"
+      "version": "1.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-18",
       "line": "EQ",
-      "order": 7,
+      "order": 101.15,
       "title": "真夏！島？大冒険！",
       "chapter": "v1.6 期間限定イベント",
       "region": "モンド",
@@ -2171,12 +2042,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-06-09",
-      "version": "1.6"
+      "version": "1.6",
+      "branchRow": 0
     },
     {
       "id": "EQ-19",
       "line": "EQ",
-      "order": 8,
+      "order": 200.0,
       "title": "雷痕を求めて",
       "chapter": "v2.0 期間限定イベント",
       "region": "稲妻",
@@ -2185,12 +2057,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-07-21",
-      "version": "2.0"
+      "version": "2.0",
+      "branchRow": 0
     },
     {
       "id": "EQ-20",
       "line": "EQ",
-      "order": 9,
+      "order": 200.05,
       "title": "韶光撫月",
       "chapter": "v2.1 期間限定イベント",
       "region": "璃月",
@@ -2199,12 +2072,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-09-01",
-      "version": "2.1"
+      "version": "2.1",
+      "branchRow": 0
     },
     {
       "id": "EQ-21",
       "line": "EQ",
-      "order": 11,
+      "order": 200.1,
       "title": "謎境一騎",
       "chapter": "v2.2 期間限定イベント",
       "region": "稲妻",
@@ -2213,12 +2087,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2021-10-13",
-      "version": "2.2"
+      "version": "2.2",
+      "branchRow": 0
     },
     {
       "id": "EQ-22",
       "line": "EQ",
-      "order": 12,
+      "order": 200.2,
       "title": "海灯祭2「華々しき流年」",
       "chapter": "v2.4 期間限定イベント",
       "region": "璃月",
@@ -2227,12 +2102,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2022-01-05",
-      "version": "2.4"
+      "version": "2.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-23",
       "line": "EQ",
-      "order": 13,
+      "order": 200.25,
       "title": "三界道饗祭",
       "chapter": "v2.5 期間限定イベント",
       "region": "稲妻",
@@ -2241,12 +2117,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2022-02-16",
-      "version": "2.5"
+      "version": "2.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-24",
       "line": "EQ",
-      "order": 16,
+      "order": 301.0,
       "title": "杯の中のバラッド",
       "chapter": "v3.1 期間限定イベント",
       "region": "モンド",
@@ -2255,12 +2132,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2022-09-28",
-      "version": "3.1"
+      "version": "3.1",
+      "branchRow": 0
     },
     {
       "id": "EQ-25",
       "line": "EQ",
-      "order": 17,
+      "order": 301.05,
       "title": "ワンダフルキノコンピック",
       "chapter": "v3.2 期間限定イベント",
       "region": "スメール",
@@ -2269,12 +2147,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2022-11-02",
-      "version": "3.2"
+      "version": "3.2",
+      "branchRow": 0
     },
     {
       "id": "EQ-26",
       "line": "EQ",
-      "order": 18,
+      "order": 301.1,
       "title": "秋津ノ夜森肝試し大会",
       "chapter": "v3.3 期間限定イベント",
       "region": "稲妻",
@@ -2283,12 +2162,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2022-12-07",
-      "version": "3.3"
+      "version": "3.3",
+      "branchRow": 0
     },
     {
       "id": "EQ-27",
       "line": "EQ",
-      "order": 21,
+      "order": 301.25,
       "title": "盛典と慧業",
       "chapter": "v3.6 期間限定イベント",
       "region": "スメール",
@@ -2297,12 +2177,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2023-04-12",
-      "version": "3.6"
+      "version": "3.6",
+      "branchRow": 0
     },
     {
       "id": "EQ-28",
       "line": "EQ",
-      "order": 22,
+      "order": 301.3,
       "title": "決闘！召喚の頂！",
       "chapter": "v3.7 期間限定イベント",
       "region": "モンド",
@@ -2311,12 +2192,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2023-05-24",
-      "version": "3.7"
+      "version": "3.7",
+      "branchRow": 0
     },
     {
       "id": "EQ-29",
       "line": "EQ",
-      "order": 25,
+      "order": 401.05,
       "title": "トルクシーの不思議な冒険",
       "chapter": "v4.2 期間限定イベント",
       "region": "フォンテーヌ",
@@ -2325,26 +2207,33 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2023-11-08",
-      "version": "4.2"
+      "version": "4.2",
+      "branchRow": 0
     },
     {
       "id": "EQ-30",
       "line": "EQ",
-      "order": 26,
+      "order": 401.1,
       "title": "薔薇と銃士",
       "chapter": "v4.3 期間限定イベント",
       "region": "フォンテーヌ",
       "availableUntil": "2024-01-30",
       "desc": "千霊祭を舞台にした復讐劇。神里綾華と新キャラのシュヴルーズが中心。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "WQ-30",
+          "reason": "世界任務「たたら物語」を先にプレイしておくのが推奨。"
+        }
+      ],
       "availableFrom": "2023-12-20",
-      "version": "4.3"
+      "version": "4.3",
+      "branchRow": 0
     },
     {
       "id": "EQ-31",
       "line": "EQ",
-      "order": 30,
+      "order": 401.3,
       "title": "荒瀧・生命のロックイリデッセンスビッグツアー",
       "chapter": "v4.6 期間限定イベント",
       "region": "稲妻",
@@ -2353,12 +2242,13 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [],
       "availableFrom": "2024-04-24",
-      "version": "4.6"
+      "version": "4.6",
+      "branchRow": 0
     },
     {
       "id": "EQ-32",
       "line": "EQ",
-      "order": 28,
+      "order": 401.2,
       "title": "巧みなる錬金経営",
       "chapter": "v4.5 期間限定イベント",
       "region": "フォンテーヌ",
@@ -2367,12 +2257,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2024-03-13",
-      "version": "4.5"
+      "version": "4.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-33",
       "line": "EQ",
-      "order": 29,
+      "order": 401.25,
       "title": "モフモフの城、にゃん冒険！",
       "chapter": "v4.5 期間限定イベント",
       "region": "フォンテーヌ",
@@ -2381,12 +2272,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2024-03-13",
-      "version": "4.5"
+      "version": "4.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-34",
       "line": "EQ",
-      "order": 32,
+      "order": 501.0,
       "title": "スピリットを求めしウォーベン",
       "chapter": "v5.0 期間限定イベント",
       "region": "ナタ",
@@ -2395,26 +2287,33 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2024-08-28",
-      "version": "5.0"
+      "version": "5.0",
+      "branchRow": 0
     },
     {
       "id": "EQ-35",
       "line": "EQ",
-      "order": 35,
+      "order": 501.15,
       "title": "三川遊芸夢奇譚",
       "chapter": "v5.4 期間限定イベント",
       "region": "稲妻",
       "availableUntil": "2025-03-03",
       "desc": "Ver5.4期間限定イベント。荒瀧一斗の伝説任務に登場したNPCも関わる。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "WQ-31",
+          "reason": "神櫻大祓を先にプレイしておくのが推奨。"
+        }
+      ],
       "availableFrom": "2025-02-14",
-      "version": "5.4"
+      "version": "5.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-36",
       "line": "EQ",
-      "order": 36,
+      "order": 501.2,
       "title": "ハーモニック・ワルツ",
       "chapter": "v5.6 期間限定イベント",
       "region": "フォンテーヌ",
@@ -2423,26 +2322,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-05-07",
-      "version": "5.6"
-    },
-    {
-      "id": "EQ-37",
-      "line": "EQ",
-      "order": 37,
-      "title": "シュヴァルマラン映影ランド",
-      "chapter": "v5.6 期間限定イベント",
-      "region": "フォンテーヌ",
-      "availableUntil": "2025-05-26",
-      "desc": "Ver5.6期間限定イベント会場。",
-      "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
-      "availableFrom": "2025-05-07",
-      "version": "5.6"
+      "version": "5.6",
+      "branchRow": 0
     },
     {
       "id": "EQ-38",
       "line": "EQ",
-      "order": 38,
+      "order": 501.3,
       "title": "染夏！烈日？リゾート満喫！",
       "chapter": "v5.8 期間限定イベント",
       "region": "ナタ",
@@ -2451,12 +2337,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-07-30",
-      "version": "5.8"
+      "version": "5.8",
+      "branchRow": 0
     },
     {
       "id": "EQ-39",
       "line": "EQ",
-      "order": 39,
+      "order": 501.35,
       "title": "密かな追跡",
       "chapter": "v5.8 期間限定イベント",
       "region": "ナタ",
@@ -2465,12 +2352,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-07-30",
-      "version": "5.8"
+      "version": "5.8",
+      "branchRow": 0
     },
     {
       "id": "EQ-40",
       "line": "EQ",
-      "order": 40,
+      "order": 600.0,
       "title": "カチャカチャ大作戦",
       "chapter": "v6.0 期間限定イベント",
       "region": "ナタ",
@@ -2479,12 +2367,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-09-10",
-      "version": "6.0"
+      "version": "6.0",
+      "branchRow": 0
     },
     {
       "id": "EQ-41",
       "line": "EQ",
-      "order": 41,
+      "order": 600.05,
       "title": "遺跡を探検？知行合一プロジェクト！",
       "chapter": "v6.1 期間限定イベント",
       "region": "ナド・クライ",
@@ -2493,12 +2382,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-10-22",
-      "version": "6.1"
+      "version": "6.1",
+      "branchRow": 0
     },
     {
       "id": "EQ-42",
       "line": "EQ",
-      "order": 42,
+      "order": 600.1,
       "title": "魂を炎やす戦士の雪の旅",
       "chapter": "v6.2 期間限定イベント",
       "region": "モンド",
@@ -2507,26 +2397,34 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2025-12-03",
-      "version": "6.2"
+      "version": "6.2",
+      "branchRow": 0
     },
     {
       "id": "EQ-43",
       "line": "EQ",
-      "order": 43,
+      "order": 609,
       "title": "海灯祭2026「天を翔ける玉輪の軌跡」",
       "chapter": "v6.3 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2026-02-24",
       "desc": "Ver6.3(Luna IV)期間限定の海灯祭イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-07",
+          "reason": "空月の歌第九幕クリアが解放条件の一つ。",
+          "type": "unlock"
+        }
+      ],
       "availableFrom": "2026-01-14",
-      "version": "6.3"
+      "version": "6.3",
+      "branchRow": 0
     },
     {
       "id": "EQ-44",
       "line": "EQ",
-      "order": 44,
+      "order": 600.2,
       "title": "風を捕まえる帰郷者",
       "chapter": "v6.4 期間限定イベント",
       "region": "モンド",
@@ -2535,12 +2433,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2026-02-25",
-      "version": "6.4"
+      "version": "6.4",
+      "branchRow": 0
     },
     {
       "id": "EQ-45",
       "line": "EQ",
-      "order": 45,
+      "order": 600.25,
       "title": "波と岩礁の邂逅",
       "chapter": "v6.5 期間限定イベント",
       "region": "ナド・クライ",
@@ -2549,12 +2448,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2026-04-08",
-      "version": "6.5"
+      "version": "6.5",
+      "branchRow": 0
     },
     {
       "id": "EQ-46",
       "line": "EQ",
-      "order": 46,
+      "order": 600.3,
       "title": "空想の友と巡る旅",
       "chapter": "v6.6 期間限定イベント",
       "region": "稲妻",
@@ -2563,12 +2463,13 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [],
       "availableFrom": "2026-05-20",
-      "version": "6.6"
+      "version": "6.6",
+      "branchRow": 0
     },
     {
       "id": "EQ-47",
       "line": "EQ",
-      "order": 47,
+      "order": 610,
       "title": "帰夏！映影？千霊祭！",
       "chapter": "v6.7 期間限定イベント",
       "region": "フォンテーヌ",
@@ -2579,15 +2480,21 @@
         {
           "id": "EQ-30",
           "reason": "実プレイで判明した前提知識。「薔薇と銃士」を先にクリアしておくと理解が深まります。"
+        },
+        {
+          "id": "AQ-50",
+          "reason": "空月の歌第十幕クリアが解放条件の一つ。",
+          "type": "unlock"
         }
       ],
       "availableFrom": "2026-07-01",
-      "version": "6.7"
+      "version": "6.7",
+      "branchRow": 0
     },
     {
       "id": "EQ-48",
       "line": "EQ",
-      "order": 34,
+      "order": 501.1,
       "title": "春光が描く桃符",
       "chapter": "v5.3 期間限定イベント",
       "region": "璃月",
@@ -2605,7 +2512,8 @@
         }
       ],
       "availableFrom": "2025-01-24",
-      "version": "5.3"
+      "version": "5.3",
+      "branchRow": 0
     },
     {
       "id": "SQ-58",
@@ -2851,7 +2759,7 @@
       "id": "SQ-70",
       "line": "SQ",
       "order": 504,
-      "branchRow": 0,
+      "branchRow": 2,
       "title": "祝福を祈り、テペトルに告ぐ（第3幕）",
       "chapter": "シロネンの伝説任務「抑揚の詠唱」",
       "region": "ナタ",
@@ -2910,7 +2818,7 @@
       "id": "SQ-73",
       "line": "SQ",
       "order": 504,
-      "branchRow": 1,
+      "branchRow": 3,
       "title": "塵に帰す花、堕ちる羽（第3幕）",
       "chapter": "チャスカの伝説任務「銃と翼」",
       "region": "ナタ",
@@ -3043,6 +2951,36 @@
         {
           "id": "AQ-03",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "AQ-50",
+      "line": "AQ",
+      "order": 610,
+      "title": "千尋の道、因果の異滅",
+      "chapter": "空月の歌 第十幕",
+      "region": "ナタ",
+      "chapterGroup": "空月の歌",
+      "desc": "空月の歌の一幕。まだ実装(受注可能)されていない。",
+      "sourceNote": "公式ストーリーマップのスクリーンショットを基に追加(2026年、未実装)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-31",
+      "line": "WQ",
+      "order": 201,
+      "branchRow": 0,
+      "title": "神櫻大祓",
+      "chapter": "稲妻・世界任務シリーズ（紺田怪談・祭神奏上・祓・深林の狸囃子・影向祓）",
+      "region": "稲妻",
+      "desc": "稲妻・紺田村を舞台にした世界任務シリーズ。謎の巫女「花散里」を巡る物語。",
+      "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "AQ-30",
+          "reason": "第二章第一幕「鳴神不動、恒常楽土」の「離島脱出計画」クリアが必要条件。",
           "type": "unlock"
         }
       ]
