@@ -38,7 +38,7 @@
   ],
   "quests": [
     {
-      "id": "MG-01",
+      "id": "MG-1",
       "line": "MG",
       "order": 1,
       "title": "原神セレベンツ",
@@ -49,7 +49,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-03",
+      "id": "AQ-34",
       "line": "AQ",
       "order": 505,
       "title": "灼烈の反魂の詩",
@@ -58,42 +58,42 @@
       "desc": "ナタの部族に伝わる因縁が明らかになる一幕。",
       "prereqs": [
         {
-          "id": "SQ-64",
+          "id": "SQ-65",
           "reason": "note記事で紹介されていた履修ルートの一つ。ムアラニの部族見聞シリーズ(流泉の衆)。流泉の衆の歴史を知ることで、本編での彼らの立ち位置が理解しやすくなります。"
         },
         {
-          "id": "SQ-67",
+          "id": "SQ-66",
           "reason": "note記事で紹介されていた履修ルートの一つ。キィニチの部族見聞シリーズ(懸木の民)を巡るエピソードです。"
         },
         {
-          "id": "SQ-70",
+          "id": "SQ-67",
           "reason": "note記事で紹介されていた履修ルートの一つ。シロネンの部族見聞シリーズ(こだまの子)を巡るエピソードです。"
         },
         {
-          "id": "SQ-73",
+          "id": "SQ-68",
           "reason": "note記事で紹介されていた履修ルートの一つ。チャスカの部族見聞シリーズ(花翼の集)を巡るエピソードで、本編直前の内容として特に関連が深いとされています。"
         },
         {
-          "id": "SQ-76",
+          "id": "SQ-70",
           "reason": "本編に登場する執行官「博士」の暗躍が、シトラリの部族見聞(謎煙の主)第3幕で描かれる別の執行官の部下の動きと呼応しており、先に読んでおくと愚人衆側の動機が繋がって見えます。"
         },
         {
-          "id": "SQ-75",
+          "id": "SQ-63",
           "reason": "流れゆく色の記憶(第2幕)を先にプレイしておくのが推奨。"
         },
         {
-          "id": "SQ-78",
+          "id": "SQ-64",
           "reason": "キノコ奇譚(第2幕)を先にプレイしておくのが推奨。"
         },
         {
-          "id": "WQ-06",
+          "id": "WQ-23",
           "reason": "「灰燼に埋もれた都市」シリーズを先にプレイしておくのが推奨。"
         }
       ],
       "chapterGroup": "第五章"
     },
     {
-      "id": "WQ-06",
+      "id": "WQ-23",
       "line": "WQ",
       "order": 501,
       "title": "「灰燼に埋もれた都市」シリーズ",
@@ -105,7 +105,7 @@
       "branchRow": 0
     },
     {
-      "id": "WQ-07",
+      "id": "WQ-24",
       "line": "WQ",
       "order": 501.15,
       "title": "「古の聖山」世界任務シリーズ",
@@ -115,14 +115,14 @@
       "sourceNote": "note記事(個人ブログ)を要約・言い換えして追加。前提ではなく事後(この任務クリア後に読むと理解が深まる)の関係。",
       "prereqs": [
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "魔神任務だけでは分からない古竜の歴史と、仔竜の相棒の背景がここで明かされます。エンディング後の余韻として非常に評価が高い世界任務です。"
         }
       ],
       "branchRow": 0
     },
     {
-      "id": "EQ-02",
+      "id": "EQ-31",
       "line": "EQ",
       "order": 401.35,
       "title": "陽夏！悪龍？童話の王国！",
@@ -132,11 +132,11 @@
       "desc": "童話仕立ての期間限定イベント。",
       "prereqs": [
         {
-          "id": "AQ-36",
+          "id": "AQ-21",
           "reason": "魔神任務 間章第三幕「伽藍に落ちて」クリアが推奨。"
         },
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
         }
       ],
@@ -145,7 +145,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-09",
+      "id": "AQ-15",
       "line": "AQ",
       "order": 301,
       "title": "煙霧のベールと暗き森を抜けて",
@@ -157,7 +157,7 @@
       "chapterGroup": "第三章"
     },
     {
-      "id": "AQ-10",
+      "id": "AQ-16",
       "line": "AQ",
       "order": 302,
       "title": "黎明を告げる千の薔薇",
@@ -169,7 +169,7 @@
       "chapterGroup": "第三章"
     },
     {
-      "id": "AQ-11",
+      "id": "AQ-17",
       "line": "AQ",
       "order": 303,
       "title": "迷夢と虚幻と欺瞞",
@@ -179,14 +179,14 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-41",
+          "id": "SQ-32",
           "reason": "ティナリの伝説任務「フェネックの章」。プレイヤーの実プレイで、この幕の前提として気づいた前提知識クエスト。"
         }
       ],
       "chapterGroup": "第三章"
     },
     {
-      "id": "AQ-12",
+      "id": "AQ-18",
       "line": "AQ",
       "order": 304,
       "title": "赤砂の王と三人の巡礼者",
@@ -198,7 +198,7 @@
       "chapterGroup": "第三章"
     },
     {
-      "id": "AQ-13",
+      "id": "AQ-19",
       "line": "AQ",
       "order": 305,
       "title": "虚空の鼓動、熾盛の劫火",
@@ -210,7 +210,7 @@
       "chapterGroup": "第三章"
     },
     {
-      "id": "AQ-14",
+      "id": "AQ-20",
       "line": "AQ",
       "order": 306,
       "title": "カリベルト",
@@ -223,7 +223,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-15",
+      "id": "AQ-22",
       "line": "AQ",
       "order": 401,
       "title": "白露と黒潮の序詩",
@@ -233,14 +233,14 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "EQ-10",
+          "id": "EQ-23",
           "reason": "ブログ記事いわく「フォンテーヌの前置き的な要素もある」とのことで、フォンテーヌ編開幕前に見ておくと雰囲気が掴みやすくなります。"
         }
       ],
       "chapterGroup": "第四章"
     },
     {
-      "id": "AQ-16",
+      "id": "AQ-23",
       "line": "AQ",
       "order": 402,
       "title": "ゆえなく煙る霧雨のように",
@@ -252,7 +252,7 @@
       "chapterGroup": "第四章"
     },
     {
-      "id": "AQ-17",
+      "id": "AQ-24",
       "line": "AQ",
       "order": 403,
       "title": "深海に煌めく星たちへ",
@@ -264,7 +264,7 @@
       "chapterGroup": "第四章"
     },
     {
-      "id": "AQ-18",
+      "id": "AQ-25",
       "line": "AQ",
       "order": 404,
       "title": "胎動を諭す終焉の刻",
@@ -276,7 +276,7 @@
       "chapterGroup": "第四章"
     },
     {
-      "id": "AQ-19",
+      "id": "AQ-26",
       "line": "AQ",
       "order": 405,
       "title": "罪人の円舞曲",
@@ -288,7 +288,7 @@
       "chapterGroup": "第四章"
     },
     {
-      "id": "AQ-20",
+      "id": "AQ-27",
       "line": "AQ",
       "order": 406,
       "title": "ベッドタイムストーリー",
@@ -301,7 +301,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-21",
+      "id": "AQ-35",
       "line": "AQ",
       "order": 506,
       "title": "あなたのいる時空",
@@ -313,7 +313,7 @@
       "chapterGroup": "第五章"
     },
     {
-      "id": "AQ-22",
+      "id": "AQ-1",
       "line": "AQ",
       "order": 1,
       "title": "風を捕まえる異邦人",
@@ -325,7 +325,7 @@
       "chapterGroup": "序章"
     },
     {
-      "id": "AQ-23",
+      "id": "AQ-2",
       "line": "AQ",
       "order": 2,
       "title": "涙のない明日のために",
@@ -337,7 +337,7 @@
       "chapterGroup": "序章"
     },
     {
-      "id": "AQ-24",
+      "id": "AQ-3",
       "line": "AQ",
       "order": 3,
       "title": "龍と自由の歌",
@@ -349,7 +349,7 @@
       "chapterGroup": "序章"
     },
     {
-      "id": "AQ-25",
+      "id": "AQ-4",
       "line": "AQ",
       "order": 101,
       "title": "浮世浮生千岩間",
@@ -361,7 +361,7 @@
       "chapterGroup": "第一章"
     },
     {
-      "id": "AQ-26",
+      "id": "AQ-5",
       "line": "AQ",
       "order": 102,
       "title": "久遠の体との別れ",
@@ -373,7 +373,7 @@
       "chapterGroup": "第一章"
     },
     {
-      "id": "AQ-27",
+      "id": "AQ-6",
       "line": "AQ",
       "order": 103,
       "title": "迫る客星",
@@ -385,7 +385,7 @@
       "chapterGroup": "第一章"
     },
     {
-      "id": "AQ-28",
+      "id": "AQ-7",
       "line": "AQ",
       "order": 104,
       "title": "私達はいずれ再会する",
@@ -398,7 +398,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-29",
+      "id": "AQ-9",
       "line": "AQ",
       "order": 200,
       "title": "秋風に舞いし紅葉",
@@ -410,7 +410,7 @@
       "chapterGroup": "第二章"
     },
     {
-      "id": "AQ-30",
+      "id": "AQ-10",
       "line": "AQ",
       "order": 201,
       "title": "鳴神不動、恒常楽土",
@@ -422,7 +422,7 @@
       "chapterGroup": "第二章"
     },
     {
-      "id": "AQ-31",
+      "id": "AQ-11",
       "line": "AQ",
       "order": 202,
       "title": "無念無想、泡影を滅す",
@@ -434,7 +434,7 @@
       "chapterGroup": "第二章"
     },
     {
-      "id": "AQ-32",
+      "id": "AQ-12",
       "line": "AQ",
       "order": 203,
       "title": "千手百目の浮世",
@@ -444,14 +444,14 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "EQ-14",
+          "id": "EQ-2",
           "reason": "「帰らぬ熄星」で散兵(スカラマシュ)が初登場し、この幕で散兵と再会する際、このイベントをプレイしたかどうかで会話が「再会」か「初対面」かに分岐します。"
         }
       ],
       "chapterGroup": "第二章"
     },
     {
-      "id": "AQ-33",
+      "id": "AQ-13",
       "line": "AQ",
       "order": 204,
       "title": "淵底に響くレクイエム",
@@ -464,7 +464,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-34",
+      "id": "AQ-8",
       "line": "AQ",
       "order": 104,
       "title": "風立ちし鶴の帰郷",
@@ -477,7 +477,7 @@
       "branchRow": 1
     },
     {
-      "id": "AQ-35",
+      "id": "AQ-14",
       "line": "AQ",
       "order": 204,
       "title": "険路怪跡",
@@ -490,7 +490,7 @@
       "branchRow": 1
     },
     {
-      "id": "AQ-36",
+      "id": "AQ-21",
       "line": "AQ",
       "order": 306,
       "title": "伽藍に落ちて",
@@ -500,11 +500,11 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "WQ-30",
+          "id": "WQ-3",
           "reason": "たたら物語。プレイヤーの実プレイで見つかった前提知識クエスト。"
         },
         {
-          "id": "EQ-06",
+          "id": "EQ-14",
           "reason": "華やぐ紫苑の庭。プレイヤーの実プレイで見つかった前提知識クエスト。"
         }
       ],
@@ -512,7 +512,7 @@
       "branchRow": 1
     },
     {
-      "id": "AQ-05",
+      "id": "AQ-28",
       "line": "AQ",
       "order": 406,
       "title": "背理",
@@ -521,23 +521,23 @@
       "desc": "",
       "prereqs": [
         {
-          "id": "EQ-02",
+          "id": "EQ-31",
           "reason": "対峙する敵キャラクターの過去と動機が描かれた期間限定イベントです。未プレイだと関係性がやや唐突に感じられます。"
         },
         {
-          "id": "SQ-23",
+          "id": "SQ-9",
           "reason": "「背理」の実際の開放条件の一つ。アルベドの伝説任務で描かれる背景を先に知っておくと、間章の内容がより理解しやすくなります。"
         },
         {
-          "id": "EQ-03",
+          "id": "EQ-3",
           "reason": "白亜と黒龍。プレイヤーの実プレイで見つかった前提知識クエスト。"
         },
         {
-          "id": "EQ-04",
+          "id": "EQ-11",
           "reason": "白雪に潜みし影。プレイヤーの実プレイで見つかった前提知識クエスト。"
         },
         {
-          "id": "EQ-05",
+          "id": "EQ-20",
           "reason": "風花の吐息。プレイヤーの実プレイで見つかった前提知識クエスト。"
         }
       ],
@@ -545,7 +545,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-06",
+      "id": "SQ-72",
       "line": "SQ",
       "order": 605,
       "title": "予見鳥の章",
@@ -555,7 +555,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-47",
+          "id": "AQ-41",
           "reason": "空月の歌第五幕クリアで解放されるリンネアの伝説任務「予見鳥の章」(第一幕)。",
           "type": "unlock"
         }
@@ -564,7 +564,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-07",
+      "id": "SQ-73",
       "line": "SQ",
       "order": 607,
       "title": "ドラコ・ルベドの章",
@@ -574,7 +574,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-06",
+          "id": "AQ-43",
           "reason": "空月の歌第七幕クリアで解放されるドゥリンの伝説任務「ドラコ・ルベドの章」(第一幕)。",
           "type": "unlock"
         }
@@ -583,7 +583,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-08",
+      "id": "SQ-51",
       "line": "SQ",
       "order": 405,
       "title": "クリスタリナの章",
@@ -593,7 +593,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるスカークの伝説任務「クリスタリナの章」(第一幕)。",
           "type": "unlock"
         }
@@ -602,7 +602,7 @@
       "branchRow": 7
     },
     {
-      "id": "SQ-09",
+      "id": "SQ-69",
       "line": "SQ",
       "order": 505,
       "title": "不敗の日輪の章",
@@ -612,7 +612,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "第五章第五幕クリアで解放されるマーヴィカの伝説任務「不敗の日輪の章」(第一幕)。",
           "type": "unlock"
         }
@@ -621,7 +621,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-10",
+      "id": "SQ-4",
       "line": "SQ",
       "order": 1,
       "title": "長杓の章",
@@ -631,7 +631,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-22",
+          "id": "AQ-1",
           "reason": "序章第一幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -640,7 +640,7 @@
       "branchRow": 3
     },
     {
-      "id": "SQ-11",
+      "id": "SQ-37",
       "line": "SQ",
       "order": 305,
       "title": "隼の章",
@@ -650,7 +650,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "第三章第五幕クリアで解放されるアルハイゼンの伝説任務「隼の章」(第一幕)。",
           "type": "unlock"
         }
@@ -659,7 +659,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-12",
+      "id": "SQ-50",
       "line": "SQ",
       "order": 405,
       "title": "ピエス・モンテの章",
@@ -669,7 +669,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるエスコフィエの伝説任務「ピエス・モンテの章」(第一幕)。",
           "type": "unlock"
         }
@@ -678,7 +678,7 @@
       "branchRow": 6
     },
     {
-      "id": "SQ-13",
+      "id": "SQ-2",
       "line": "SQ",
       "order": 1,
       "title": "小兎の章",
@@ -688,7 +688,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-22",
+          "id": "AQ-1",
           "reason": "序章第一幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -697,7 +697,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-14",
+      "id": "SQ-3",
       "line": "SQ",
       "order": 1,
       "title": "孔雀羽の章",
@@ -707,11 +707,11 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "MG-01",
+          "id": "MG-1",
           "reason": "ガイアの過去が公式漫画で描かれており、伝説任務の背景を先に知ることができます。"
         },
         {
-          "id": "AQ-22",
+          "id": "AQ-1",
           "reason": "序章第一幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -720,7 +720,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-15",
+      "id": "SQ-1",
       "line": "SQ",
       "order": 1,
       "title": "砂時計の章",
@@ -730,7 +730,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-22",
+          "id": "AQ-1",
           "reason": "序章第一幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -739,7 +739,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-16",
+      "id": "SQ-6",
       "line": "SQ",
       "order": 3,
       "title": "狼の章",
@@ -749,7 +749,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-24",
+          "id": "AQ-3",
           "reason": "序章第三幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -758,7 +758,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-17",
+      "id": "SQ-7",
       "line": "SQ",
       "order": 3,
       "title": "夜梟の章",
@@ -768,11 +768,11 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "MG-01",
+          "id": "MG-1",
           "reason": "ディルックの過去が公式漫画で描かれており、伝説任務の背景を先に知ることができます。"
         },
         {
-          "id": "AQ-24",
+          "id": "AQ-3",
           "reason": "序章第三幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -781,7 +781,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-18",
+      "id": "SQ-10",
       "line": "SQ",
       "order": 3.5,
       "title": "四つ葉の章",
@@ -791,12 +791,12 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-17",
+          "id": "SQ-7",
           "reason": "ディルックの伝説任務「夜梟の章」第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "SQ-16",
+          "id": "SQ-6",
           "reason": "レザーの伝説任務「狼の章」第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
@@ -805,7 +805,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-19",
+      "id": "SQ-11",
       "line": "SQ",
       "order": 4,
       "title": "仔獅子の章",
@@ -815,7 +815,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-18",
+          "id": "SQ-10",
           "reason": "クレーの伝説任務「四つ葉の章」第一幕クリアが解放条件。",
           "type": "unlock"
         }
@@ -824,7 +824,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-20",
+      "id": "SQ-13",
       "line": "SQ",
       "order": 4,
       "title": "歌仙の章",
@@ -834,7 +834,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-18",
+          "id": "SQ-10",
           "reason": "クレーの伝説任務「四つ葉の章」第一幕クリアが解放条件。",
           "type": "unlock"
         }
@@ -843,7 +843,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-21",
+      "id": "SQ-12",
       "line": "SQ",
       "order": 4,
       "title": "映天の章",
@@ -853,7 +853,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-18",
+          "id": "SQ-10",
           "reason": "クレーの伝説任務「四つ葉の章」第一幕クリアが解放条件。",
           "type": "unlock"
         }
@@ -862,7 +862,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-22",
+      "id": "SQ-8",
       "line": "SQ",
       "order": 3,
       "title": "波沫の章",
@@ -872,7 +872,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-24",
+          "id": "AQ-3",
           "reason": "序章第三幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -881,7 +881,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-23",
+      "id": "SQ-9",
       "line": "SQ",
       "order": 3,
       "title": "白亜の章",
@@ -891,7 +891,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。CSVの備考「v1.2期間限定イベント」は同時期に実装された関連イベント「白亜と黒龍」(EQ-03)についての記述であり、この伝説任務自体は常設のため修正(2026年再監査)。",
       "prereqs": [
         {
-          "id": "AQ-24",
+          "id": "AQ-3",
           "reason": "序章第三幕クリアで解放される伝説任務(第一幕・旅人観察報告)。",
           "type": "unlock"
         }
@@ -900,7 +900,7 @@
       "branchRow": 3
     },
     {
-      "id": "SQ-24",
+      "id": "SQ-5",
       "line": "SQ",
       "order": 1.5,
       "title": "錦織の章",
@@ -910,7 +910,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-15",
+          "id": "SQ-1",
           "reason": "砂時計の章(第一幕)クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -919,7 +919,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-25",
+      "id": "SQ-16",
       "line": "SQ",
       "order": 103,
       "title": "空鯨の章",
@@ -929,7 +929,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-27",
+          "id": "AQ-6",
           "reason": "第一章第三幕クリアで解放されるタルタリヤの伝説任務「空鯨の章」(第一幕)。",
           "type": "unlock"
         }
@@ -938,7 +938,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-26",
+      "id": "SQ-20",
       "line": "SQ",
       "order": 104,
       "title": "古聞の章",
@@ -948,7 +948,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-28",
+          "id": "AQ-7",
           "reason": "第一章第四幕クリアで解放される鍾離の伝説任務「古聞の章」。",
           "type": "unlock"
         }
@@ -957,7 +957,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-27",
+      "id": "SQ-17",
       "line": "SQ",
       "order": 103,
       "title": "仙麟の章",
@@ -967,7 +967,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-27",
+          "id": "AQ-6",
           "reason": "第一章第三幕クリアで解放される甘雨の伝説任務「仙麟の章」(第一幕)。",
           "type": "unlock"
         }
@@ -976,7 +976,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-28",
+      "id": "SQ-14",
       "line": "SQ",
       "order": 101,
       "title": "金翼鵬王の章",
@@ -986,7 +986,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-25",
+          "id": "AQ-4",
           "reason": "第一章第一幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -995,7 +995,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-29",
+      "id": "SQ-15",
       "line": "SQ",
       "order": 102,
       "title": "彼岸蝶の章",
@@ -1005,7 +1005,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-26",
+          "id": "AQ-5",
           "reason": "第一章第二幕クリアで解放される胡桃の伝説任務「彼岸蝶の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1014,7 +1014,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-30",
+      "id": "SQ-29",
       "line": "SQ",
       "order": 203.8,
       "title": "幽客の章",
@@ -1024,7 +1024,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-35",
+          "id": "AQ-14",
           "reason": "間章第二幕クリアで解放される夜蘭の伝説任務「幽客の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1033,7 +1033,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-31",
+      "id": "SQ-18",
       "line": "SQ",
       "order": 103,
       "title": "懸壺の章",
@@ -1043,7 +1043,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-27",
+          "id": "AQ-6",
           "reason": "第一章第三幕クリアで解放される白朮の伝説任務「懸壺の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1052,7 +1052,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-32",
+      "id": "SQ-21",
       "line": "SQ",
       "order": 201,
       "title": "琉金の章（第一幕）",
@@ -1062,7 +1062,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-30",
+          "id": "AQ-10",
           "reason": "第二章第一幕クリアで解放される宵宮の伝説任務「琉金の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1071,7 +1071,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-33",
+      "id": "SQ-28",
       "line": "SQ",
       "order": 203.8,
       "title": "天ノ牛の章",
@@ -1081,7 +1081,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-36",
+          "id": "SQ-24",
           "reason": "睡竜の章クリアで解放される荒瀧一斗の伝説任務「天ノ牛の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1090,7 +1090,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-34",
+      "id": "SQ-22",
       "line": "SQ",
       "order": 201,
       "title": "雪鶴の章",
@@ -1100,7 +1100,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-30",
+          "id": "AQ-10",
           "reason": "第二章第一幕クリアで解放される神里綾華の伝説任務「雪鶴の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1109,7 +1109,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-35",
+      "id": "SQ-23",
       "line": "SQ",
       "order": 203,
       "title": "天下人の章（第一幕）",
@@ -1119,7 +1119,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-32",
+          "id": "AQ-12",
           "reason": "第二章第三幕クリアで解放される雷電将軍の伝説任務「天下人の章」第一幕。",
           "type": "unlock"
         }
@@ -1128,7 +1128,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-36",
+      "id": "SQ-24",
       "line": "SQ",
       "order": 203.5,
       "title": "睡竜の章",
@@ -1138,7 +1138,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-35",
+          "id": "SQ-23",
           "reason": "天下人の章クリアで解放される珊瑚宮心海の伝説任務「睡竜の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1147,7 +1147,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-37",
+      "id": "SQ-30",
       "line": "SQ",
       "order": 203.8,
       "title": "仙狐の章",
@@ -1157,7 +1157,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "天下人の章 第二幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -1166,7 +1166,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-38",
+      "id": "SQ-25",
       "line": "SQ",
       "order": 203.5,
       "title": "神守柏の章",
@@ -1176,7 +1176,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-35",
+          "id": "SQ-23",
           "reason": "天下人の章クリアで解放される神里綾人の伝説任務「神守柏の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1185,7 +1185,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-39",
+      "id": "SQ-26",
       "line": "SQ",
       "order": 203.5,
       "title": "紅葉の章",
@@ -1195,7 +1195,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-35",
+          "id": "SQ-23",
           "reason": "天下人の章クリアで解放される楓原万葉の伝説任務「紅葉の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1204,7 +1204,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-40",
+      "id": "SQ-31",
       "line": "SQ",
       "order": 203.8,
       "title": "獏枕の章",
@@ -1214,7 +1214,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "天下人の章 第二幕クリアで解放される伝説任務(第一幕)。",
           "type": "unlock"
         }
@@ -1223,7 +1223,7 @@
       "branchRow": 3
     },
     {
-      "id": "SQ-41",
+      "id": "SQ-32",
       "line": "SQ",
       "order": 302,
       "title": "フェネックの章",
@@ -1233,7 +1233,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-10",
+          "id": "AQ-16",
           "reason": "第三章第二幕クリアで解放されるティナリの伝説任務「フェネックの章」(第一幕)。",
           "type": "unlock"
         }
@@ -1242,7 +1242,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-42",
+      "id": "SQ-34",
       "line": "SQ",
       "order": 304,
       "title": "金狼の章（第一幕）",
@@ -1252,7 +1252,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-12",
+          "id": "AQ-18",
           "reason": "第三章第四幕クリアで解放されるセノの伝説任務「金狼の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1261,7 +1261,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-43",
+      "id": "SQ-33",
       "line": "SQ",
       "order": 302,
       "title": "睡蓮の章",
@@ -1271,7 +1271,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-10",
+          "id": "AQ-16",
           "reason": "第三章第二幕クリアで解放されるニィロウの伝説任務「睡蓮の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1280,7 +1280,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-44",
+      "id": "SQ-38",
       "line": "SQ",
       "order": 305,
       "title": "マンティコアの章",
@@ -1290,7 +1290,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "第三章第五幕クリアで解放されるディシアの伝説任務「マンティコアの章」(第一幕)。",
           "type": "unlock"
         }
@@ -1299,7 +1299,7 @@
       "branchRow": 3
     },
     {
-      "id": "SQ-45",
+      "id": "SQ-35",
       "line": "SQ",
       "order": 305,
       "title": "知恵の主の章（第一幕）",
@@ -1309,7 +1309,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "第三章第五幕クリアで解放されるナヒーダの伝説任務「知恵の主の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1318,7 +1318,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-46",
+      "id": "SQ-41",
       "line": "SQ",
       "order": 403,
       "title": "黒斑猫の章",
@@ -1328,7 +1328,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-17",
+          "id": "AQ-24",
           "reason": "第四章第三幕クリアで解放されるリネの伝説任務「黒斑猫の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1337,7 +1337,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-47",
+      "id": "SQ-42",
       "line": "SQ",
       "order": 404,
       "title": "潮汐の章",
@@ -1347,7 +1347,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-18",
+          "id": "AQ-25",
           "reason": "第四章第四幕クリアで解放されるヌヴィレットの伝説任務「潮汐の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1356,7 +1356,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-48",
+      "id": "SQ-43",
       "line": "SQ",
       "order": 404,
       "title": "獄守犬の章",
@@ -1366,7 +1366,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-18",
+          "id": "AQ-25",
           "reason": "第四章第四幕クリアで解放されるリオセスリの伝説任務「獄守犬の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1375,7 +1375,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-49",
+      "id": "SQ-44",
       "line": "SQ",
       "order": 405,
       "title": "頌歌者の章",
@@ -1385,7 +1385,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるフリーナの伝説任務「頌歌者の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1394,7 +1394,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-50",
+      "id": "SQ-45",
       "line": "SQ",
       "order": 405,
       "title": "野薔薇の章",
@@ -1404,7 +1404,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるナヴィアの伝説任務「野薔薇の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1413,7 +1413,7 @@
       "branchRow": 1
     },
     {
-      "id": "SQ-51",
+      "id": "SQ-19",
       "line": "SQ",
       "order": 104,
       "title": "閑鶴の章",
@@ -1423,7 +1423,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-34",
+          "id": "AQ-8",
           "reason": "間章第一幕クリアで解放される閑雲の伝説任務「閑鶴の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1432,7 +1432,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-52",
+      "id": "SQ-46",
       "line": "SQ",
       "order": 405,
       "title": "糸切鋏の章",
@@ -1442,7 +1442,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放される千織の伝説任務「糸切鋏の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1451,7 +1451,7 @@
       "branchRow": 2
     },
     {
-      "id": "SQ-53",
+      "id": "SQ-47",
       "line": "SQ",
       "order": 405,
       "title": "浄煉の炎の章",
@@ -1461,7 +1461,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるアルレッキーノの伝説任務「浄煉の炎の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1470,7 +1470,7 @@
       "branchRow": 3
     },
     {
-      "id": "SQ-54",
+      "id": "SQ-52",
       "line": "SQ",
       "order": 405.5,
       "title": "レイピアの章",
@@ -1480,7 +1480,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-49",
+          "id": "SQ-44",
           "reason": "頌歌者の章クリアで解放されるクロリンデの伝説任務「レイピアの章」(第一幕)。",
           "type": "unlock"
         }
@@ -1489,7 +1489,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-55",
+      "id": "SQ-48",
       "line": "SQ",
       "order": 405,
       "title": "ネレイスの章",
@@ -1499,7 +1499,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるシグウィンの伝説任務「ネレイスの章」(第一幕)。",
           "type": "unlock"
         }
@@ -1508,7 +1508,7 @@
       "branchRow": 4
     },
     {
-      "id": "SQ-56",
+      "id": "SQ-49",
       "line": "SQ",
       "order": 405,
       "title": "ポムム・ドゥ・アンブラの章",
@@ -1518,7 +1518,7 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕クリアで解放されるエミリエの伝説任務「ポムム・ドゥ・アンブラの章」(第一幕)。",
           "type": "unlock"
         }
@@ -1527,7 +1527,7 @@
       "branchRow": 5
     },
     {
-      "id": "EQ-07",
+      "id": "EQ-32",
       "line": "EQ",
       "order": 501.0,
       "title": "キャンディと薔薇の歌",
@@ -1537,23 +1537,23 @@
       "sourceNote": "genshin-dictionary.com(CSV)ではquest-storyタグだったが、実際は期間限定イベント任務のため路線を修正(2026年再監査)。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
         },
         {
-          "id": "SQ-59",
+          "id": "SQ-36",
           "reason": "セノの伝説任務「金狼の章」第二幕クリアが推奨。"
         },
         {
-          "id": "WQ-33",
+          "id": "WQ-9",
           "reason": "世界任務「アランナラの世界」クリアが推奨。"
         },
         {
-          "id": "WQ-34",
+          "id": "WQ-10",
           "reason": "世界任務「料理は楽しい思い出」クリアが推奨。"
         },
         {
-          "id": "WQ-35",
+          "id": "WQ-18",
           "reason": "世界任務「如是霊光一切示現」で「二本角の花冠」を選んでいるとより理解が深まる。"
         }
       ],
@@ -1564,7 +1564,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-06",
+      "id": "AQ-43",
       "line": "AQ",
       "order": 607,
       "title": "冬の夜、ある旅人が",
@@ -1576,7 +1576,7 @@
       "chapterGroup": "空月の歌"
     },
     {
-      "id": "AQ-07",
+      "id": "AQ-45",
       "line": "AQ",
       "order": 609,
       "title": "身土壊空、五蘊識転",
@@ -1588,7 +1588,7 @@
       "chapterGroup": "空月の歌"
     },
     {
-      "id": "AQ-08",
+      "id": "AQ-47",
       "line": "AQ",
       "order": 611,
       "title": "虚空劫灰のプラーナ",
@@ -1600,7 +1600,7 @@
       "chapterGroup": "空月の歌"
     },
     {
-      "id": "SQ-04",
+      "id": "SQ-74",
       "line": "SQ",
       "order": 609,
       "title": "天狼の章",
@@ -1610,7 +1610,7 @@
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
       "prereqs": [
         {
-          "id": "AQ-07",
+          "id": "AQ-45",
           "reason": "空月の歌第九幕クリアで解放されるファルカの伝説任務「天狼の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1619,7 +1619,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-05",
+      "id": "SQ-75",
       "line": "SQ",
       "order": 610,
       "title": "騎士兎の章",
@@ -1629,7 +1629,7 @@
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
       "prereqs": [
         {
-          "id": "AQ-50",
+          "id": "AQ-46",
           "reason": "空月の歌第十幕クリアで解放されるローエンの伝説任務「騎士兎の章」(第一幕)。",
           "type": "unlock"
         }
@@ -1638,7 +1638,7 @@
       "branchRow": 0
     },
     {
-      "id": "WQ-08",
+      "id": "WQ-25",
       "line": "WQ",
       "order": 610,
       "title": "淑女のお誘い",
@@ -1655,7 +1655,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-03",
+      "id": "EQ-3",
       "line": "EQ",
       "order": 1.1,
       "title": "白亜と黒龍",
@@ -1670,7 +1670,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-04",
+      "id": "EQ-11",
       "line": "EQ",
       "order": 200.15,
       "title": "白雪に潜みし影",
@@ -1681,7 +1681,7 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "EQ-03",
+          "id": "EQ-3",
           "reason": "ブログ記事いわく「アルベドについてはver2.3の『白雪に潜みし影』で色々と明らかになるので、そちらを見る前にこっちを見ておくといいかもしれません」とのことです。"
         }
       ],
@@ -1690,7 +1690,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-05",
+      "id": "EQ-20",
       "line": "EQ",
       "order": 301.2,
       "title": "風花の吐息",
@@ -1701,11 +1701,11 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
         },
         {
-          "id": "SQ-23",
+          "id": "SQ-9",
           "reason": "アルベドの伝説任務「白亜の章」第一幕クリアが推奨。"
         }
       ],
@@ -1714,7 +1714,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-06",
+      "id": "EQ-14",
       "line": "EQ",
       "order": 200.3,
       "title": "華やぐ紫苑の庭",
@@ -1725,15 +1725,15 @@
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-38",
+          "id": "SQ-25",
           "reason": "神里綾人の伝説任務「神守柏の章」第一幕「散りゆく青桐の葉」クリアが推奨。"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務「天下人の章」第二幕「須臾百夢」クリアが推奨。"
         },
         {
-          "id": "SQ-36",
+          "id": "SQ-24",
           "reason": "珊瑚宮心海の伝説任務「睡竜の章」第一幕「春草や、戦の後の夢の迹」クリアが推奨。"
         }
       ],
@@ -1742,7 +1742,7 @@
       "branchRow": 0
     },
     {
-      "id": "WQ-30",
+      "id": "WQ-3",
       "line": "WQ",
       "order": 200,
       "title": "たたら物語",
@@ -1754,7 +1754,7 @@
       "branchRow": 0
     },
     {
-      "id": "AQ-37",
+      "id": "AQ-29",
       "line": "AQ",
       "order": 501,
       "title": "栄華と炎天の途",
@@ -1766,7 +1766,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-38",
+      "id": "AQ-30",
       "line": "AQ",
       "order": 502,
       "title": "白石に埋もれし黒石",
@@ -1778,7 +1778,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-39",
+      "id": "AQ-31",
       "line": "AQ",
       "order": 503,
       "title": "鏡と謎煙の行方",
@@ -1790,7 +1790,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-40",
+      "id": "AQ-32",
       "line": "AQ",
       "order": 504,
       "title": "燃ゆる運命の虹光",
@@ -1802,7 +1802,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-41",
+      "id": "AQ-33",
       "line": "AQ",
       "order": 504.5,
       "title": "万火、一に帰す",
@@ -1814,7 +1814,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-42",
+      "id": "AQ-36",
       "line": "AQ",
       "order": 600,
       "title": "帰途",
@@ -1825,23 +1825,23 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
-          "id": "SQ-45",
+          "id": "SQ-35",
           "reason": "ナヒーダの伝説任務「知恵の主の章」。実プレイで判明した情報として、空月の歌8章完了後に進めようとすると「任務エリアが他の任務に占用されています」という警告により空月の歌9章を進めないといけなくなるため、序幕の時点で片付けておくことが推奨されます。",
           "type": "warning"
         },
         {
-          "id": "SQ-42",
+          "id": "SQ-34",
           "reason": "セノの伝説任務「金狼の章」。実プレイで判明した情報として、空月の歌8章完了後に進めようとすると「任務エリアが他の任務に占用されています」という警告により空月の歌9章を進めないといけなくなるため、序幕の時点で片付けておくことが推奨されます。",
           "type": "warning"
         },
         {
-          "id": "WQ-41",
+          "id": "WQ-21",
           "reason": "「水仙のアン」シリーズを先にプレイしておくのが推奨。"
         }
       ]
     },
     {
-      "id": "AQ-43",
+      "id": "AQ-37",
       "line": "AQ",
       "order": 601,
       "title": "白銀の浪と蒼林の舞",
@@ -1853,7 +1853,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-44",
+      "id": "AQ-38",
       "line": "AQ",
       "order": 602,
       "title": "塵と灯のエレジー",
@@ -1865,7 +1865,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-45",
+      "id": "AQ-39",
       "line": "AQ",
       "order": 603,
       "title": "存在しない国",
@@ -1877,7 +1877,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-46",
+      "id": "AQ-40",
       "line": "AQ",
       "order": 604,
       "title": "消えた月光に想いを馳せて",
@@ -1889,7 +1889,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-47",
+      "id": "AQ-41",
       "line": "AQ",
       "order": 605,
       "title": "北の果ての夜想詩",
@@ -1901,7 +1901,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-48",
+      "id": "AQ-42",
       "line": "AQ",
       "order": 606,
       "title": "朝霧に散りゆく月光",
@@ -1913,7 +1913,7 @@
       "prereqs": []
     },
     {
-      "id": "AQ-49",
+      "id": "AQ-44",
       "line": "AQ",
       "order": 608,
       "title": "真実の月",
@@ -1925,7 +1925,7 @@
       "prereqs": []
     },
     {
-      "id": "EQ-08",
+      "id": "EQ-15",
       "line": "EQ",
       "order": 200.35,
       "title": "サマータイムオデッセイ",
@@ -1936,7 +1936,7 @@
       "sourceNote": "Fandom Wikiで「推奨任務」として明記されている情報を基に追加。",
       "prereqs": [
         {
-          "id": "SQ-21",
+          "id": "SQ-12",
           "reason": "公式Wikiで「推奨任務」として明記されている、モナの伝説任務「映天の章」第一幕。クリアしておくとイベントをより楽しめます。"
         }
       ],
@@ -1945,7 +1945,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-09",
+      "id": "EQ-19",
       "line": "EQ",
       "order": 301.15,
       "title": "海灯祭2023「華舞う夜の旋律」",
@@ -1956,11 +1956,11 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [
         {
-          "id": "AQ-34",
+          "id": "AQ-8",
           "reason": "魔神任務「風立ちし鶴の帰郷」クリアが推奨。"
         },
         {
-          "id": "SQ-30",
+          "id": "SQ-29",
           "reason": "夜蘭の伝説任務「幽客の章」第一幕クリアが推奨。"
         }
       ],
@@ -1969,7 +1969,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-10",
+      "id": "EQ-23",
       "line": "EQ",
       "order": 301.35,
       "title": "涼夏！楽園？大秘境！",
@@ -1980,15 +1980,15 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "魔神任務 第三章第五幕「虚空の鼓動、熾盛の劫火」クリアが推奨。"
         },
         {
-          "id": "SQ-22",
+          "id": "SQ-8",
           "reason": "エウルアの伝説任務「波沫の章」第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-36",
+          "id": "SQ-24",
           "reason": "珊瑚宮心海の伝説任務「睡竜の章」第一幕クリアが推奨。"
         }
       ],
@@ -1997,7 +1997,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-11",
+      "id": "EQ-24",
       "line": "EQ",
       "order": 401.0,
       "title": "流れゆく水に詩を紡いで",
@@ -2008,7 +2008,7 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [
         {
-          "id": "EQ-09",
+          "id": "EQ-19",
           "reason": "ブログ記事いわく「まさかのver.3.4 海灯祭の伏線回収」とのことで、エピローグの内容を先に知っておくと本編の繋がりが分かりやすくなります。"
         }
       ],
@@ -2017,7 +2017,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-12",
+      "id": "EQ-27",
       "line": "EQ",
       "order": 401.15,
       "title": "海灯祭2024「春立つ風を梳かす彩鳶」",
@@ -2028,15 +2028,15 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
       "prereqs": [
         {
-          "id": "SQ-51",
+          "id": "SQ-19",
           "reason": "ブログ記事いわく「これから動画を見る人は『閑雲の伝説任務』をやってから見ることをおすすめします」とのことです。"
         },
         {
-          "id": "AQ-27",
+          "id": "AQ-6",
           "reason": "魔神任務 第一章第三幕「迫る客星」クリアが推奨。"
         },
         {
-          "id": "SQ-49",
+          "id": "SQ-44",
           "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
         }
       ],
@@ -2045,7 +2045,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-13",
+      "id": "EQ-1",
       "line": "EQ",
       "order": 1.0,
       "title": "バーバラ、キラッと登場☆",
@@ -2060,7 +2060,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-14",
+      "id": "EQ-2",
       "line": "EQ",
       "order": 1.05,
       "title": "帰らぬ熄星",
@@ -2075,7 +2075,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-15",
+      "id": "EQ-4",
       "line": "EQ",
       "order": 101.0,
       "title": "海灯祭2021「明霄、海に昇りて」",
@@ -2090,7 +2090,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-16",
+      "id": "EQ-5",
       "line": "EQ",
       "order": 101.05,
       "title": "風花の招待",
@@ -2105,7 +2105,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-17",
+      "id": "EQ-6",
       "line": "EQ",
       "order": 101.1,
       "title": "エネルギー原盤・序論",
@@ -2120,7 +2120,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-18",
+      "id": "EQ-7",
       "line": "EQ",
       "order": 101.15,
       "title": "真夏！島？大冒険！",
@@ -2135,7 +2135,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-19",
+      "id": "EQ-8",
       "line": "EQ",
       "order": 200.0,
       "title": "雷痕を求めて",
@@ -2150,7 +2150,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-20",
+      "id": "EQ-9",
       "line": "EQ",
       "order": 200.05,
       "title": "韶光撫月",
@@ -2165,7 +2165,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-21",
+      "id": "EQ-10",
       "line": "EQ",
       "order": 200.1,
       "title": "謎境一騎",
@@ -2180,7 +2180,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-22",
+      "id": "EQ-12",
       "line": "EQ",
       "order": 200.2,
       "title": "海灯祭2022「華々しき流年」",
@@ -2195,7 +2195,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-23",
+      "id": "EQ-13",
       "line": "EQ",
       "order": 200.25,
       "title": "三界道饗祭",
@@ -2206,7 +2206,7 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "WQ-39",
+          "id": "WQ-8",
           "reason": "第二章の世界任務「エレボスの秘密」クリアが推奨。"
         }
       ],
@@ -2215,7 +2215,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-24",
+      "id": "EQ-16",
       "line": "EQ",
       "order": 301.0,
       "title": "杯の中のバラッド",
@@ -2226,11 +2226,11 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "SQ-16",
+          "id": "SQ-6",
           "reason": "レザーの伝説任務「狼の章」第一幕「ルピカの意味」クリアが推奨。"
         },
         {
-          "id": "AQ-24",
+          "id": "AQ-3",
           "reason": "魔神任務 序章第三幕「龍と自由の歌」クリアが推奨。"
         }
       ],
@@ -2239,7 +2239,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-25",
+      "id": "EQ-17",
       "line": "EQ",
       "order": 301.05,
       "title": "ワンダフルキノコンピック",
@@ -2250,11 +2250,11 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "魔神任務 第三章第五幕「虚空の鼓動、熾盛の劫火」クリアが推奨。"
         },
         {
-          "id": "SQ-37",
+          "id": "SQ-30",
           "reason": "八重神子の伝説任務「仙狐の章」第一幕「鳴神御祓祈願祭」クリアが推奨。"
         }
       ],
@@ -2263,7 +2263,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-26",
+      "id": "EQ-18",
       "line": "EQ",
       "order": 301.1,
       "title": "秋津ノ夜森肝試し大会",
@@ -2274,7 +2274,7 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "SQ-33",
+          "id": "SQ-28",
           "reason": "荒瀧一斗の伝説任務「天ノ牛の章」第一幕「赤金魂」クリアが推奨。"
         }
       ],
@@ -2283,7 +2283,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-27",
+      "id": "EQ-21",
       "line": "EQ",
       "order": 301.25,
       "title": "盛典と慧業",
@@ -2294,11 +2294,11 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "AQ-36",
+          "id": "AQ-21",
           "reason": "魔神任務「伽藍に落ちて」クリアが推奨。"
         },
         {
-          "id": "SQ-11",
+          "id": "SQ-37",
           "reason": "アルハイゼンの伝説任務「隼の章」第一幕クリアが推奨。"
         }
       ],
@@ -2307,7 +2307,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-28",
+      "id": "EQ-22",
       "line": "EQ",
       "order": 301.3,
       "title": "決闘！召喚の頂！",
@@ -2318,15 +2318,15 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
         },
         {
-          "id": "SQ-21",
+          "id": "SQ-12",
           "reason": "モナの伝説任務「映天の章」第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
         }
       ],
@@ -2335,7 +2335,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-29",
+      "id": "EQ-25",
       "line": "EQ",
       "order": 401.05,
       "title": "トルクシーの不思議な冒険",
@@ -2346,7 +2346,7 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
         }
       ],
@@ -2355,7 +2355,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-30",
+      "id": "EQ-26",
       "line": "EQ",
       "order": 401.1,
       "title": "薔薇と銃士",
@@ -2366,27 +2366,27 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "WQ-30",
+          "id": "WQ-3",
           "reason": "世界任務「たたら物語」を先にプレイしておくのが推奨。"
         },
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
         },
         {
-          "id": "SQ-49",
+          "id": "SQ-44",
           "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
         },
         {
-          "id": "WQ-37",
+          "id": "WQ-7",
           "reason": "第二章の世界任務「『七人目の武士』」クリアが推奨。"
         },
         {
-          "id": "WQ-38",
+          "id": "WQ-6",
           "reason": "第二章の世界任務「映影が残す思い出」クリアが推奨。"
         }
       ],
@@ -2395,7 +2395,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-31",
+      "id": "EQ-30",
       "line": "EQ",
       "order": 401.3,
       "title": "荒瀧・生命のロックイリデッセンスビッグツアー",
@@ -2406,11 +2406,11 @@
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
       "prereqs": [
         {
-          "id": "SQ-33",
+          "id": "SQ-28",
           "reason": "荒瀧一斗の伝説任務「天ノ牛の章」第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
         }
       ],
@@ -2419,7 +2419,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-32",
+      "id": "EQ-28",
       "line": "EQ",
       "order": 401.2,
       "title": "巧みなる錬金経営",
@@ -2430,11 +2430,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
         },
         {
-          "id": "SQ-22",
+          "id": "SQ-8",
           "reason": "エウルアの伝説任務「波沫の章」第一幕クリアが推奨。"
         }
       ],
@@ -2443,7 +2443,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-33",
+      "id": "EQ-29",
       "line": "EQ",
       "order": 401.25,
       "title": "モフモフの城、にゃん冒険！",
@@ -2454,11 +2454,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-16",
+          "id": "AQ-23",
           "reason": "魔神任務 第四章第二幕「ゆえなく煙る霧雨のように」クリアが推奨。"
         },
         {
-          "id": "WQ-36",
+          "id": "WQ-4",
           "reason": "世界任務「翠石の玉壺・一」クリアが推奨。"
         }
       ],
@@ -2467,7 +2467,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-34",
+      "id": "EQ-33",
       "line": "EQ",
       "order": 501.05,
       "title": "スピリットを求めしウォーベン",
@@ -2478,7 +2478,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-40",
+          "id": "AQ-32",
           "reason": "第五章第四幕「燃ゆる運命の虹光」クリアが推奨。"
         }
       ],
@@ -2498,23 +2498,23 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "WQ-31",
+          "id": "WQ-5",
           "reason": "神櫻大祓を先にプレイしておくのが推奨。"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務(天下人の章)第二幕クリアが推奨。"
         },
         {
-          "id": "SQ-40",
+          "id": "SQ-31",
           "reason": "夢見月瑞希の伝説任務(獏枕の章)第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-36",
+          "id": "SQ-24",
           "reason": "珊瑚宮心海の伝説任務(睡竜の章)第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-60",
+          "id": "SQ-39",
           "reason": "宵宮の伝説任務(琉金の章)第二幕クリアが推奨。"
         }
       ],
@@ -2523,7 +2523,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-36",
+      "id": "EQ-37",
       "line": "EQ",
       "order": 501.25,
       "title": "ハーモニック・ワルツ",
@@ -2534,23 +2534,23 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "第五章第五幕「灼烈の反魂の詩」クリアが推奨。"
         },
         {
-          "id": "SQ-49",
+          "id": "SQ-44",
           "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-12",
+          "id": "SQ-50",
           "reason": "エスコフィエの伝説任務「ピエス・モンテの章」第一幕クリアが推奨。"
         },
         {
-          "id": "SQ-79",
+          "id": "SQ-71",
           "reason": "「豊穣の邦」の部族見聞「キノコ奇譚」第三幕(ヴァレサ)クリアが推奨。"
         },
         {
-          "id": "WQ-32",
+          "id": "WQ-19",
           "reason": "世界任務「早々に頓挫！『画像認識学』…」クリアが推奨。"
         }
       ],
@@ -2570,7 +2570,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "「灼烈の反魂の詩」クリアが推奨。"
         }
       ],
@@ -2591,11 +2591,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-19",
+          "id": "AQ-26",
           "reason": "第四章第五幕「罪人の円舞曲」クリア後が推奨。"
         },
         {
-          "id": "SQ-30",
+          "id": "SQ-29",
           "reason": "伝説任務「幽客の章」第一幕クリア後が推奨。"
         }
       ],
@@ -2615,7 +2615,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-44",
+          "id": "AQ-38",
           "reason": "空月の歌第二幕「塵と灯のエレジー」クリア後が推奨。"
         }
       ],
@@ -2635,11 +2635,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-45",
+          "id": "AQ-39",
           "reason": "空月の歌第四幕「存在しない国」を先にプレイしておくのが推奨。"
         },
         {
-          "id": "SQ-59",
+          "id": "SQ-36",
           "reason": "セノの伝説任務(金狼の章)第二幕を先にプレイしておくのが推奨。"
         }
       ],
@@ -2659,11 +2659,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "SQ-70",
+          "id": "SQ-67",
           "reason": "部族見聞「祝福を祈り、テペトルに告ぐ」第三幕クリア後が推奨。"
         },
         {
-          "id": "SQ-79",
+          "id": "SQ-71",
           "reason": "部族見聞「キノコ奇譚」第三幕クリア後が推奨。"
         }
       ],
@@ -2672,7 +2672,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-43",
+      "id": "EQ-46",
       "line": "EQ",
       "order": 609,
       "title": "海灯祭2026「天を翔ける玉輪の軌跡」",
@@ -2683,7 +2683,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-07",
+          "id": "AQ-45",
           "reason": "空月の歌第九幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
@@ -2694,7 +2694,7 @@
       "permanentNow": true
     },
     {
-      "id": "EQ-44",
+      "id": "EQ-43",
       "line": "EQ",
       "order": 600.2,
       "title": "風を捕まえる帰郷者",
@@ -2705,11 +2705,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-49",
+          "id": "AQ-44",
           "reason": "魔神任務「真実の月」クリアが推奨。"
         },
         {
-          "id": "SQ-04",
+          "id": "SQ-74",
           "reason": "伝説任務「天狼の章」第一幕クリアが推奨。"
         }
       ],
@@ -2718,7 +2718,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-45",
+      "id": "EQ-44",
       "line": "EQ",
       "order": 600.25,
       "title": "波と岩礁の邂逅",
@@ -2729,7 +2729,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-49",
+          "id": "AQ-44",
           "reason": "魔神任務「真実の月」クリアが推奨。"
         }
       ],
@@ -2738,7 +2738,7 @@
       "branchRow": 0
     },
     {
-      "id": "EQ-46",
+      "id": "EQ-45",
       "line": "EQ",
       "order": 600.3,
       "title": "空想の友と巡る旅",
@@ -2749,7 +2749,7 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "AQ-49",
+          "id": "AQ-44",
           "reason": "空月の歌第八幕「真実の月」クリアが推奨。"
         }
       ],
@@ -2769,11 +2769,11 @@
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
       "prereqs": [
         {
-          "id": "EQ-30",
+          "id": "EQ-26",
           "reason": "実プレイで判明した前提知識。「薔薇と銃士」を先にクリアしておくと理解が深まります。"
         },
         {
-          "id": "AQ-50",
+          "id": "AQ-46",
           "reason": "空月の歌第十幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
@@ -2784,7 +2784,7 @@
       "permanentNow": true
     },
     {
-      "id": "EQ-48",
+      "id": "EQ-34",
       "line": "EQ",
       "order": 501.1,
       "title": "海灯祭2025「春光が描く桃符」",
@@ -2795,15 +2795,15 @@
       "sourceNote": "Fandom Wikiに明記された「推奨任務」を基に前提関係を追加。",
       "prereqs": [
         {
-          "id": "SQ-31",
+          "id": "SQ-18",
           "reason": "公式Wikiで「推奨任務」として明記。懸壺の章 第一幕。"
         },
         {
-          "id": "SQ-29",
+          "id": "SQ-15",
           "reason": "公式Wikiで「推奨任務」として明記。彼岸蝶の章 第一幕。"
         },
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "第五章第五幕「灼烈の反魂の詩」クリアが推奨。"
         }
       ],
@@ -2812,7 +2812,7 @@
       "branchRow": 0
     },
     {
-      "id": "SQ-58",
+      "id": "SQ-27",
       "line": "SQ",
       "order": 203.5,
       "branchRow": 3,
@@ -2823,14 +2823,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-35",
+          "id": "SQ-23",
           "reason": "天下人の章 第一幕クリアで解放される第二幕。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-59",
+      "id": "SQ-36",
       "line": "SQ",
       "order": 305,
       "branchRow": 1,
@@ -2841,23 +2841,23 @@
       "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "第三章第五幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "SQ-42",
+          "id": "SQ-34",
           "reason": "金狼の章 第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "SQ-11",
+          "id": "SQ-37",
           "reason": "セノの伝説任務「金狼の章」内に、アルハイゼンの伝説任務「隼の章」の内容に関わる情報が登場します。先にクリアしておくと繋がりが分かりやすくなります。"
         }
       ]
     },
     {
-      "id": "SQ-60",
+      "id": "SQ-39",
       "line": "SQ",
       "order": 305,
       "branchRow": 4,
@@ -2868,24 +2868,24 @@
       "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-13",
+          "id": "AQ-19",
           "reason": "第三章第五幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "SQ-58",
+          "id": "SQ-27",
           "reason": "雷電将軍の伝説任務「天下人の章 第二幕」クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "SQ-32",
+          "id": "SQ-21",
           "reason": "琉金の章 第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-61",
+      "id": "SQ-40",
       "line": "SQ",
       "order": 305.5,
       "branchRow": 0,
@@ -2896,14 +2896,14 @@
       "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-45",
+          "id": "SQ-35",
           "reason": "知恵の主の章 第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-62",
+      "id": "SQ-53",
       "line": "SQ",
       "order": 501,
       "branchRow": 0,
@@ -2914,14 +2914,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-63",
+      "id": "SQ-59",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 0,
@@ -2932,14 +2932,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-62",
+          "id": "SQ-53",
           "reason": "流泉の帰す場所 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-64",
+      "id": "SQ-65",
       "line": "SQ",
       "order": 502.5,
       "branchRow": 0,
@@ -2950,19 +2950,19 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-63",
+          "id": "SQ-59",
           "reason": "流泉の帰す場所 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "AQ-39",
+          "id": "AQ-31",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-65",
+      "id": "SQ-54",
       "line": "SQ",
       "order": 501,
       "branchRow": 1,
@@ -2973,14 +2973,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-66",
+      "id": "SQ-60",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 1,
@@ -2991,14 +2991,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-65",
+          "id": "SQ-54",
           "reason": "ユパンキの廻焔 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-67",
+      "id": "SQ-66",
       "line": "SQ",
       "order": 502.5,
       "branchRow": 1,
@@ -3009,14 +3009,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-66",
+          "id": "SQ-60",
           "reason": "ユパンキの廻焔 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-68",
+      "id": "SQ-55",
       "line": "SQ",
       "order": 501,
       "branchRow": 2,
@@ -3027,14 +3027,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-69",
+      "id": "SQ-61",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 2,
@@ -3045,14 +3045,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-68",
+          "id": "SQ-55",
           "reason": "祝福を祈り、テペトルに告ぐ 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-70",
+      "id": "SQ-67",
       "line": "SQ",
       "order": 504,
       "branchRow": 2,
@@ -3063,19 +3063,19 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-69",
+          "id": "SQ-61",
           "reason": "祝福を祈り、テペトルに告ぐ 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "AQ-40",
+          "id": "AQ-32",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-71",
+      "id": "SQ-56",
       "line": "SQ",
       "order": 501,
       "branchRow": 3,
@@ -3086,14 +3086,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-72",
+      "id": "SQ-62",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 3,
@@ -3104,14 +3104,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-71",
+          "id": "SQ-56",
           "reason": "塵に帰す花、堕ちる羽 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-73",
+      "id": "SQ-68",
       "line": "SQ",
       "order": 504,
       "branchRow": 3,
@@ -3122,19 +3122,19 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-72",
+          "id": "SQ-62",
           "reason": "塵に帰す花、堕ちる羽 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "AQ-40",
+          "id": "AQ-32",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-74",
+      "id": "SQ-57",
       "line": "SQ",
       "order": 501,
       "branchRow": 4,
@@ -3145,14 +3145,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-75",
+      "id": "SQ-63",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 4,
@@ -3163,14 +3163,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-74",
+          "id": "SQ-57",
           "reason": "流れゆく色の記憶 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-76",
+      "id": "SQ-70",
       "line": "SQ",
       "order": 505,
       "branchRow": 4,
@@ -3181,19 +3181,19 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-75",
+          "id": "SQ-63",
           "reason": "流れゆく色の記憶 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-77",
+      "id": "SQ-58",
       "line": "SQ",
       "order": 501,
       "branchRow": 5,
@@ -3204,14 +3204,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-37",
+          "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-78",
+      "id": "SQ-64",
       "line": "SQ",
       "order": 501.5,
       "branchRow": 5,
@@ -3222,14 +3222,14 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-77",
+          "id": "SQ-58",
           "reason": "キノコ奇譚 第1幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "SQ-79",
+      "id": "SQ-71",
       "line": "SQ",
       "order": 505,
       "branchRow": 5,
@@ -3240,19 +3240,19 @@
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に、部族見聞シリーズを伝説任務として幕ごとに再構成(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-78",
+          "id": "SQ-64",
           "reason": "キノコ奇譚 第2幕クリアが解放条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "AQ-03",
+          "id": "AQ-34",
           "reason": "追加の魔神任務クリアが解放条件の一つ。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "AQ-50",
+      "id": "AQ-46",
       "line": "AQ",
       "order": 610,
       "title": "千尋の道、因果の異滅",
@@ -3264,7 +3264,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-31",
+      "id": "WQ-5",
       "line": "WQ",
       "order": 200.3,
       "branchRow": 0,
@@ -3275,14 +3275,14 @@
       "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-30",
+          "id": "AQ-10",
           "reason": "第二章第一幕「鳴神不動、恒常楽土」の「離島脱出計画」クリアが必要条件。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "EQ-49",
+      "id": "EQ-36",
       "line": "EQ",
       "order": 501.2,
       "branchRow": 0,
@@ -3296,13 +3296,13 @@
       "sourceNote": "famitsu.com記事の開放条件・推奨任務の記述を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "SQ-09",
+          "id": "SQ-69",
           "reason": "マーヴィカの伝説任務「不敗の日輪の章」第一幕クリア後にプレイすると、より良い体験でイベントを楽しめる。"
         }
       ]
     },
     {
-      "id": "WQ-32",
+      "id": "WQ-19",
       "line": "WQ",
       "order": 401,
       "branchRow": 0,
@@ -3314,7 +3314,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-33",
+      "id": "WQ-9",
       "line": "WQ",
       "order": 301,
       "branchRow": 0,
@@ -3326,7 +3326,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-34",
+      "id": "WQ-10",
       "line": "WQ",
       "order": 301.15,
       "branchRow": 0,
@@ -3338,7 +3338,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-35",
+      "id": "WQ-18",
       "line": "WQ",
       "order": 302.35,
       "branchRow": 0,
@@ -3350,7 +3350,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-36",
+      "id": "WQ-4",
       "line": "WQ",
       "order": 200.15,
       "branchRow": 0,
@@ -3362,7 +3362,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-37",
+      "id": "WQ-7",
       "line": "WQ",
       "order": 200.6,
       "branchRow": 0,
@@ -3374,7 +3374,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-38",
+      "id": "WQ-6",
       "line": "WQ",
       "order": 200.45,
       "branchRow": 0,
@@ -3386,7 +3386,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-39",
+      "id": "WQ-8",
       "line": "WQ",
       "order": 200.75,
       "branchRow": 0,
@@ -3398,7 +3398,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-40",
+      "id": "WQ-22",
       "line": "WQ",
       "order": 401.45,
       "branchRow": 0,
@@ -3410,7 +3410,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-41",
+      "id": "WQ-21",
       "line": "WQ",
       "order": 401.3,
       "branchRow": 0,
@@ -3422,7 +3422,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-42",
+      "id": "WQ-20",
       "line": "WQ",
       "order": 401.15,
       "branchRow": 0,
@@ -3434,7 +3434,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-43",
+      "id": "WQ-1",
       "line": "WQ",
       "order": 103,
       "branchRow": 0,
@@ -3445,14 +3445,14 @@
       "sourceNote": "Web検索(gamewith/game8/Fandom等)の情報を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "AQ-27",
+          "id": "AQ-6",
           "reason": "魔神任務 第一章第三幕「迫る客星」クリアが必要条件。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "WQ-44",
+      "id": "WQ-2",
       "line": "WQ",
       "order": 103.15,
       "branchRow": 0,
@@ -3464,7 +3464,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-45",
+      "id": "WQ-11",
       "line": "WQ",
       "order": 301.3,
       "branchRow": 0,
@@ -3476,7 +3476,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-46",
+      "id": "WQ-12",
       "line": "WQ",
       "order": 301.3,
       "branchRow": 1,
@@ -3487,14 +3487,14 @@
       "sourceNote": "Web検索(altema/gamewith等)の情報を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "WQ-45",
+          "id": "WQ-11",
           "reason": "世界任務「黄金の眠り」クリアが受注条件。ジェイドの物語の続きとなる内容。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "WQ-47",
+      "id": "WQ-13",
       "line": "WQ",
       "order": 301.6,
       "branchRow": 0,
@@ -3505,14 +3505,14 @@
       "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "WQ-45",
+          "id": "WQ-11",
           "reason": "「黄金の眠り」クリア後、現実時間で1日経過すると発生する直接の続編。",
           "type": "unlock"
         }
       ]
     },
     {
-      "id": "WQ-48",
+      "id": "WQ-14",
       "line": "WQ",
       "order": 301.75,
       "branchRow": 0,
@@ -3524,7 +3524,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-49",
+      "id": "WQ-15",
       "line": "WQ",
       "order": 301.9,
       "branchRow": 0,
@@ -3536,7 +3536,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-50",
+      "id": "WQ-16",
       "line": "WQ",
       "order": 302.05,
       "branchRow": 0,
@@ -3548,7 +3548,7 @@
       "prereqs": []
     },
     {
-      "id": "WQ-51",
+      "id": "WQ-17",
       "line": "WQ",
       "order": 302.05,
       "branchRow": 1,
@@ -3559,22 +3559,22 @@
       "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
       "prereqs": [
         {
-          "id": "WQ-50",
+          "id": "WQ-16",
           "reason": "「過ぎ去りし終末」クリアが受注条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "WQ-49",
+          "id": "WQ-15",
           "reason": "「失せ者を取り返す喜びをともに」クリアが受注条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "WQ-46",
+          "id": "WQ-12",
           "reason": "「ビルキースの哀歌」クリアが受注条件の一つ。",
           "type": "unlock"
         },
         {
-          "id": "WQ-48",
+          "id": "WQ-14",
           "reason": "「『猟鷹』タッドラー」クリアが受注条件の一つ。",
           "type": "unlock"
         }
