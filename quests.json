@@ -101,12 +101,13 @@
       "region": "ナタ",
       "desc": "ナタに入って出会う仔竜との絆を描く長編世界任務シリーズ。全編クリアが前提として推奨される。",
       "sourceNote": "note記事(個人ブログ)を要約・言い換えして追加。",
-      "prereqs": []
+      "prereqs": [],
+      "branchRow": 0
     },
     {
       "id": "WQ-07",
       "line": "WQ",
-      "order": 502,
+      "order": 501.15,
       "title": "「古の聖山」世界任務シリーズ",
       "chapter": "地下マップ・古の聖山",
       "region": "ナタ",
@@ -117,7 +118,8 @@
           "id": "AQ-03",
           "reason": "魔神任務だけでは分からない古竜の歴史と、仔竜の相棒の背景がここで明かされます。エンディング後の余韻として非常に評価が高い世界任務です。"
         }
-      ]
+      ],
+      "branchRow": 0
     },
     {
       "id": "EQ-02",
@@ -128,7 +130,16 @@
       "region": null,
       "availableUntil": "2024-08-27",
       "desc": "童話仕立ての期間限定イベント。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-36",
+          "reason": "魔神任務 間章第三幕「伽藍に落ちて」クリアが推奨。"
+        },
+        {
+          "id": "AQ-19",
+          "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2024-07-17",
       "version": "4.8",
       "branchRow": 0
@@ -152,7 +163,7 @@
       "title": "黎明を告げる千の薔薇",
       "chapter": "第三章 第二幕",
       "region": "スメール",
-      "desc": "スメール編の一幕。",
+      "desc": "スメール編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第三章"
@@ -164,7 +175,7 @@
       "title": "迷夢と虚幻と欺瞞",
       "chapter": "第三章 第三幕",
       "region": "スメール",
-      "desc": "スメール編の一幕。",
+      "desc": "スメール編の三幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
@@ -181,7 +192,7 @@
       "title": "赤砂の王と三人の巡礼者",
       "chapter": "第三章 第四幕",
       "region": "スメール",
-      "desc": "スメール編の一幕。",
+      "desc": "スメール編の四幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第三章"
@@ -235,7 +246,7 @@
       "title": "ゆえなく煙る霧雨のように",
       "chapter": "第四章 第二幕",
       "region": "フォンテーヌ",
-      "desc": "フォンテーヌ編の一幕。",
+      "desc": "フォンテーヌ編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第四章"
@@ -247,7 +258,7 @@
       "title": "深海に煌めく星たちへ",
       "chapter": "第四章 第三幕",
       "region": "フォンテーヌ",
-      "desc": "フォンテーヌ編の一幕。",
+      "desc": "フォンテーヌ編の三幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第四章"
@@ -259,7 +270,7 @@
       "title": "胎動を諭す終焉の刻",
       "chapter": "第四章 第四幕",
       "region": "フォンテーヌ",
-      "desc": "フォンテーヌ編の一幕。",
+      "desc": "フォンテーヌ編の四幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第四章"
@@ -356,7 +367,7 @@
       "title": "久遠の体との別れ",
       "chapter": "第一章 第二幕",
       "region": "璃月",
-      "desc": "璃月編の一幕。",
+      "desc": "璃月編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第一章"
@@ -368,7 +379,7 @@
       "title": "迫る客星",
       "chapter": "第一章 第三幕",
       "region": "璃月",
-      "desc": "璃月編の一幕。",
+      "desc": "璃月編の三幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第一章"
@@ -417,7 +428,7 @@
       "title": "無念無想、泡影を滅す",
       "chapter": "第二章 第二幕",
       "region": "稲妻",
-      "desc": "稲妻編の一幕。",
+      "desc": "稲妻編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第二章"
@@ -429,7 +440,7 @@
       "title": "千手百目の浮世",
       "chapter": "第二章 第三幕",
       "region": "稲妻",
-      "desc": "稲妻編の一幕。",
+      "desc": "稲妻編の三幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [
         {
@@ -507,7 +518,7 @@
       "title": "背理",
       "chapter": "間章 第四幕",
       "region": null,
-      "desc": "間章で描かれる、過去に決着をつけられなかった因縁との再会。",
+      "desc": "",
       "prereqs": [
         {
           "id": "EQ-02",
@@ -607,7 +618,7 @@
         }
       ],
       "releaseDate": "2025-01-01",
-      "branchRow": 5
+      "branchRow": 0
     },
     {
       "id": "SQ-10",
@@ -874,10 +885,10 @@
       "line": "SQ",
       "order": 3,
       "title": "白亜の章",
-      "chapter": "アルベドの伝説任務。v1.2 期間限定イベント。",
+      "chapter": "アルベドの伝説任務",
       "region": "モンド",
-      "desc": "アルベドの伝説任務。v1.2 期間限定イベント。",
-      "sourceNote": "genshin-dictionary.com(CSV)より取得。",
+      "desc": "アルベドの伝説任務。",
+      "sourceNote": "genshin-dictionary.com(CSV)より取得。CSVの備考「v1.2期間限定イベント」は同時期に実装された関連イベント「白亜と黒龍」(EQ-03)についての記述であり、この伝説任務自体は常設のため修正(2026年再監査)。",
       "prereqs": [
         {
           "id": "AQ-24",
@@ -1518,13 +1529,34 @@
     {
       "id": "EQ-07",
       "line": "EQ",
-      "order": 501.05,
-      "title": "彼女にサプライズを",
+      "order": 501.0,
+      "title": "キャンディと薔薇の歌",
       "chapter": "v5.1 期間限定イベント",
       "region": null,
       "desc": "v5.1テーマイベント「キャンディと薔薇の歌」の最初の話。伝説任務ではなく期間限定イベントのため、SQからEQへ分類を修正。",
       "sourceNote": "genshin-dictionary.com(CSV)ではquest-storyタグだったが、実際は期間限定イベント任務のため路線を修正(2026年再監査)。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-13",
+          "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
+        },
+        {
+          "id": "SQ-59",
+          "reason": "セノの伝説任務「金狼の章」第二幕クリアが推奨。"
+        },
+        {
+          "id": "WQ-33",
+          "reason": "世界任務「アランナラの世界」クリアが推奨。"
+        },
+        {
+          "id": "WQ-34",
+          "reason": "世界任務「料理は楽しい思い出」クリアが推奨。"
+        },
+        {
+          "id": "WQ-35",
+          "reason": "世界任務「如是霊光一切示現」で「二本角の花冠」を選んでいるとより理解が深まる。"
+        }
+      ],
       "releaseDate": "2024-10-09",
       "availableUntil": "2024-11-07",
       "availableFrom": "2024-10-23",
@@ -1667,7 +1699,16 @@
       "availableUntil": "2023-04-11",
       "desc": "モンドの祭り「風花祭」にまつわる期間限定イベント。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-13",
+          "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
+        },
+        {
+          "id": "SQ-23",
+          "reason": "アルベドの伝説任務「白亜の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-03-01",
       "version": "3.5",
       "branchRow": 0
@@ -1682,7 +1723,20 @@
       "availableUntil": "2022-04-25",
       "desc": "稲妻の祭り「光華容彩祭」を舞台に、五歌仙にまつわる過去の秘密が描かれるイベント。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-38",
+          "reason": "神里綾人の伝説任務「神守柏の章」第一幕「散りゆく青桐の葉」クリアが推奨。"
+        },
+        {
+          "id": "SQ-58",
+          "reason": "雷電将軍の伝説任務「天下人の章」第二幕「須臾百夢」クリアが推奨。"
+        },
+        {
+          "id": "SQ-36",
+          "reason": "珊瑚宮心海の伝説任務「睡竜の章」第一幕「春草や、戦の後の夢の迹」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2022-03-30",
       "version": "2.6",
       "branchRow": 0
@@ -1696,7 +1750,8 @@
       "region": "稲妻",
       "desc": "稲妻・たたら砂を舞台にした世界任務。",
       "sourceNote": "ユーザーのプレイ経験に基づき追加。genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "branchRow": 0
     },
     {
       "id": "AQ-37",
@@ -1771,13 +1826,17 @@
       "prereqs": [
         {
           "id": "SQ-45",
-          "reason": "ナヒーダの伝説任務「知恵の主の章」。実プレイで判明した情報として、空月の歌9幕でスメール系キャラのコンフリクトが起きるため、序幕の時点で片付けておくことが推奨されます。",
+          "reason": "ナヒーダの伝説任務「知恵の主の章」。実プレイで判明した情報として、空月の歌8章完了後に進めようとすると「任務エリアが他の任務に占用されています」という警告により空月の歌9章を進めないといけなくなるため、序幕の時点で片付けておくことが推奨されます。",
           "type": "warning"
         },
         {
           "id": "SQ-42",
-          "reason": "セノの伝説任務「金狼の章」。実プレイで判明した情報として、空月の歌9幕を進めようとするとキャラのコンフリクトで進行できなくなるため、序幕の時点で片付けておくことが推奨されます。",
+          "reason": "セノの伝説任務「金狼の章」。実プレイで判明した情報として、空月の歌8章完了後に進めようとすると「任務エリアが他の任務に占用されています」という警告により空月の歌9章を進めないといけなくなるため、序幕の時点で片付けておくことが推奨されます。",
           "type": "warning"
+        },
+        {
+          "id": "WQ-41",
+          "reason": "「水仙のアン」シリーズを先にプレイしておくのが推奨。"
         }
       ]
     },
@@ -1889,13 +1948,22 @@
       "id": "EQ-09",
       "line": "EQ",
       "order": 301.15,
-      "title": "華舞う夜の旋律",
+      "title": "海灯祭2023「華舞う夜の旋律」",
       "chapter": "v3.4 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2023-02-28",
       "desc": "海灯祭3回目のテーマイベント。甘雨・刻晴・ヨォーヨ・夜蘭・申鶴・魈・胡桃が出演。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-34",
+          "reason": "魔神任務「風立ちし鶴の帰郷」クリアが推奨。"
+        },
+        {
+          "id": "SQ-30",
+          "reason": "夜蘭の伝説任務「幽客の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-01-18",
       "version": "3.4",
       "branchRow": 0
@@ -1910,7 +1978,20 @@
       "availableUntil": "2023-08-15",
       "desc": "クレー・ガイア・エウルア・コレイ・珊瑚宮心海が出演。フォンテーヌ編の前置き的な要素を含む。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)を要約・言い換えして追加。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-13",
+          "reason": "魔神任務 第三章第五幕「虚空の鼓動、熾盛の劫火」クリアが推奨。"
+        },
+        {
+          "id": "SQ-22",
+          "reason": "エウルアの伝説任務「波沫の章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-36",
+          "reason": "珊瑚宮心海の伝説任務「睡竜の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-07-05",
       "version": "3.8",
       "branchRow": 0
@@ -1939,7 +2020,7 @@
       "id": "EQ-12",
       "line": "EQ",
       "order": 401.15,
-      "title": "春立つ風を梳かす彩鳶",
+      "title": "海灯祭2024「春立つ風を梳かす彩鳶」",
       "chapter": "v4.4 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2024-03-12",
@@ -1949,6 +2030,14 @@
         {
           "id": "SQ-51",
           "reason": "ブログ記事いわく「これから動画を見る人は『閑雲の伝説任務』をやってから見ることをおすすめします」とのことです。"
+        },
+        {
+          "id": "AQ-27",
+          "reason": "魔神任務 第一章第三幕「迫る客星」クリアが推奨。"
+        },
+        {
+          "id": "SQ-49",
+          "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
         }
       ],
       "availableFrom": "2024-01-31",
@@ -1989,7 +2078,7 @@
       "id": "EQ-15",
       "line": "EQ",
       "order": 101.0,
-      "title": "海灯祭",
+      "title": "海灯祭2021「明霄、海に昇りて」",
       "chapter": "v1.3 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2021-03-17",
@@ -2094,7 +2183,7 @@
       "id": "EQ-22",
       "line": "EQ",
       "order": 200.2,
-      "title": "海灯祭2「華々しき流年」",
+      "title": "海灯祭2022「華々しき流年」",
       "chapter": "v2.4 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2022-02-16",
@@ -2115,7 +2204,12 @@
       "availableUntil": "2022-03-30",
       "desc": "淵下宮の調査にまつわる複雑な謎解きイベント。心海が絡む。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "WQ-39",
+          "reason": "第二章の世界任務「エレボスの秘密」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2022-02-16",
       "version": "2.5",
       "branchRow": 0
@@ -2130,7 +2224,16 @@
       "availableUntil": "2022-11-02",
       "desc": "ブリーズブリュー祭を舞台に、レザーの両親の謎に迫るイベント。クレー・ベネット・ウェンティが登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-16",
+          "reason": "レザーの伝説任務「狼の章」第一幕「ルピカの意味」クリアが推奨。"
+        },
+        {
+          "id": "AQ-24",
+          "reason": "魔神任務 序章第三幕「龍と自由の歌」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2022-09-28",
       "version": "3.1",
       "branchRow": 0
@@ -2145,7 +2248,16 @@
       "availableUntil": "2022-12-07",
       "desc": "魔物「キノコン」を戦わせる大会イベント。新キャラのレイラ・八重神子が登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-13",
+          "reason": "魔神任務 第三章第五幕「虚空の鼓動、熾盛の劫火」クリアが推奨。"
+        },
+        {
+          "id": "SQ-37",
+          "reason": "八重神子の伝説任務「仙狐の章」第一幕「鳴神御祓祈願祭」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2022-11-02",
       "version": "3.2",
       "branchRow": 0
@@ -2160,7 +2272,12 @@
       "availableUntil": "2023-01-18",
       "desc": "社奉行主催の肝試し大会。荒瀧一斗・鹿野院平蔵・神里綾人が中心。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-33",
+          "reason": "荒瀧一斗の伝説任務「天ノ牛の章」第一幕「赤金魂」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2022-12-07",
       "version": "3.3",
       "branchRow": 0
@@ -2175,7 +2292,16 @@
       "availableUntil": "2023-05-23",
       "desc": "スメールの学院祭・学院トーナメントを舞台にしたイベント。ティナリ・セノ・カーヴェ・ファルザンが登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-36",
+          "reason": "魔神任務「伽藍に落ちて」クリアが推奨。"
+        },
+        {
+          "id": "SQ-11",
+          "reason": "アルハイゼンの伝説任務「隼の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-04-12",
       "version": "3.6",
       "branchRow": 0
@@ -2190,7 +2316,20 @@
       "availableUntil": "2023-07-04",
       "desc": "七聖召喚の国際大会を舞台にした、新キャラ中心のイベント。シャルロット・綺良々が初登場。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-13",
+          "reason": "魔神任務「虚空の鼓動、熾盛の劫火」クリアが推奨。"
+        },
+        {
+          "id": "SQ-21",
+          "reason": "モナの伝説任務「映天の章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-58",
+          "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-05-24",
       "version": "3.7",
       "branchRow": 0
@@ -2205,7 +2344,12 @@
       "availableUntil": "2023-12-19",
       "desc": "人魚伝説の謎を調査する、フレミネが中心のイベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-19",
+          "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2023-11-08",
       "version": "4.2",
       "branchRow": 0
@@ -2224,6 +2368,26 @@
         {
           "id": "WQ-30",
           "reason": "世界任務「たたら物語」を先にプレイしておくのが推奨。"
+        },
+        {
+          "id": "AQ-19",
+          "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
+        },
+        {
+          "id": "SQ-58",
+          "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-49",
+          "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "WQ-37",
+          "reason": "第二章の世界任務「『七人目の武士』」クリアが推奨。"
+        },
+        {
+          "id": "WQ-38",
+          "reason": "第二章の世界任務「映影が残す思い出」クリアが推奨。"
         }
       ],
       "availableFrom": "2023-12-20",
@@ -2240,7 +2404,16 @@
       "availableUntil": "2024-06-04",
       "desc": "荒瀧一斗が中心の音楽祭イベント。",
       "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-33",
+          "reason": "荒瀧一斗の伝説任務「天ノ牛の章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-58",
+          "reason": "雷電将軍の伝説任務「天下人の章」第二幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2024-04-24",
       "version": "4.6",
       "branchRow": 0
@@ -2255,7 +2428,16 @@
       "availableUntil": "2024-04-23",
       "desc": "Ver4.5期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-19",
+          "reason": "魔神任務 第四章第五幕「罪人の円舞曲」クリアが推奨。"
+        },
+        {
+          "id": "SQ-22",
+          "reason": "エウルアの伝説任務「波沫の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2024-03-13",
       "version": "4.5",
       "branchRow": 0
@@ -2270,7 +2452,16 @@
       "availableUntil": "2024-04-23",
       "desc": "Ver4.5期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-16",
+          "reason": "魔神任務 第四章第二幕「ゆえなく煙る霧雨のように」クリアが推奨。"
+        },
+        {
+          "id": "WQ-36",
+          "reason": "世界任務「翠石の玉壺・一」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2024-03-13",
       "version": "4.5",
       "branchRow": 0
@@ -2278,23 +2469,28 @@
     {
       "id": "EQ-34",
       "line": "EQ",
-      "order": 501.0,
+      "order": 501.05,
       "title": "スピリットを求めしウォーベン",
-      "chapter": "v5.0 期間限定イベント",
+      "chapter": "v5.2 期間限定イベント",
       "region": "ナタ",
       "availableUntil": "2024-10-08",
       "desc": "Ver5.2期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-40",
+          "reason": "第五章第四幕「燃ゆる運命の虹光」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2024-08-28",
-      "version": "5.0",
+      "version": "5.2",
       "branchRow": 0
     },
     {
       "id": "EQ-35",
       "line": "EQ",
       "order": 501.15,
-      "title": "三川遊芸夢奇譚",
+      "title": "三川遊芸夢綺譚",
       "chapter": "v5.4 期間限定イベント",
       "region": "稲妻",
       "availableUntil": "2025-03-03",
@@ -2304,6 +2500,22 @@
         {
           "id": "WQ-31",
           "reason": "神櫻大祓を先にプレイしておくのが推奨。"
+        },
+        {
+          "id": "SQ-58",
+          "reason": "雷電将軍の伝説任務(天下人の章)第二幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-40",
+          "reason": "夢見月瑞希の伝説任務(獏枕の章)第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-36",
+          "reason": "珊瑚宮心海の伝説任務(睡竜の章)第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-60",
+          "reason": "宵宮の伝説任務(琉金の章)第二幕クリアが推奨。"
         }
       ],
       "availableFrom": "2025-02-14",
@@ -2313,14 +2525,35 @@
     {
       "id": "EQ-36",
       "line": "EQ",
-      "order": 501.2,
+      "order": 501.25,
       "title": "ハーモニック・ワルツ",
       "chapter": "v5.6 期間限定イベント",
       "region": "フォンテーヌ",
       "availableUntil": "2025-05-26",
       "desc": "Ver5.6期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-03",
+          "reason": "第五章第五幕「灼烈の反魂の詩」クリアが推奨。"
+        },
+        {
+          "id": "SQ-49",
+          "reason": "フリーナの伝説任務「頌歌者の章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-12",
+          "reason": "エスコフィエの伝説任務「ピエス・モンテの章」第一幕クリアが推奨。"
+        },
+        {
+          "id": "SQ-79",
+          "reason": "「豊穣の邦」の部族見聞「キノコ奇譚」第三幕(ヴァレサ)クリアが推奨。"
+        },
+        {
+          "id": "WQ-32",
+          "reason": "世界任務「早々に頓挫！『画像認識学』…」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2025-05-07",
       "version": "5.6",
       "branchRow": 0
@@ -2335,10 +2568,16 @@
       "availableUntil": "2025-08-27",
       "desc": "Ver5.8夏期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-03",
+          "reason": "「灼烈の反魂の詩」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2025-07-30",
       "version": "5.8",
-      "branchRow": 0
+      "branchRow": 0,
+      "permanentNow": true
     },
     {
       "id": "EQ-39",
@@ -2350,7 +2589,16 @@
       "availableUntil": "2025-08-27",
       "desc": "Ver5.8期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-19",
+          "reason": "第四章第五幕「罪人の円舞曲」クリア後が推奨。"
+        },
+        {
+          "id": "SQ-30",
+          "reason": "伝説任務「幽客の章」第一幕クリア後が推奨。"
+        }
+      ],
       "availableFrom": "2025-07-30",
       "version": "5.8",
       "branchRow": 0
@@ -2365,7 +2613,12 @@
       "availableUntil": "2025-10-08",
       "desc": "Ver6.0(Luna I)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-44",
+          "reason": "空月の歌第二幕「塵と灯のエレジー」クリア後が推奨。"
+        }
+      ],
       "availableFrom": "2025-09-10",
       "version": "6.0",
       "branchRow": 0
@@ -2380,7 +2633,16 @@
       "availableUntil": "2025-11-19",
       "desc": "Ver6.1(Luna II)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-45",
+          "reason": "空月の歌第四幕「存在しない国」を先にプレイしておくのが推奨。"
+        },
+        {
+          "id": "SQ-59",
+          "reason": "セノの伝説任務(金狼の章)第二幕を先にプレイしておくのが推奨。"
+        }
+      ],
       "availableFrom": "2025-10-22",
       "version": "6.1",
       "branchRow": 0
@@ -2395,7 +2657,16 @@
       "availableUntil": "2026-01-13",
       "desc": "Ver6.2(Luna III)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "SQ-70",
+          "reason": "部族見聞「祝福を祈り、テペトルに告ぐ」第三幕クリア後が推奨。"
+        },
+        {
+          "id": "SQ-79",
+          "reason": "部族見聞「キノコ奇譚」第三幕クリア後が推奨。"
+        }
+      ],
       "availableFrom": "2025-12-03",
       "version": "6.2",
       "branchRow": 0
@@ -2419,7 +2690,8 @@
       ],
       "availableFrom": "2026-01-14",
       "version": "6.3",
-      "branchRow": 0
+      "branchRow": 0,
+      "permanentNow": true
     },
     {
       "id": "EQ-44",
@@ -2431,7 +2703,16 @@
       "availableUntil": "2026-04-07",
       "desc": "Ver6.4(Luna V)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-49",
+          "reason": "魔神任務「真実の月」クリアが推奨。"
+        },
+        {
+          "id": "SQ-04",
+          "reason": "伝説任務「天狼の章」第一幕クリアが推奨。"
+        }
+      ],
       "availableFrom": "2026-02-25",
       "version": "6.4",
       "branchRow": 0
@@ -2446,7 +2727,12 @@
       "availableUntil": "2026-05-19",
       "desc": "Ver6.5(Luna VI)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-49",
+          "reason": "魔神任務「真実の月」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2026-04-08",
       "version": "6.5",
       "branchRow": 0
@@ -2461,7 +2747,12 @@
       "availableUntil": "2026-06-30",
       "desc": "Ver6.6(Luna VII)期間限定イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [],
+      "prereqs": [
+        {
+          "id": "AQ-49",
+          "reason": "空月の歌第八幕「真実の月」クリアが推奨。"
+        }
+      ],
       "availableFrom": "2026-05-20",
       "version": "6.6",
       "branchRow": 0
@@ -2489,13 +2780,14 @@
       ],
       "availableFrom": "2026-07-01",
       "version": "6.7",
-      "branchRow": 0
+      "branchRow": 0,
+      "permanentNow": true
     },
     {
       "id": "EQ-48",
       "line": "EQ",
       "order": 501.1,
-      "title": "春光が描く桃符",
+      "title": "海灯祭2025「春光が描く桃符」",
       "chapter": "v5.3 期間限定イベント",
       "region": "璃月",
       "availableUntil": "2025-02-09",
@@ -2509,6 +2801,10 @@
         {
           "id": "SQ-29",
           "reason": "公式Wikiで「推奨任務」として明記。彼岸蝶の章 第一幕。"
+        },
+        {
+          "id": "AQ-03",
+          "reason": "第五章第五幕「灼烈の反魂の詩」クリアが推奨。"
         }
       ],
       "availableFrom": "2025-01-24",
@@ -2877,7 +3173,7 @@
       "id": "SQ-76",
       "line": "SQ",
       "order": 505,
-      "branchRow": 0,
+      "branchRow": 4,
       "title": "流れゆく色の記憶（第3幕）",
       "chapter": "シトラリの伝説任務「七彩の戦いの真相」",
       "region": "ナタ",
@@ -2936,7 +3232,7 @@
       "id": "SQ-79",
       "line": "SQ",
       "order": 505,
-      "branchRow": 1,
+      "branchRow": 5,
       "title": "キノコ奇譚（第3幕）",
       "chapter": "ヴァレサの伝説任務「畑に潜むキノコの気配」",
       "region": "ナタ",
@@ -2970,7 +3266,7 @@
     {
       "id": "WQ-31",
       "line": "WQ",
-      "order": 201,
+      "order": 200.3,
       "branchRow": 0,
       "title": "神櫻大祓",
       "chapter": "稲妻・世界任務シリーズ（紺田怪談・祭神奏上・祓・深林の狸囃子・影向祓）",
@@ -2981,6 +3277,305 @@
         {
           "id": "AQ-30",
           "reason": "第二章第一幕「鳴神不動、恒常楽土」の「離島脱出計画」クリアが必要条件。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "EQ-49",
+      "line": "EQ",
+      "order": 501.2,
+      "branchRow": 0,
+      "title": "栄華のバトルアリーナ",
+      "chapter": "v5.5 期間限定イベント",
+      "region": "ナタ",
+      "version": "5.5",
+      "availableFrom": "2025-03-28",
+      "availableUntil": "2025-04-14",
+      "desc": "仔竜のための大会を開催するストーリー。竜医イファが登場する。星4キャラ「オロルン」が入手できる。",
+      "sourceNote": "famitsu.com記事の開放条件・推奨任務の記述を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "SQ-09",
+          "reason": "マーヴィカの伝説任務「不敗の日輪の章」第一幕クリア後にプレイすると、より良い体験でイベントを楽しめる。"
+        }
+      ]
+    },
+    {
+      "id": "WQ-32",
+      "line": "WQ",
+      "order": 401,
+      "branchRow": 0,
+      "title": "早々に頓挫！「画像認識学」…",
+      "chapter": "フォンテーヌ・世界任務（Ver4.3追加）",
+      "region": "フォンテーヌ",
+      "desc": "期間限定イベント「画像認識実験レポート」終了後に発生する世界任務。特殊分析ズームレンズが入手できる。",
+      "sourceNote": "Web検索(gamewith/game8等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-33",
+      "line": "WQ",
+      "order": 301,
+      "branchRow": 0,
+      "title": "「森林書」シリーズ",
+      "chapter": "スメール・世界任務",
+      "region": "スメール",
+      "desc": "アランナラの世界にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-34",
+      "line": "WQ",
+      "order": 301.15,
+      "branchRow": 0,
+      "title": "料理は楽しい思い出",
+      "chapter": "スメール・世界任務",
+      "region": "スメール",
+      "desc": "料理は楽しい思い出にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-35",
+      "line": "WQ",
+      "order": 302.35,
+      "branchRow": 0,
+      "title": "「善悪のクヴァレナ」シリーズ",
+      "chapter": "スメール・世界任務",
+      "region": "スメール",
+      "desc": "如是霊光一切示現にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-36",
+      "line": "WQ",
+      "order": 200.15,
+      "branchRow": 0,
+      "title": "翠石の玉壺・一",
+      "chapter": "稲妻・世界任務",
+      "region": "稲妻",
+      "desc": "翠石の玉壺・一にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-37",
+      "line": "WQ",
+      "order": 200.6,
+      "branchRow": 0,
+      "title": "「七人目の武士」",
+      "chapter": "稲妻・世界任務",
+      "region": "稲妻",
+      "desc": "「七人目の武士」にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-38",
+      "line": "WQ",
+      "order": 200.45,
+      "branchRow": 0,
+      "title": "映影が残す思い出",
+      "chapter": "稲妻・世界任務",
+      "region": "稲妻",
+      "desc": "映影が残す思い出にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-39",
+      "line": "WQ",
+      "order": 200.75,
+      "branchRow": 0,
+      "title": "エレボスの秘密",
+      "chapter": "稲妻・世界任務",
+      "region": "稲妻",
+      "desc": "エレボスの秘密にまつわる世界任務。",
+      "sourceNote": "ユーザーのプレイ経験に基づき追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-40",
+      "line": "WQ",
+      "order": 401.45,
+      "branchRow": 0,
+      "title": "「諧律のカンティクル」シリーズ",
+      "chapter": "フォンテーヌ・世界任務シリーズ",
+      "region": "フォンテーヌ",
+      "desc": "Ver4.6追加。序曲「奇異な町の夢」〜第一〜三章〜最終章「鎮魂曲」の大型世界任務。アルレッキーノの突破素材を入手できる魔像「レガトゥス」への挑戦条件にもなる。",
+      "sourceNote": "Web検索(altema/game8/神ゲー攻略等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-41",
+      "line": "WQ",
+      "order": 401.3,
+      "branchRow": 0,
+      "title": "「水仙のアン」シリーズ",
+      "chapter": "フォンテーヌ・世界任務シリーズ",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ・水仙十字結社にまつわる世界任務シリーズ(全4任務)。フォンテーヌ廷西の海底遺跡で発生する。",
+      "sourceNote": "Web検索(altema/game8/神ゲー攻略等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-42",
+      "line": "WQ",
+      "order": 401.15,
+      "branchRow": 0,
+      "title": "「古き色合い」シリーズ",
+      "chapter": "フォンテーヌ・世界任務シリーズ",
+      "region": "フォンテーヌ",
+      "desc": "フォンテーヌ・水仙十字関連の世界任務シリーズ。「水仙のアン」と時系列が重なる内容。",
+      "sourceNote": "Web検索(altema/game8/神ゲー攻略等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-43",
+      "line": "WQ",
+      "order": 103,
+      "branchRow": 0,
+      "title": "層岩巨淵深遊記",
+      "chapter": "璃月・世界任務シリーズ（全7任務）",
+      "region": "璃月",
+      "desc": "層岩巨淵を舞台にした大型世界任務シリーズ。地下鉱区の開放に必須。ストーリー的に第二章第四幕とも関わりが深い。",
+      "sourceNote": "Web検索(gamewith/game8/Fandom等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "AQ-27",
+          "reason": "魔神任務 第一章第三幕「迫る客星」クリアが必要条件。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "WQ-44",
+      "line": "WQ",
+      "order": 103.15,
+      "branchRow": 0,
+      "title": "沈玉の祝福",
+      "chapter": "璃月・世界任務シリーズ（Ver4.4追加・沈玉の谷）",
+      "region": "璃月",
+      "desc": "沈玉の谷を舞台にしたシリーズ世界任務。複数の任務で構成され、クリアには数時間かかる。",
+      "sourceNote": "Web検索(altema等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-45",
+      "line": "WQ",
+      "order": 301.3,
+      "branchRow": 0,
+      "title": "「黄金の眠り」シリーズ",
+      "chapter": "スメール・世界任務シリーズ（Ver3.1追加・砂海迷道／インドア派考古入門／アフマルの秘密／熱砂の夢）",
+      "region": "スメール",
+      "desc": "スメール砂漠地帯を舞台にしたシリーズ世界任務。砂漠地帯の遺跡探索に必要なボリュームのある内容。",
+      "sourceNote": "Web検索(altema/game8/神ゲー攻略等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-46",
+      "line": "WQ",
+      "order": 301.3,
+      "branchRow": 1,
+      "title": "「ビルキースの哀歌」シリーズ",
+      "chapter": "スメール・世界任務シリーズ（Ver3.4追加・千尋の砂漠、全6任務）",
+      "region": "スメール",
+      "desc": "千尋の砂漠を舞台にしたシリーズ世界任務。「黄金の眠り」で登場したジェイドの後日談で、彼女の父親の行方を巡る物語。",
+      "sourceNote": "Web検索(altema/gamewith等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "WQ-45",
+          "reason": "世界任務「黄金の眠り」クリアが受注条件。ジェイドの物語の続きとなる内容。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "WQ-47",
+      "line": "WQ",
+      "order": 301.6,
+      "branchRow": 0,
+      "title": "古き物語と新しき友人",
+      "chapter": "スメール・世界任務シリーズ",
+      "region": "スメール",
+      "desc": "「黄金の眠り」の直接の続編。クリア後、現実時間で1日経過するとアアル村で発生する。",
+      "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "WQ-45",
+          "reason": "「黄金の眠り」クリア後、現実時間で1日経過すると発生する直接の続編。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "WQ-48",
+      "line": "WQ",
+      "order": 301.75,
+      "branchRow": 0,
+      "title": "「猟鷹」タッドラー",
+      "chapter": "スメール・世界任務シリーズ",
+      "region": "スメール",
+      "desc": "千尋の砂漠を舞台にしたシリーズ世界任務。",
+      "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-49",
+      "line": "WQ",
+      "order": 301.9,
+      "branchRow": 0,
+      "title": "失せ者を取り返す喜びをともに",
+      "chapter": "スメール・世界任務シリーズ",
+      "region": "スメール",
+      "desc": "千尋の砂漠を舞台にしたシリーズ世界任務。",
+      "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-50",
+      "line": "WQ",
+      "order": 302.05,
+      "branchRow": 0,
+      "title": "過ぎ去りし終末",
+      "chapter": "スメール・世界任務シリーズ",
+      "region": "スメール",
+      "desc": "神の碁盤に活性化デバイスを5つ設置すると発生するシリーズ世界任務。",
+      "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
+      "prereqs": []
+    },
+    {
+      "id": "WQ-51",
+      "line": "WQ",
+      "order": 302.05,
+      "branchRow": 1,
+      "title": "仇敵は沸き返る水の如く…",
+      "chapter": "スメール・世界任務シリーズ",
+      "region": "スメール",
+      "desc": "千尋の砂漠関連の最後の世界任務。冒険ランク35以上、かつ「過ぎ去りし終末」「失せ者を取り返す喜びをともに」「ビルキースの哀歌」「『猟鷹』タッドラー」のクリアが必要。",
+      "sourceNote": "Web検索(altema/kamigame/知恵袋等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "WQ-50",
+          "reason": "「過ぎ去りし終末」クリアが受注条件の一つ。",
+          "type": "unlock"
+        },
+        {
+          "id": "WQ-49",
+          "reason": "「失せ者を取り返す喜びをともに」クリアが受注条件の一つ。",
+          "type": "unlock"
+        },
+        {
+          "id": "WQ-46",
+          "reason": "「ビルキースの哀歌」クリアが受注条件の一つ。",
+          "type": "unlock"
+        },
+        {
+          "id": "WQ-48",
+          "reason": "「『猟鷹』タッドラー」クリアが受注条件の一つ。",
           "type": "unlock"
         }
       ]

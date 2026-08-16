@@ -126,6 +126,18 @@
     transition:border-color .15s ease, color .15s ease;
   }
   .reset-btn:hover{border-color:var(--gold); color:var(--gold);}
+  .toggle-chip{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--parchment-dim);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .toggle-chip input{cursor:pointer;}
+  .toggle-chip:hover{color:var(--parchment);}
   .legend-note .k{display:flex;align-items:center;gap:6px;}
   .legend-note .ln{width:20px;height:0;border-top:2px dashed var(--parchment-dim);}
   .legend-note .ln2{width:20px;height:0;border-top:2px solid var(--parchment-dim);}
@@ -287,15 +299,7 @@
     padding:0 0 8px 0; /* 上は0(他の列と上揃えを保つ)、下だけ少し余白 */
   }
   .station-slot.has-branch::before{
-    /* 分岐スロットであることを示す縦の連結線 */
-    content:"";
-    position:absolute;
-    left:-2px;
-    top:0;
-    bottom:8px;
-    width:2px;
-    background:var(--rail-color, var(--hair-strong));
-    opacity:.4;
+    display:none; /* 分岐グループの目印線は、他の矢印線と重なって煩雑になるため非表示 */
   }
   .station-slot .station{
     flex:0 0 auto;
@@ -304,7 +308,7 @@
   .station-spacer{
     flex:0 0 auto;
     width:100%;
-    height:96px; /* 通常のタイル1枚ぶんの目安の高さ(見えない空白)。要調整 */
+    height:136px; /* 実際のタイル(.station)の高さと必ず一致させる */
     visibility:hidden;
     pointer-events:none;
   }
@@ -312,7 +316,7 @@
   .station{
     position:relative;
     z-index:2;
-    height:118px; /* タイトル2行+バッジありでも収まる固定の高さ(全カード共通、線が真っ直ぐ通るように) */
+    height:136px; /* タイトル2行+バッジありでも収まる固定の高さ(全カード共通、線が真っ直ぐ通るように) */
     box-sizing:border-box;
     overflow:hidden;
     background:#1e1a13;
@@ -386,6 +390,17 @@
     font-size:9.5px;
     background:var(--ember);
     color:#14110d;
+    padding:1px 6px;
+    border-radius:3px;
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-weight:900;
+  }
+  /* 期間限定イベントが終了後に常設任務化したもの: 終了風の斜線背景は付けず、代わりに「常設」バッジを出す */
+  .station.permanent .code::after{
+    content:"常設";
+    font-size:9.5px;
+    background:var(--jade);
+    color:#0e1614;
     padding:1px 6px;
     border-radius:3px;
     font-family:'Zen Kaku Gothic New', sans-serif;
@@ -607,19 +622,20 @@
   <p class="lede">
     原神のストーリーを満喫するために、先にクリアしておいた方が良い任務情報を可視化しました。
     魔神任務・世界任務・伝説任務・期間限定任務をまたいだ伏線を、まとめて確認できます。
-    <br>
-    <a href="reference.html" style="color:var(--jade); text-decoration:none; font-size:12.5px; display:inline-block; margin-top:8px;">🔍 世界任務を検索・参照する →</a>
   </p>
 </header>
 
 <div class="legend-bar" id="legendBar">
-  <span class="legend-title">路線を表示 /</span>
+  <span class="legend-title">任務を表示 /</span>
   <!-- chips injected by JS -->
   <button id="resetFiltersBtn" class="reset-btn">↺ 絞り込みを解除</button>
+  <label class="toggle-chip">
+    <input type="checkbox" id="toggleEqRecommend">
+    期間限定イベントへの推奨線を表示
+  </label>
   <div class="legend-note">
     <span class="k"><span class="ln"></span>おすすめ前提</span>
     <span class="k"><span class="ln3"></span>解放条件</span>
-    <span class="k"><span class="ln2"></span>まとめ・収録</span>
   </div>
 </div>
 
@@ -655,6 +671,7 @@ const mapScroll = document.getElementById('mapScroll');
 const legendBar = document.getElementById('legendBar');
 let suppressNextClick = false;
 let pinnedId = null; // パネル表示中に固定するハイライト対象
+let showEqRecommendLines = false; // 期間限定イベント自身への推奨線(おすすめ前提)を表示するか
 let isMapDragging = false; // ドラッグ中はホバー判定を止める
 const svg = document.getElementById('connectors');
 const panel = document.getElementById('panel');
@@ -683,6 +700,7 @@ async function loadData(){
 
 /* ---------------- BUILD MODEL ---------------- */
 function isEnded(q){
+  if(q.permanentNow) return false; // 終了後に常設化されたものは「終了」扱いしない
   if(!q.availableUntil) return false;
   return new Date(q.availableUntil) < new Date();
 }
@@ -866,7 +884,7 @@ function renderMap(){
           nextExpectedRow = targetRow + 1;
 
           const st = document.createElement('div');
-          st.className = 'station' + (isEnded(q) ? ' ended' : '');
+          st.className = 'station' + (isEnded(q) ? ' ended' : '') + (q.permanentNow ? ' permanent' : '');
           st.id = 'st-' + q.id;
           st.dataset.id = q.id;
           st.dataset.group = tabGroupOf(q);
@@ -918,19 +936,38 @@ function alignSlotsToReference(refCode, targetOffsets){
   Object.entries(targetOffsets).forEach(([code, offsetX])=>{
     const row = mapInner.querySelector(`.line-row[data-code="${code}"]`);
     if(!row) return;
-    // 左から順に処理する(前のスロットの余白変更が後続の位置に影響するため)
     const slots = [...row.querySelectorAll('.station-slot')]
       .filter(s=>s.style.display !== 'none');
+
+    // フェーズ1: 現在の位置と余白を「まとめて」読む(この時点ではまだ何も書き込まない)
+    const initialX = [];
+    const initialMargin = [];
     slots.forEach(slot=>{
-      const baseX = refOrderToX.get(slot.dataset.order);
-      if(baseX === undefined) return;
-      const targetX = baseX + offsetX; // 公式マップ風に、基準位置から少し右にずらす
-      const currentRect = slot.getBoundingClientRect();
-      const currentX = currentRect.left - mapInnerRect.left;
-      const delta = targetX - currentX;
-      const currentMargin = parseFloat(slot.style.marginLeft || '0');
-      slot.style.marginLeft = (currentMargin + delta) + 'px';
+      const rect = slot.getBoundingClientRect();
+      initialX.push(rect.left - mapInnerRect.left);
+      initialMargin.push(parseFloat(slot.style.marginLeft || '0'));
     });
+
+    // フェーズ2: 新しい余白を計算だけで求める(DOM測定は一切行わない)
+    // 前のスロットの余白変更が後続の位置をどれだけ押し出すか(累積シフト量)を、
+    // DOMを再測定する代わりに数値計算だけで追跡する
+    const newMargin = new Array(slots.length);
+    let cumulativeShift = 0;
+    slots.forEach((slot, i)=>{
+      const currentX = initialX[i] + cumulativeShift;
+      const baseX = refOrderToX.get(slot.dataset.order);
+      if(baseX === undefined){
+        newMargin[i] = initialMargin[i]; // 対象外は変更しない
+        return;
+      }
+      const targetX = baseX + offsetX; // 公式マップ風に、基準位置から少し右にずらす
+      const delta = targetX - currentX;
+      newMargin[i] = initialMargin[i] + delta;
+      cumulativeShift += delta;
+    });
+
+    // フェーズ3: 計算し終えた余白を「まとめて」書き込む
+    slots.forEach((slot, i)=>{ slot.style.marginLeft = newMargin[i] + 'px'; });
   });
 }
 
@@ -1041,16 +1078,33 @@ function drawConnectors(){
     </marker>`).join('')}
   </defs>`;
 
+  // 同じタイルの座標を何度も測り直さないよう、1回だけ測ってキャッシュする
+  // (前提の矢印が増えるほど、同じタイルが複数の線から参照されるため効果が大きい)
+  const rectCache = new Map();
+  function getCachedRect(id){
+    if(rectCache.has(id)) return rectCache.get(id);
+    const el = document.getElementById('st-'+id);
+    const rect = el ? el.getBoundingClientRect() : null;
+    rectCache.set(id, rect);
+    return rect;
+  }
+
   EDGES.forEach(edge=>{
     const fromQ = QUESTS[edge.from], toQ = QUESTS[edge.to];
     if(!fromQ || !toQ) return;
     if(!isStationVisible(edge.from) || !isStationVisible(edge.to)) return;
+
+    // 期間限定イベント自身への「おすすめ前提」線(本編理解には直結しない副読的な関係)は
+    // トグルがOFFの間は非表示にし、線の量を抑える
+    const isEqRecommend = edge.type === 'prereq' && edge.prereqType !== 'unlock' && toQ._line.code === 'EQ';
+    if(isEqRecommend && !showEqRecommendLines) return;
+
     const fromEl = document.getElementById('st-'+edge.from);
     const toEl = document.getElementById('st-'+edge.to);
     if(!fromEl || !toEl) return;
 
-    const fr = fromEl.getBoundingClientRect();
-    const tr = toEl.getBoundingClientRect();
+    const fr = getCachedRect(edge.from);
+    const tr = getCachedRect(edge.to);
     const isElbow = edge.type === 'prereq' && edge.prereqType === 'unlock';
 
     let d;
@@ -1204,7 +1258,7 @@ function openPanel(id){
     ${periodHtml}
     <div class="p-desc">${q.desc}</div>
     ${rescueHtml}
-    <div class="p-section-title">先にプレイしておきたい前提任務</div>
+    <div class="p-section-title">先にプレイしておきたい任務</div>
     ${prereqs.length ? prereqs.map(p=>{
       const pq = QUESTS[p.id];
       const typeBadge = p.type === 'warning'
@@ -1284,7 +1338,9 @@ function wireDragScroll(){
   let isDown = false;
   let dragMoved = false;
   let startX = 0;
+  let startY = 0;
   let startScroll = 0;
+  let startScrollY = 0;
   let startedOnScrim = false;
 
   function startDrag(e, fromScrim){
@@ -1293,7 +1349,9 @@ function wireDragScroll(){
     dragMoved = false;
     startedOnScrim = fromScrim;
     startX = e.clientX;
+    startY = e.clientY;
     startScroll = mapScroll.scrollLeft;
+    startScrollY = window.scrollY;
   }
 
   mapScroll.addEventListener('pointerdown', e=>{
@@ -1310,7 +1368,8 @@ function wireDragScroll(){
   window.addEventListener('pointermove', e=>{
     if(!isDown) return;
     const dx = e.clientX - startX;
-    if(!dragMoved && Math.abs(dx) > 4){
+    const dy = e.clientY - startY;
+    if(!dragMoved && (Math.abs(dx) > 4 || Math.abs(dy) > 4)){
       dragMoved = true;
       mapScroll.classList.add('dragging');
       scrim.classList.add('dragging');
@@ -1318,6 +1377,7 @@ function wireDragScroll(){
     }
     if(dragMoved){
       mapScroll.scrollLeft = startScroll - dx;
+      window.scrollTo(window.scrollX, startScrollY - dy);
     }
   });
 
@@ -1392,6 +1452,11 @@ function wireEvents(){
   });
 
   document.getElementById('resetFiltersBtn').addEventListener('click', resetAllFilters);
+
+  document.getElementById('toggleEqRecommend').addEventListener('change', e=>{
+    showEqRecommendLines = e.target.checked;
+    requestAnimationFrame(drawConnectors);
+  });
 
   window.addEventListener('resize', redraw);
 
