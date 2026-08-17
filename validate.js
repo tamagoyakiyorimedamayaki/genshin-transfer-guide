@@ -44,13 +44,17 @@ data.quests.forEach((q, i) => {
     if (!p.reason || !p.reason.trim()) {
       errors.push(`${where}: prereqs "${p.id}" に reason がありません`);
     }
-    if (p.type !== undefined && !['story', 'warning', 'unlock'].includes(p.type)) {
+    if (p.type !== undefined && !['story', 'warning', 'unlock', 'optional'].includes(p.type)) {
       errors.push(`${where}: prereqs "${p.id}" の type "${p.type}" は "story" か "warning" である必要があります`);
     }
   });
 
   if (q.branchRow !== undefined && typeof q.branchRow !== 'number') {
     errors.push(`${where}: branchRow は数値である必要があります`);
+  }
+
+  if (q.permanentNow !== undefined && typeof q.permanentNow !== 'boolean') {
+    errors.push(`${where}: permanentNow は true/false である必要があります`);
   }
 
   if (q.summaryOf && !questIds.has(q.summaryOf)) {

@@ -138,10 +138,145 @@
   }
   .toggle-chip input{cursor:pointer;}
   .toggle-chip:hover{color:var(--parchment);}
+
+  /* ---- ツールバー(検索 + カバレッジ確認) ---- */
+  .tool-bar{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 5vw 16px;
+    flex-wrap:wrap;
+  }
+  .search-wrap{
+    position:relative;
+    flex:0 1 320px;
+    min-width:220px;
+  }
+  #questSearchInput{
+    width:100%;
+    box-sizing:border-box;
+    background:var(--ink-2);
+    border:1px solid var(--hair-strong);
+    border-radius:20px;
+    padding:8px 14px;
+    color:var(--parchment);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-size:13px;
+    outline:none;
+  }
+  #questSearchInput:focus{border-color:var(--gold);}
+  .search-results{
+    display:none;
+    position:absolute;
+    top:calc(100% + 6px);
+    left:0;
+    right:0;
+    max-height:320px;
+    overflow-y:auto;
+    background:var(--ink-2);
+    border:1px solid var(--hair-strong);
+    border-radius:10px;
+    box-shadow:0 12px 28px rgba(0,0,0,.5);
+    z-index:20;
+  }
+  .search-results.open{display:block;}
+  .search-result-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 12px;
+    cursor:pointer;
+    border-bottom:1px solid var(--hair);
+    font-size:12.5px;
+  }
+  .search-result-item:last-child{border-bottom:none;}
+  .search-result-item:hover{background:rgba(255,255,255,.05);}
+  .search-result-item .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;}
+  .search-result-item .code{font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--parchment-dim);}
+  .search-empty{padding:10px 12px; font-size:12px; color:var(--parchment-dim);}
+
+  .coverage-panel{
+    display:none;
+    margin:0 5vw 16px;
+    background:var(--ink-2);
+    border:1px solid var(--hair-strong);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .coverage-panel.open{display:block;}
+  .coverage-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 16px;
+    font-size:13px;
+    font-weight:700;
+    background:rgba(255,255,255,.03);
+    border-bottom:1px solid var(--hair-strong);
+  }
+  .coverage-close{
+    background:none;
+    border:none;
+    color:var(--parchment-dim);
+    cursor:pointer;
+    font-size:14px;
+  }
+  .coverage-close:hover{color:var(--gold);}
+  .coverage-list{
+    max-height:280px;
+    overflow-y:auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:14px 16px;
+  }
+  .coverage-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 11px;
+    border-radius:20px;
+    border:1px solid var(--hair-strong);
+    background:var(--ink);
+    cursor:pointer;
+    font-size:11.5px;
+  }
+  .coverage-item:hover{border-color:var(--gold); color:var(--gold);}
+  #coverageBtn{
+    display:none; /* 開発者向け機能なので、通常は非表示(管理者モード時のみJSで表示する) */
+  }
+  .is-admin #coverageBtn{
+    display:inline-block;
+  }
+  .report-link{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11.5px;
+    color:var(--jade);
+    text-decoration:none;
+    border:1px solid rgba(63,132,121,.4);
+    background:rgba(63,132,121,.08);
+    padding:6px 14px;
+    border-radius:20px;
+    white-space:nowrap;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .report-link:hover{border-color:var(--jade); color:#fff;}
+  .panel-report{
+    margin-top:20px;
+    padding-top:14px;
+    border-top:1px solid var(--hair);
+    font-size:11.5px;
+    line-height:1.6;
+    color:var(--parchment-dim);
+  }
+  .panel-report a{color:var(--jade);}
+  .panel-report a:hover{color:#fff;}
+  .coverage-item .dot{width:7px;height:7px;border-radius:50%;flex:0 0 auto;}
   .legend-note .k{display:flex;align-items:center;gap:6px;}
   .legend-note .ln{width:20px;height:0;border-top:2px dashed var(--parchment-dim);}
   .legend-note .ln2{width:20px;height:0;border-top:2px solid var(--parchment-dim);}
   .legend-note .ln3{width:20px;height:0;border-top:3px solid var(--jade);}
+  .legend-note .ln4{width:20px;height:0;border-top:1.5px dotted var(--parchment-dim);}
 
   /* ---------- Map ---------- */
   .map-scroll{
@@ -578,6 +713,18 @@
     border:1px solid rgba(63,132,121,.4);
     vertical-align:middle;
   }
+  .optional-badge{
+    display:inline-block;
+    font-size:10px;
+    font-weight:700;
+    padding:2px 7px;
+    margin-left:6px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    color:var(--parchment-dim);
+    border:1px solid var(--hair-strong);
+    vertical-align:middle;
+  }
   .p-item .body span.pcode{
     font-family:'JetBrains Mono', monospace;
     font-size:10.5px;
@@ -625,6 +772,23 @@
   </p>
 </header>
 
+<div class="tool-bar">
+  <div class="search-wrap">
+    <input type="text" id="questSearchInput" placeholder="🔍 任務名で検索…" autocomplete="off">
+    <div id="questSearchResults" class="search-results"></div>
+  </div>
+  <button id="coverageBtn" class="reset-btn">📋 前提未調査の任務一覧</button>
+  <a href="https://x.com/o0_kurumi_0o" target="_blank" rel="noopener" class="report-link">💬 前提関係の情報提供・誤り報告はこちら</a>
+</div>
+
+<div id="coveragePanel" class="coverage-panel">
+  <div class="coverage-header">
+    <span>前提関係が未登録の任務(<span id="coverageCount">0</span>件)</span>
+    <button id="coverageClose" class="coverage-close">✕</button>
+  </div>
+  <div id="coverageList" class="coverage-list"></div>
+</div>
+
 <div class="legend-bar" id="legendBar">
   <span class="legend-title">任務を表示 /</span>
   <!-- chips injected by JS -->
@@ -634,7 +798,8 @@
     期間限定イベントへの推奨線を表示
   </label>
   <div class="legend-note">
-    <span class="k"><span class="ln"></span>おすすめ前提</span>
+    <span class="k"><span class="ln"></span>おすすめ</span>
+    <span class="k"><span class="ln4"></span>できれば</span>
     <span class="k"><span class="ln3"></span>解放条件</span>
   </div>
 </div>
@@ -852,6 +1017,7 @@ function renderMap(){
       '第三章→第四章': 900,
       '第四章→第五章': 900,
       '第五章→空月の歌': 900,
+      '空月の歌→第七章': 900,
     };
 
     let prevGroup = null;
@@ -891,7 +1057,7 @@ function renderMap(){
           st.style.setProperty('--c', line.color);
 
           let flags = '';
-          const hasRecommendation = q.prereqs && q.prereqs.some(p => (p.type||'story') !== 'unlock');
+          const hasRecommendation = q.prereqs && q.prereqs.some(p => !['unlock','optional'].includes(p.type||'story'));
           if(hasRecommendation) flags += `<span class="flag transfer">おすすめあり</span>`;
           if(q.summaryOf) flags += `<span class="flag summary">まとめ収録</span>`;
 
@@ -1158,6 +1324,12 @@ function drawConnectors(){
         // 解放条件(ゲーム的な条件): 実線・少し太めにして「前提(点線)」と区別する
         path.setAttribute('stroke-width', '2.2');
         path.setAttribute('stroke-opacity', '0.75');
+      } else if(edge.prereqType === 'optional'){
+        // できればやっておきたい(軽めの推奨): おすすめ前提(破線)と区別するため、丸いドット状の線にする
+        path.setAttribute('stroke-width', '1.6');
+        path.setAttribute('stroke-opacity', '0.8');
+        path.setAttribute('stroke-dasharray','0.5 5');
+        path.setAttribute('stroke-linecap','round');
       } else {
         path.setAttribute('stroke-width', '1.6');
         path.setAttribute('stroke-dasharray','5 5');
@@ -1265,6 +1437,8 @@ function openPanel(id){
         ? `<span class="badge warning-badge">⚠ 進行注意</span>`
         : p.type === 'unlock'
         ? `<span class="badge unlock-badge">🔓 解放条件</span>`
+        : p.type === 'optional'
+        ? `<span class="badge optional-badge">できれば</span>`
         : '';
       return `<div class="p-item p-item-nav" data-nav-id="${p.id}">
         <span class="dot" style="background:${pq ? pq._line.color : '#999'}"></span>
@@ -1285,6 +1459,10 @@ function openPanel(id){
         </div>
       </div>`).join('') : '<div class="p-empty">現時点では確認されていません。</div>'}
     ${videoHtml}
+    <div class="panel-report">
+      この任務に関する前提関係のご存知の情報や、誤りにお気づきの場合は
+      <a href="https://x.com/o0_kurumi_0o" target="_blank" rel="noopener">X(@o0_kurumi_0o)へDM</a>で教えてください。
+    </div>
   `;
   panel.classList.add('open');
   scrim.classList.add('open');
@@ -1458,6 +1636,9 @@ function wireEvents(){
     requestAnimationFrame(drawConnectors);
   });
 
+  wireQuestSearch();
+  wireCoveragePanel();
+
   window.addEventListener('resize', redraw);
 
   // 横スクロール中、章タブのハイライトを追従させる(rAFで間引いて負荷を抑える)
@@ -1469,6 +1650,99 @@ function wireEvents(){
       updateActiveTabOnScroll();
       scrollSpyTicking = false;
     });
+  });
+}
+
+/**
+ * ヘッダー下の検索ボックス: 入力に応じて任務名を絞り込み、クリックでその任務へジャンプする。
+ */
+function wireQuestSearch(){
+  const input = document.getElementById('questSearchInput');
+  const results = document.getElementById('questSearchResults');
+
+  function render(query){
+    const q = query.trim();
+    if(!q){
+      results.classList.remove('open');
+      results.innerHTML = '';
+      return;
+    }
+    const matches = Object.values(QUESTS)
+      .filter(quest => quest.title.includes(q) || quest.id.toLowerCase().includes(q.toLowerCase()))
+      .slice(0, 12);
+
+    if(matches.length === 0){
+      results.innerHTML = `<div class="search-empty">「${q}」に一致する任務が見つかりません。</div>`;
+    } else {
+      results.innerHTML = matches.map(quest => `
+        <div class="search-result-item" data-nav-id="${quest.id}">
+          <span class="dot" style="background:${quest._line.color}"></span>
+          <span class="code mono">${quest.id}</span>
+          <span>${quest.title}</span>
+        </div>`).join('');
+    }
+    results.classList.add('open');
+  }
+
+  input.addEventListener('input', ()=> render(input.value));
+  input.addEventListener('focus', ()=> { if(input.value.trim()) render(input.value); });
+
+  results.addEventListener('click', e=>{
+    const item = e.target.closest('.search-result-item');
+    if(!item) return;
+    navigateToQuest(item.dataset.navId);
+    input.value = '';
+    results.classList.remove('open');
+    results.innerHTML = '';
+  });
+
+  // 検索結果の外側をクリックしたら閉じる
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.search-wrap')) results.classList.remove('open');
+  });
+}
+
+/**
+ * 「前提未調査の任務一覧」パネル: prereqsが空の任務を路線ごとに一覧表示し、
+ * クリックでその任務へジャンプできる(次にどれを調べればいいか一目で分かるようにする)。
+ */
+function wireCoveragePanel(){
+  const btn = document.getElementById('coverageBtn');
+  const panel = document.getElementById('coveragePanel');
+  const list = document.getElementById('coverageList');
+  const countEl = document.getElementById('coverageCount');
+  const closeBtn = document.getElementById('coverageClose');
+
+  function render(){
+    const uncovered = Object.values(QUESTS)
+      .filter(q => !q.prereqs || q.prereqs.length === 0)
+      .sort((a,b)=> a._line.code === b._line.code
+        ? a.order - b.order
+        : a._line.code.localeCompare(b._line.code));
+
+    countEl.textContent = uncovered.length;
+    if(uncovered.length === 0){
+      list.innerHTML = '<div class="search-empty">全ての任務に前提情報が登録されています。</div>';
+      return;
+    }
+    list.innerHTML = uncovered.map(q => `
+      <div class="coverage-item" data-nav-id="${q.id}">
+        <span class="dot" style="background:${q._line.color}"></span>
+        <span class="code mono">${q.id}</span>
+        <span>${q.title}</span>
+      </div>`).join('');
+  }
+
+  btn.addEventListener('click', ()=>{
+    const isOpen = panel.classList.toggle('open');
+    if(isOpen) render();
+  });
+  closeBtn.addEventListener('click', ()=> panel.classList.remove('open'));
+
+  list.addEventListener('click', e=>{
+    const item = e.target.closest('.coverage-item');
+    if(!item) return;
+    navigateToQuest(item.dataset.navId);
   });
 }
 
@@ -1489,10 +1763,27 @@ function resetAllFilters(){
 /* ---------------- INIT ---------------- */
 function redraw(){
   requestAnimationFrame(()=>{
-    alignSlotsToReference('AQ', { SQ: 150, WQ: 150, EQ: 150 });
+    alignSlotsToReference('AQ', { SQ: 150, WQ: 150, EQ: 150, MG: 150 });
     drawConnectors();
   });
 }
+/**
+ * 管理者モード判定: URLに ?admin=<合言葉> を付けてアクセスすると、
+ * 開発者向け機能(前提未調査の任務一覧)を表示する。
+ * 一度アクセスすればlocalStorageに記憶され、以降はパラメータ無しでも表示され続ける。
+ * ※ 強固なセキュリティではなく、一般ユーザーの目に触れないようにする簡易的な仕組みです。
+ */
+(function initAdminMode(){
+  const ADMIN_KEY = 'kurumi-teiwat-admin'; // 合言葉。変更したい場合はここを書き換える
+  const params = new URLSearchParams(window.location.search);
+  if(params.get('admin') === ADMIN_KEY){
+    localStorage.setItem('isTeiwatAdmin', '1');
+  }
+  if(localStorage.getItem('isTeiwatAdmin') === '1'){
+    document.documentElement.classList.add('is-admin');
+  }
+})();
+
 loadData();
 setTimeout(redraw, 200); // フォント確定後に再計測
 setTimeout(redraw, 800); // 念のため、もう一段階遅れて再計測(画像等の遅延読み込み対策)
