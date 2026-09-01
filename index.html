@@ -156,6 +156,8 @@
   }
   .toggle-chip input{cursor:pointer;}
   .toggle-chip:hover{color:var(--parchment);}
+  .ln-swatch{width:16px;height:0;border-top:2px dashed var(--parchment-dim); display:inline-block;}
+  .ln-swatch-dotted{border-top:1.5px dotted var(--parchment-dim);}
 
   /* ---- ツールバー(検索 + カバレッジ確認) ---- */
   .tool-bar{
@@ -792,7 +794,7 @@
 
 <div class="tool-bar">
   <div class="search-wrap">
-    <input type="text" id="questSearchInput" placeholder="🔍 任務名で検索…" autocomplete="off">
+    <input type="text" id="questSearchInput" placeholder="🔍 任務名・キャラ名で検索…" autocomplete="off">
     <div id="questSearchResults" class="search-results"></div>
   </div>
   <button id="coverageBtn" class="reset-btn">📋 前提未調査の任務一覧</button>
@@ -812,12 +814,18 @@
   <!-- chips injected by JS -->
   <button id="resetFiltersBtn" class="reset-btn">↺ 絞り込みを解除</button>
   <label class="toggle-chip">
-    <input type="checkbox" id="toggleEqRecommend">
-    期間限定イベントへの推奨線を表示
+    <input type="checkbox" id="toggleStoryLines" checked>
+    <span class="ln-swatch"></span>おすすめ
+  </label>
+  <label class="toggle-chip">
+    <input type="checkbox" id="toggleOptionalLines" checked>
+    <span class="ln-swatch ln-swatch-dotted"></span>できれば
+  </label>
+  <label class="toggle-chip">
+    <input type="checkbox" id="toggleEqTargetLines">
+    期間限定イベントへの線
   </label>
   <div class="legend-note">
-    <span class="k"><span class="ln"></span>おすすめ</span>
-    <span class="k"><span class="ln4"></span>できれば</span>
     <span class="k"><span class="ln3"></span>解放条件</span>
   </div>
 </div>
@@ -854,7 +862,9 @@ const mapScroll = document.getElementById('mapScroll');
 const legendBar = document.getElementById('legendBar');
 let suppressNextClick = false;
 let pinnedId = null; // パネル表示中に固定するハイライト対象
-let showEqRecommendLines = false; // 期間限定イベント自身への推奨線(おすすめ前提)を表示するか
+let showStoryLines = true; // 「おすすめ」線(story型)を表示するか
+let showOptionalLines = true; // 「できれば」線(optional型)を表示するか
+let showEqTargetLines = false; // 期間限定イベント(EQ)宛ての推奨線を表示するか
 let isMapDragging = false; // ドラッグ中はホバー判定を止める
 const svg = document.getElementById('connectors');
 const panel = document.getElementById('panel');
@@ -1278,10 +1288,16 @@ function drawConnectors(){
     if(!fromQ || !toQ) return;
     if(!isStationVisible(edge.from) || !isStationVisible(edge.to)) return;
 
-    // 期間限定イベント自身への「おすすめ前提」線(本編理解には直結しない副読的な関係)は
-    // トグルがOFFの間は非表示にし、線の量を抑える
-    const isEqRecommend = edge.type === 'prereq' && edge.prereqType !== 'unlock' && toQ._line.code === 'EQ';
-    if(isEqRecommend && !showEqRecommendLines) return;
+    // 「おすすめ」「できれば」は、それぞれ独立したトグルで表示/非表示を切り替えられる
+    if(edge.type === 'prereq' && edge.prereqType !== 'unlock'){
+      if(edge.prereqType === 'optional'){
+        if(!showOptionalLines) return;
+      } else {
+        if(!showStoryLines) return;
+      }
+      // さらに、期間限定イベント(EQ)宛ての線だけを対象にした個別トグルもAND条件で効かせる
+      if(toQ._line.code === 'EQ' && !showEqTargetLines) return;
+    }
 
     const fromEl = document.getElementById('st-'+edge.from);
     const toEl = document.getElementById('st-'+edge.to);
@@ -1417,15 +1433,19 @@ function openPanel(id){
   let videoHtml = '';
   if(q.videoUrls && q.videoUrls.length){
     videoHtml = `
-    <div class="p-section-title" style="margin-top:20px;">▶ 関連動画</div>
-    ${q.videoUrls.map(v=>`
+    <div class="p-section-title" style="margin-top:20px;">▶ 関連リンク</div>
+    ${q.videoUrls.map(v=>{
+      const isYouTube = /youtube\.com|youtu\.be/.test(v.url);
+      const label = isYouTube ? 'YouTubeで見る ↗' : 'リンクを開く ↗';
+      return `
       <a class="p-item video-link" href="${v.url}" target="_blank" rel="noopener noreferrer">
         <span class="dot" style="background:${line.color}"></span>
         <div class="body">
           <b>${v.title}</b>
-          <div class="reason">公式YouTubeで見る ↗</div>
+          <div class="reason">${label}</div>
         </div>
-      </a>`).join('')}
+      </a>`;
+    }).join('')}
     `;
   }
 
@@ -1649,8 +1669,16 @@ function wireEvents(){
 
   document.getElementById('resetFiltersBtn').addEventListener('click', resetAllFilters);
 
-  document.getElementById('toggleEqRecommend').addEventListener('change', e=>{
-    showEqRecommendLines = e.target.checked;
+  document.getElementById('toggleStoryLines').addEventListener('change', e=>{
+    showStoryLines = e.target.checked;
+    requestAnimationFrame(drawConnectors);
+  });
+  document.getElementById('toggleOptionalLines').addEventListener('change', e=>{
+    showOptionalLines = e.target.checked;
+    requestAnimationFrame(drawConnectors);
+  });
+  document.getElementById('toggleEqTargetLines').addEventListener('change', e=>{
+    showEqTargetLines = e.target.checked;
     requestAnimationFrame(drawConnectors);
   });
 
@@ -1686,7 +1714,11 @@ function wireQuestSearch(){
       return;
     }
     const matches = Object.values(QUESTS)
-      .filter(quest => quest.title.includes(q) || quest.id.toLowerCase().includes(q.toLowerCase()))
+      .filter(quest =>
+        quest.title.includes(q) ||
+        quest.id.toLowerCase().includes(q.toLowerCase()) ||
+        (quest.chapter && quest.chapter.includes(q))
+      )
       .slice(0, 12);
 
     if(matches.length === 0){

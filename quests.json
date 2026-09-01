@@ -46,7 +46,13 @@
       "region": "モンド",
       "desc": "ゲーム本編以前の時代を描く公式漫画。ヴェネッサやファデュイのモンドへの関与、ディルックとガイアの過去などが描かれる。全16話・通読1時間程度。",
       "sourceNote": "Fandom Wiki「漫画」ページの記述を基に追加。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "公式サイトで読む",
+          "url": "https://genshin.hoyoverse.com/ja/manga"
+        }
+      ]
     },
     {
       "id": "AQ-34",
@@ -90,7 +96,13 @@
           "reason": "「灰燼に埋もれた都市」シリーズを先にプレイしておくのが推奨。"
         }
       ],
-      "chapterGroup": "第五章"
+      "chapterGroup": "第五章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=_L2rO_PG7vQ"
+        }
+      ]
     },
     {
       "id": "WQ-23",
@@ -142,7 +154,13 @@
       ],
       "availableFrom": "2024-07-17",
       "version": "4.8",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=sLejqRYmQM0"
+        }
+      ]
     },
     {
       "id": "AQ-15",
@@ -159,7 +177,13 @@
           "reason": "公式PV「冬夜の戯劇」を先に見ておくのが推奨。第三章(スメール編)で深掘りされるドットーレを含む、ファデュイ執行官のほとんどが初めて直接登場する内容。"
         }
       ],
-      "chapterGroup": "第三章"
+      "chapterGroup": "第三章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=GYs5E8-NaDQ"
+        }
+      ]
     },
     {
       "id": "AQ-16",
@@ -171,7 +195,13 @@
       "desc": "スメール編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第三章"
+      "chapterGroup": "第三章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=X8ZyRtPRKyo"
+        }
+      ]
     },
     {
       "id": "AQ-17",
@@ -188,7 +218,13 @@
           "reason": "ティナリの伝説任務「フェネックの章」。プレイヤーの実プレイで、この幕の前提として気づいた前提知識クエスト。"
         }
       ],
-      "chapterGroup": "第三章"
+      "chapterGroup": "第三章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=EA2DEwWUi6Q"
+        }
+      ]
     },
     {
       "id": "AQ-18",
@@ -200,7 +236,13 @@
       "desc": "スメール編の四幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第三章"
+      "chapterGroup": "第三章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=31k5qi_W4FM"
+        }
+      ]
     },
     {
       "id": "AQ-19",
@@ -212,7 +254,13 @@
       "desc": "スメール編の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第三章"
+      "chapterGroup": "第三章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=go4hsfS2cCE"
+        }
+      ]
     },
     {
       "id": "AQ-20",
@@ -225,7 +273,13 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第三章",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=vn7-gyKKkFE"
+        }
+      ]
     },
     {
       "id": "AQ-22",
@@ -242,7 +296,13 @@
           "reason": "ブログ記事いわく「フォンテーヌの前置き的な要素もある」とのことで、フォンテーヌ編開幕前に見ておくと雰囲気が掴みやすくなります。"
         }
       ],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=I61D8yoafzY"
+        }
+      ]
     },
     {
       "id": "AQ-23",
@@ -254,7 +314,13 @@
       "desc": "フォンテーヌ編の二幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=cE-zfYixsZE"
+        }
+      ]
     },
     {
       "id": "AQ-24",
@@ -266,7 +332,13 @@
       "desc": "フォンテーヌ編の三幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=TrdxdTfa2Mc"
+        }
+      ]
     },
     {
       "id": "AQ-25",
@@ -278,7 +350,13 @@
       "desc": "フォンテーヌ編の四幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=XuP6-DmMqT0"
+        }
+      ]
     },
     {
       "id": "AQ-26",
@@ -290,7 +368,13 @@
       "desc": "フォンテーヌ編の終幕。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第四章"
+      "chapterGroup": "第四章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=52suqaE695o"
+        }
+      ]
     },
     {
       "id": "AQ-27",
@@ -303,7 +387,13 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第四章",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=H6PufdIjsVk"
+        }
+      ]
     },
     {
       "id": "AQ-35",
@@ -315,7 +405,13 @@
       "desc": "第五章の帰結。ここまでの伏線が一つに収束する。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
-      "chapterGroup": "第五章"
+      "chapterGroup": "第五章",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=O-9sBjL78CA"
+        }
+      ]
     },
     {
       "id": "AQ-1",
@@ -451,6 +547,10 @@
         {
           "id": "EQ-2",
           "reason": "「帰らぬ熄星」で散兵(スカラマシュ)が初登場し、この幕で散兵と再会する際、このイベントをプレイしたかどうかで会話が「再会」か「初対面」かに分岐します。"
+        },
+        {
+          "id": "WQ-3",
+          "reason": "世界任務「たたら物語」を先にプレイしておくのが推奨。"
         }
       ],
       "chapterGroup": "第二章"
@@ -479,7 +579,13 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第一章",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=9KMvRi-Mdq4"
+        }
+      ]
     },
     {
       "id": "AQ-14",
@@ -492,7 +598,13 @@
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
       "prereqs": [],
       "chapterGroup": "第二章",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ZAYCltgeGH8"
+        }
+      ]
     },
     {
       "id": "AQ-21",
@@ -514,7 +626,13 @@
         }
       ],
       "chapterGroup": "第三章",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "ムービーのみ",
+          "url": "https://youtu.be/xunOX-gY2n4"
+        }
+      ]
     },
     {
       "id": "AQ-28",
@@ -547,7 +665,13 @@
         }
       ],
       "chapterGroup": "第四章",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=Tn800dMPa9I"
+        }
+      ]
     },
     {
       "id": "SQ-72",
@@ -566,7 +690,13 @@
         }
       ],
       "releaseDate": "2026-04-08",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/21LxRRFFb3g"
+        }
+      ]
     },
     {
       "id": "SQ-73",
@@ -585,7 +715,13 @@
         }
       ],
       "releaseDate": "2025-12-03",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=h5mdpL9V-cY"
+        }
+      ]
     },
     {
       "id": "SQ-51",
@@ -604,7 +740,13 @@
         }
       ],
       "releaseDate": "2025-06-18",
-      "branchRow": 7
+      "branchRow": 7,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ShqnjjEAaUY"
+        }
+      ]
     },
     {
       "id": "SQ-69",
@@ -623,7 +765,13 @@
         }
       ],
       "releaseDate": "2025-01-01",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=O_mJz579Bqo"
+        }
+      ]
     },
     {
       "id": "SQ-4",
@@ -680,7 +828,13 @@
         }
       ],
       "releaseDate": "2025-05-07",
-      "branchRow": 6
+      "branchRow": 6,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=XnoB4JIqq9k"
+        }
+      ]
     },
     {
       "id": "SQ-2",
@@ -940,7 +1094,13 @@
         }
       ],
       "releaseDate": "2020-11-11",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=THiu4Qngad0"
+        }
+      ]
     },
     {
       "id": "SQ-20",
@@ -1054,7 +1214,13 @@
         }
       ],
       "releaseDate": "2023-05-02",
-      "branchRow": 2
+      "branchRow": 2,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=NjI6Lmq765M"
+        }
+      ]
     },
     {
       "id": "SQ-21",
@@ -1092,7 +1258,13 @@
         }
       ],
       "releaseDate": "2021-12-14",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=iL25cL5hivo"
+        }
+      ]
     },
     {
       "id": "SQ-22",
@@ -1130,7 +1302,13 @@
         }
       ],
       "releaseDate": "2021-09-01",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=4JHb3Qcu5fY"
+        }
+      ]
     },
     {
       "id": "SQ-24",
@@ -1187,7 +1365,13 @@
         }
       ],
       "releaseDate": "2022-03-30",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ZNHbb-4Lwqw"
+        }
+      ]
     },
     {
       "id": "SQ-26",
@@ -1225,7 +1409,13 @@
         }
       ],
       "releaseDate": "2025-02-12",
-      "branchRow": 3
+      "branchRow": 3,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=qlqfWQZKzws"
+        }
+      ]
     },
     {
       "id": "SQ-32",
@@ -1244,7 +1434,13 @@
         }
       ],
       "releaseDate": "2022-08-24",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=RZxPz7B-y68"
+        }
+      ]
     },
     {
       "id": "SQ-34",
@@ -1339,7 +1535,13 @@
         }
       ],
       "releaseDate": "2023-08-16",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=FenPzrQRmyI"
+        }
+      ]
     },
     {
       "id": "SQ-42",
@@ -1358,7 +1560,13 @@
         }
       ],
       "releaseDate": "2023-09-27",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=C2EkWWL3XKE"
+        }
+      ]
     },
     {
       "id": "SQ-43",
@@ -1377,7 +1585,13 @@
         }
       ],
       "releaseDate": "2023-10-17",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=pxKUKbL-krA"
+        }
+      ]
     },
     {
       "id": "SQ-44",
@@ -1396,7 +1610,13 @@
         }
       ],
       "releaseDate": "2023-11-08",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=us0KxV8m7RI"
+        }
+      ]
     },
     {
       "id": "SQ-45",
@@ -1415,7 +1635,13 @@
         }
       ],
       "releaseDate": "2023-12-20",
-      "branchRow": 1
+      "branchRow": 1,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=lgOqfCpS6Ak"
+        }
+      ]
     },
     {
       "id": "SQ-19",
@@ -1434,7 +1660,13 @@
         }
       ],
       "releaseDate": "2024-01-31",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=EE0qNkw5xro"
+        }
+      ]
     },
     {
       "id": "SQ-46",
@@ -1453,7 +1685,13 @@
         }
       ],
       "releaseDate": "2024-03-13",
-      "branchRow": 2
+      "branchRow": 2,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=4xORD9S1ndU"
+        }
+      ]
     },
     {
       "id": "SQ-47",
@@ -1491,7 +1729,13 @@
         }
       ],
       "releaseDate": "2024-06-05",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=g4rsGdwkVOQ"
+        }
+      ]
     },
     {
       "id": "SQ-48",
@@ -1510,7 +1754,13 @@
         }
       ],
       "releaseDate": "2024-07-01",
-      "branchRow": 4
+      "branchRow": 4,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=8XR-eliIJAY"
+        }
+      ]
     },
     {
       "id": "SQ-49",
@@ -1529,7 +1779,13 @@
         }
       ],
       "releaseDate": "2024-08-06",
-      "branchRow": 5
+      "branchRow": 5,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=7jlzuTABMh0"
+        }
+      ]
     },
     {
       "id": "EQ-32",
@@ -1566,7 +1822,13 @@
       "availableUntil": "2024-11-07",
       "availableFrom": "2024-10-23",
       "version": "5.1",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=oOkKK_eTvRo"
+        }
+      ]
     },
     {
       "id": "AQ-43",
@@ -1578,7 +1840,13 @@
       "desc": "間章「空月の歌」の一幕。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
       "prereqs": [],
-      "chapterGroup": "空月の歌"
+      "chapterGroup": "空月の歌",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=zcQysuQJXaw"
+        }
+      ]
     },
     {
       "id": "AQ-45",
@@ -1590,7 +1858,13 @@
       "desc": "間章「空月の歌」の一幕。スメールの六賢人が登場する。",
       "sourceNote": "genshin-dictionary.com(オープンデータ)より取得。",
       "prereqs": [],
-      "chapterGroup": "空月の歌"
+      "chapterGroup": "空月の歌",
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/CWZI3_jhlaU"
+        }
+      ]
     },
     {
       "id": "SQ-74",
@@ -1609,7 +1883,13 @@
         }
       ],
       "releaseDate": "2026-02-25",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/Jb_NQtuS5RE"
+        }
+      ]
     },
     {
       "id": "SQ-75",
@@ -1628,7 +1908,13 @@
         }
       ],
       "releaseDate": "2026-05-20",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=3xiHKDAgJ3o"
+        }
+      ]
     },
     {
       "id": "WQ-25",
@@ -1650,7 +1936,7 @@
     {
       "id": "EQ-3",
       "line": "EQ",
-      "order": 1.1,
+      "order": 1.05,
       "title": "白亜と黒龍",
       "chapter": "v1.2 期間限定イベント",
       "region": "モンド",
@@ -1680,7 +1966,13 @@
       ],
       "availableFrom": "2021-11-24",
       "version": "2.3",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=vr5OQEwRCB4"
+        }
+      ]
     },
     {
       "id": "EQ-20",
@@ -1704,7 +1996,13 @@
       ],
       "availableFrom": "2023-03-01",
       "version": "3.5",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=oSaKVeB3qWM"
+        }
+      ]
     },
     {
       "id": "EQ-14",
@@ -1737,7 +2035,7 @@
     {
       "id": "WQ-3",
       "line": "WQ",
-      "order": 200,
+      "order": 200.3,
       "title": "たたら物語",
       "chapter": "稲妻・世界任務",
       "region": "稲妻",
@@ -1756,7 +2054,13 @@
       "chapterGroup": "第五章",
       "desc": "第五章 第一幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=yrYWxIffkPY"
+        }
+      ]
     },
     {
       "id": "AQ-30",
@@ -1768,7 +2072,13 @@
       "chapterGroup": "第五章",
       "desc": "第五章 第二幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=yF9fPDZXEjQ"
+        }
+      ]
     },
     {
       "id": "AQ-31",
@@ -1780,7 +2090,13 @@
       "chapterGroup": "第五章",
       "desc": "第五章 第三幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=s39VrJfg4TM"
+        }
+      ]
     },
     {
       "id": "AQ-32",
@@ -1792,7 +2108,13 @@
       "chapterGroup": "第五章",
       "desc": "第五章 第四幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=AVHhtE5clYo"
+        }
+      ]
     },
     {
       "id": "AQ-33",
@@ -1804,7 +2126,13 @@
       "chapterGroup": "第五章",
       "desc": "第五章 幕間の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=5Zju0WRsMg0"
+        }
+      ]
     },
     {
       "id": "AQ-36",
@@ -1862,6 +2190,16 @@
           "id": "MG-2",
           "reason": "公式PV「冬夜の戯劇」をできれば見ておきたい。",
           "type": "optional"
+        },
+        {
+          "id": "WQ-24",
+          "reason": "「古の聖山」世界任務シリーズを先にプレイしておくのが推奨。"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=tHfQ_9s96rw"
         }
       ]
     },
@@ -1875,7 +2213,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第一幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=lYduv50HiYE"
+        }
+      ]
     },
     {
       "id": "AQ-38",
@@ -1887,7 +2231,18 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第二幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [
+        {
+          "id": "WQ-26",
+          "reason": "伴月紀聞Iを先にプレイしておくのが推奨。"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=Q72YV3lC-uU"
+        }
+      ]
     },
     {
       "id": "AQ-39",
@@ -1899,7 +2254,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第三幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=PSX3FA0NHiU"
+        }
+      ]
     },
     {
       "id": "AQ-40",
@@ -1911,7 +2272,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第四幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=vlNAd0QnFcQ"
+        }
+      ]
     },
     {
       "id": "AQ-41",
@@ -1923,7 +2290,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第五幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=im2UdjZav8g"
+        }
+      ]
     },
     {
       "id": "AQ-42",
@@ -1935,7 +2308,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第六幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=dgMe4sFF5O8"
+        }
+      ]
     },
     {
       "id": "AQ-44",
@@ -1947,7 +2326,13 @@
       "chapterGroup": "空月の歌",
       "desc": "空月の歌 第八幕の内容。",
       "sourceNote": "genshin-dictionary.com(CSV)より取得。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=AIR86KlD-IU"
+        }
+      ]
     },
     {
       "id": "EQ-15",
@@ -1967,7 +2352,13 @@
       ],
       "availableFrom": "2022-07-13",
       "version": "2.8",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=PBZQN2WQiVw"
+        }
+      ]
     },
     {
       "id": "EQ-19",
@@ -2019,7 +2410,13 @@
       ],
       "availableFrom": "2023-07-05",
       "version": "3.8",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ZRA2UkZW5m0"
+        }
+      ]
     },
     {
       "id": "EQ-24",
@@ -2039,7 +2436,13 @@
       ],
       "availableFrom": "2023-09-27",
       "version": "4.1",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=5_n_pKc_Jn4"
+        }
+      ]
     },
     {
       "id": "EQ-27",
@@ -2067,27 +2470,18 @@
       ],
       "availableFrom": "2024-01-31",
       "version": "4.4",
-      "branchRow": 0
-    },
-    {
-      "id": "EQ-1",
-      "line": "EQ",
-      "order": 1.0,
-      "title": "バーバラ、キラッと登場☆",
-      "chapter": "v1.0 期間限定イベント",
-      "region": "モンド",
-      "availableUntil": "2020-11-11",
-      "desc": "モンド編初期のテーマイベント。バーバラにまつわる物語が描かれる。",
-      "sourceNote": "あらいぐま書店のブログ記事(個人ブログ)の歴代イベント一覧を基に追加。前提関係は未調査。",
-      "prereqs": [],
-      "availableFrom": "2020-09-28",
-      "version": "1.0",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=7deR09FONMU"
+        }
+      ]
     },
     {
       "id": "EQ-2",
       "line": "EQ",
-      "order": 1.05,
+      "order": 1,
       "title": "帰らぬ熄星",
       "chapter": "v1.1 期間限定イベント",
       "region": "モンド",
@@ -2202,7 +2596,13 @@
       "prereqs": [],
       "availableFrom": "2021-10-13",
       "version": "2.2",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=N-4N5_o8cEs"
+        }
+      ]
     },
     {
       "id": "EQ-12",
@@ -2285,7 +2685,13 @@
       ],
       "availableFrom": "2022-11-02",
       "version": "3.2",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=OXRKAV-6fZ4"
+        }
+      ]
     },
     {
       "id": "EQ-18",
@@ -2329,7 +2735,13 @@
       ],
       "availableFrom": "2023-04-12",
       "version": "3.6",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=zp5IplFDf20"
+        }
+      ]
     },
     {
       "id": "EQ-22",
@@ -2357,7 +2769,13 @@
       ],
       "availableFrom": "2023-05-24",
       "version": "3.7",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=jjE6jMKfzzs"
+        }
+      ]
     },
     {
       "id": "EQ-25",
@@ -2377,7 +2795,13 @@
       ],
       "availableFrom": "2023-11-08",
       "version": "4.2",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=C-12pAOlZlA"
+        }
+      ]
     },
     {
       "id": "EQ-26",
@@ -2417,7 +2841,13 @@
       ],
       "availableFrom": "2023-12-20",
       "version": "4.3",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ADJYFOPj4rU"
+        }
+      ]
     },
     {
       "id": "EQ-30",
@@ -2465,7 +2895,13 @@
       ],
       "availableFrom": "2024-03-13",
       "version": "4.5",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=yudSQhgsDW0"
+        }
+      ]
     },
     {
       "id": "EQ-29",
@@ -2509,7 +2945,13 @@
       ],
       "availableFrom": "2024-08-28",
       "version": "5.2",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=NJdKRsrKg64"
+        }
+      ]
     },
     {
       "id": "EQ-35",
@@ -2545,7 +2987,13 @@
       ],
       "availableFrom": "2025-02-14",
       "version": "5.4",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=CowGTjIUJuk"
+        }
+      ]
     },
     {
       "id": "EQ-37",
@@ -2581,7 +3029,13 @@
       ],
       "availableFrom": "2025-05-07",
       "version": "5.6",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=o5j1_dr7eB8"
+        }
+      ]
     },
     {
       "id": "EQ-38",
@@ -2602,7 +3056,13 @@
       "availableFrom": "2025-07-30",
       "version": "5.8",
       "branchRow": 0,
-      "permanentNow": true
+      "permanentNow": true,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=13DIMt8J1Rs"
+        }
+      ]
     },
     {
       "id": "EQ-39",
@@ -2626,7 +3086,13 @@
       ],
       "availableFrom": "2025-07-30",
       "version": "5.8",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=7WKcAL3qBxA"
+        }
+      ]
     },
     {
       "id": "EQ-40",
@@ -2646,7 +3112,13 @@
       ],
       "availableFrom": "2025-09-10",
       "version": "6.0",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=A3YLG_B3T5s"
+        }
+      ]
     },
     {
       "id": "EQ-41",
@@ -2674,7 +3146,13 @@
       ],
       "availableFrom": "2025-10-22",
       "version": "6.1",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=7YgstNHBV3w"
+        }
+      ]
     },
     {
       "id": "EQ-42",
@@ -2698,7 +3176,13 @@
       ],
       "availableFrom": "2025-12-03",
       "version": "6.2",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=IaLm4IBqbpg"
+        }
+      ]
     },
     {
       "id": "EQ-46",
@@ -2710,17 +3194,21 @@
       "availableUntil": "2026-02-24",
       "desc": "Ver6.3(Luna IV)期間限定の海灯祭イベント。",
       "sourceNote": "YouTube再生リスト「期間限定イベントストーリー」(りんぼのゲーム事務所)のタイトル一覧＋genshin-dictionary.comで期間確認。",
-      "prereqs": [
-        {
-          "id": "AQ-45",
-          "reason": "空月の歌第九幕クリアが解放条件の一つ。",
-          "type": "unlock"
-        }
-      ],
+      "prereqs": [],
       "availableFrom": "2026-01-14",
       "version": "6.3",
       "branchRow": 0,
-      "permanentNow": true
+      "permanentNow": true,
+      "videoUrls": [
+        {
+          "title": "会話まとめ",
+          "url": "https://youtu.be/6ZWBjh5LWdY"
+        },
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=7FbACLdbHro"
+        }
+      ]
     },
     {
       "id": "EQ-43",
@@ -2744,7 +3232,13 @@
       ],
       "availableFrom": "2026-02-25",
       "version": "6.4",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/nsZzoGN_19k"
+        }
+      ]
     },
     {
       "id": "EQ-44",
@@ -2764,7 +3258,13 @@
       ],
       "availableFrom": "2026-04-08",
       "version": "6.5",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=UXBMcaPbNWk"
+        }
+      ]
     },
     {
       "id": "EQ-45",
@@ -2784,7 +3284,13 @@
       ],
       "availableFrom": "2026-05-20",
       "version": "6.6",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/8Ha9H8tz7Ug"
+        }
+      ]
     },
     {
       "id": "EQ-47",
@@ -2800,17 +3306,18 @@
         {
           "id": "EQ-26",
           "reason": "実プレイで判明した前提知識。「薔薇と銃士」を先にクリアしておくと理解が深まります。"
-        },
-        {
-          "id": "AQ-46",
-          "reason": "空月の歌第十幕クリアが解放条件の一つ。",
-          "type": "unlock"
         }
       ],
       "availableFrom": "2026-07-01",
       "version": "6.7",
       "branchRow": 0,
-      "permanentNow": true
+      "permanentNow": true,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/rD3r8LTsTSQ"
+        }
+      ]
     },
     {
       "id": "EQ-34",
@@ -2838,7 +3345,13 @@
       ],
       "availableFrom": "2025-01-24",
       "version": "5.3",
-      "branchRow": 0
+      "branchRow": 0,
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=G0-V6nKanUA"
+        }
+      ]
     },
     {
       "id": "SQ-27",
@@ -2855,6 +3368,12 @@
           "id": "SQ-23",
           "reason": "天下人の章 第一幕クリアで解放される第二幕。",
           "type": "unlock"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=95-lH4z2WjM"
         }
       ]
     },
@@ -2882,6 +3401,12 @@
         {
           "id": "SQ-37",
           "reason": "セノの伝説任務「金狼の章」内に、アルハイゼンの伝説任務「隼の章」の内容に関わる情報が登場します。先にクリアしておくと繋がりが分かりやすくなります。"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=6VHSU_c7Wdo"
         }
       ]
     },
@@ -2911,6 +3436,12 @@
           "reason": "琉金の章 第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=9k_ltBN2Af8"
+        }
       ]
     },
     {
@@ -2929,6 +3460,12 @@
           "reason": "知恵の主の章 第一幕クリアが解放条件の一つ。",
           "type": "unlock"
         }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=oHIAVd9T40I"
+        }
       ]
     },
     {
@@ -2946,6 +3483,12 @@
           "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=DEDFedx7lEo"
         }
       ]
     },
@@ -3006,6 +3549,12 @@
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=Yc97cwFGloI"
+        }
       ]
     },
     {
@@ -3059,6 +3608,12 @@
           "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=m-MSMBwXrnQ"
         }
       ]
     },
@@ -3119,6 +3674,12 @@
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=ZhIZMqoj5cU"
+        }
       ]
     },
     {
@@ -3177,6 +3738,12 @@
           "id": "AQ-29",
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=4B8lC6-e9Yg"
         }
       ]
     },
@@ -3237,6 +3804,12 @@
           "reason": "第五章第一幕クリアで解放される部族見聞(第一幕)。",
           "type": "unlock"
         }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=NabJIRqhxpo"
+        }
       ]
     },
     {
@@ -3284,31 +3857,31 @@
       "id": "AQ-46",
       "line": "AQ",
       "order": 610,
-      "title": "千尋の道、因果の異滅",
+      "title": "虚空劫灰のプラーナ",
       "chapter": "空月の歌 第十幕",
       "region": "ナタ",
       "chapterGroup": "空月の歌",
       "desc": "空月の歌の一幕。まだ実装(受注可能)されていない。",
       "sourceNote": "公式ストーリーマップのスクリーンショットを基に追加(2026年、未実装)。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://youtu.be/Xt5h101lGec"
+        }
+      ]
     },
     {
       "id": "WQ-5",
       "line": "WQ",
-      "order": 200.3,
+      "order": 200.15,
       "branchRow": 0,
       "title": "神櫻大祓",
       "chapter": "稲妻・世界任務シリーズ（紺田怪談・祭神奏上・祓・深林の狸囃子・影向祓）",
       "region": "稲妻",
       "desc": "稲妻・紺田村を舞台にした世界任務シリーズ。謎の巫女「花散里」を巡る物語。",
       "sourceNote": "Fandom Wikiの開放条件を基に追加(2026年)。",
-      "prereqs": [
-        {
-          "id": "AQ-10",
-          "reason": "第二章第一幕「鳴神不動、恒常楽土」の「離島脱出計画」クリアが必要条件。",
-          "type": "unlock"
-        }
-      ]
+      "prereqs": []
     },
     {
       "id": "EQ-36",
@@ -3327,6 +3900,12 @@
         {
           "id": "SQ-69",
           "reason": "マーヴィカの伝説任務「不敗の日輪の章」第一幕クリア後にプレイすると、より良い体験でイベントを楽しめる。"
+        }
+      ],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=NG2mQeEG8no"
         }
       ]
     },
@@ -3381,7 +3960,7 @@
     {
       "id": "WQ-4",
       "line": "WQ",
-      "order": 200.15,
+      "order": 200,
       "branchRow": 0,
       "title": "翠石の玉壺・一",
       "chapter": "稲妻・世界任務",
@@ -3620,7 +4199,13 @@
       "chapterGroup": "第七章",
       "desc": "スネージナヤを舞台にした第七章の開幕。星鋒の剣が入手できる。",
       "sourceNote": "Web検索(gamewith/game8/kamigame等)の情報を基に追加(2026年)。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=HHOtCQg_yq4"
+        }
+      ]
     },
     {
       "id": "AQ-48",
@@ -3633,7 +4218,13 @@
       "chapterGroup": "第七章",
       "desc": "スネージナヤを舞台にした第七章の続き。",
       "sourceNote": "Web検索(gamewith等)の情報を基に追加(2026年)。",
-      "prereqs": []
+      "prereqs": [],
+      "videoUrls": [
+        {
+          "title": "全ムービーまとめ",
+          "url": "https://www.youtube.com/watch?v=TvGcJXlHcis"
+        }
+      ]
     },
     {
       "id": "MG-2",
@@ -3645,6 +4236,60 @@
       "desc": "2022年7月11日公開の公式PV。ファデュイ執行官(十一人衆)のほとんどが初めて直接登場する内容。",
       "sourceNote": "Web検索(Fandom Wiki/Wiki3等)の情報を基に追加(2026年)。",
       "prereqs": []
+    },
+    {
+      "id": "WQ-26",
+      "line": "WQ",
+      "order": 601.0,
+      "branchRow": 0,
+      "title": "伴月紀聞I",
+      "chapter": "ナド・クライ・銀月の庭「伴月紀聞」シリーズ",
+      "region": "ナド・クライ",
+      "desc": "銀月の庭で発生するシリーズ任務。少女(コロンビーナ)や月霊と交流できる。前のエピソードクリア後、リアル時間で7日経過すると次が解放される。",
+      "sourceNote": "Web検索(game8/kamigame/gamewith等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "AQ-37",
+          "reason": "空月の歌第一幕「白銀の浪と蒼林の舞」クリアが解放条件。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "WQ-27",
+      "line": "WQ",
+      "order": 601.05,
+      "branchRow": 0,
+      "title": "伴月紀聞II",
+      "chapter": "ナド・クライ・銀月の庭「伴月紀聞」シリーズ",
+      "region": "ナド・クライ",
+      "desc": "銀月の庭で発生するシリーズ任務。少女(コロンビーナ)や月霊と交流できる。前のエピソードクリア後、リアル時間で7日経過すると次が解放される。",
+      "sourceNote": "Web検索(game8/kamigame/gamewith等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "AQ-37",
+          "reason": "空月の歌第一幕「白銀の浪と蒼林の舞」クリアが解放条件。",
+          "type": "unlock"
+        }
+      ]
+    },
+    {
+      "id": "WQ-28",
+      "line": "WQ",
+      "order": 601.1,
+      "branchRow": 0,
+      "title": "伴月紀聞III",
+      "chapter": "ナド・クライ・銀月の庭「伴月紀聞」シリーズ",
+      "region": "ナド・クライ",
+      "desc": "銀月の庭で発生するシリーズ任務。少女(コロンビーナ)や月霊と交流できる。前のエピソードクリア後、リアル時間で7日経過すると次が解放される。",
+      "sourceNote": "Web検索(game8/kamigame/gamewith等)の情報を基に追加(2026年)。",
+      "prereqs": [
+        {
+          "id": "AQ-37",
+          "reason": "空月の歌第一幕「白銀の浪と蒼林の舞」クリアが解放条件。",
+          "type": "unlock"
+        }
+      ]
     }
   ]
 }
